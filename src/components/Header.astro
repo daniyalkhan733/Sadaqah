@@ -1,0 +1,410 @@
+
+  <body class="text-gray-800">
+    <!-- Top notification bar -->
+    <div
+      class="bg-green-600 text-white text-xs p-1 flex justify-between items-center"
+    >
+      <div class="flex items-center">
+        <i class="fas fa-globe mx-1"></i>
+        <span
+          >Looks like you are outside of the UK, would you like to donate in:
+        </span>
+        <span class="font-bold mx-1">USD</span>
+      </div>
+      <button class="text-white">×</button>
+    </div>
+  
+    <!-- Main navigation - Modern and Interactive -->
+    <header
+      class="bg-white shadow-lg sticky top-0 z-50 transition-all duration-300"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center">
+            <img
+              src="/api/placeholder/150/50"
+              alt="Muslim Aid Logo"
+              class="h-12 hover:opacity-80 transition-opacity duration-300"
+            />
+          </div>
+  
+          <!-- Mobile menu button -->
+          <button
+            id="mobile-menu-button"
+            class="md:hidden flex items-center focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+  
+          <div class="hidden md:flex space-x-4 items-center">
+            <button
+              class="bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 font-medium flex items-center gap-2"
+            >
+              <i class="fas fa-heart"></i>
+              Donate
+            </button>
+            <div class="relative group">
+              <button
+                class="border border-gray-300 px-4 py-2 rounded-lg flex items-center gap-1 hover:bg-gray-50 transition-colors duration-300"
+              >
+                <i class="fas fa-globe-europe text-green-600"></i>
+                GBP
+                <i class="fas fa-chevron-down text-xs ml-1"></i>
+              </button>
+              <div
+                class="absolute right-0 mt-2 w-40 bg-white shadow-xl rounded-lg overflow-hidden transform scale-0 group-hover:scale-100 origin-top-right transition-transform duration-200 z-50"
+              >
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-sm"
+                  >USD - US Dollar</a
+                >
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-sm"
+                  >EUR - Euro</a
+                >
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-sm"
+                  >CAD - Canadian Dollar</a
+                >
+              </div>
+            </div>
+            <button
+              class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg transition-colors duration-300 flex items-center gap-2"
+            >
+              <i class="fas fa-shopping-cart text-green-600"></i>
+              Cart
+              <span
+                class="inline-flex items-center justify-center w-5 h-5 ml-1 text-xs font-semibold text-white bg-green-600 rounded-full"
+                >0</span
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Secondary navigation with hover effects and indicators -->
+      <nav
+        class="bg-gradient-to-r from-gray-50 to-gray-100 border-t border-gray-300 relative"
+      >
+        <div class="container mx-auto px-4">
+          <ul
+            id="nav-menu"
+            class="hidden md:flex flex-col md:flex-row md:space-x-2 text-sm"
+          >
+            <li class="group relative">
+              <a
+                href="#"
+                class="block p-4 hover:text-green-600 transition-colors duration-300 font-medium"
+              >
+                Donation
+                <span
+                  class="absolute bottom-0 left-0 w-full h-1 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+                ></span>
+              </a>
+              <div
+                class="absolute left-0 mt-1 w-48 bg-white shadow-xl rounded-lg overflow-hidden transform scale-0 group-hover:scale-100 origin-top-left transition-transform duration-200 z-50"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-green-50 text-sm flex items-center gap-2"
+                >
+                  <i class="fas fa-donate text-green-600"></i>
+                  One-time Donation
+                </a>
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-green-50 text-sm flex items-center gap-2"
+                >
+                  <i class="fas fa-sync text-green-600"></i>
+                  Monthly Giving
+                </a>
+              </div>
+            </li>
+            <li class="group relative">
+              <a
+                href="#"
+                class="block p-4 hover:text-green-600 transition-colors duration-300 font-medium"
+              >
+                Appeals
+                <span
+                  class="absolute bottom-0 left-0 w-full h-1 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+                ></span>
+              </a>
+              <div
+                class="absolute left-0 mt-1 w-48 bg-white shadow-xl rounded-lg overflow-hidden transform scale-0 group-hover:scale-100 origin-top-left transition-transform duration-200 z-50"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-green-50 text-sm flex items-center gap-2"
+                >
+                  <i class="fas fa-hands-helping text-green-600"></i>
+                  Emergency Appeals
+                </a>
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-green-50 text-sm flex items-center gap-2"
+                >
+                  <i class="fas fa-hand-holding-heart text-green-600"></i>
+                  Ongoing Appeals
+                </a>
+              </div>
+            </li>
+            <li class="group relative">
+              <a
+                href="#"
+                class="block p-4 hover:text-green-600 transition-colors duration-300 font-medium"
+              >
+                Zakat
+                <span
+                  class="absolute bottom-0 left-0 w-full h-1 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+                ></span>
+              </a>
+              <div
+                class="absolute left-0 mt-1 w-48 bg-white shadow-xl rounded-lg overflow-hidden transform scale-0 group-hover:scale-100 origin-top-left transition-transform duration-200 z-50"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-green-50 text-sm flex items-center gap-2"
+                >
+                  <i class="fas fa-calculator text-green-600"></i>
+                  Zakat Calculator
+                </a>
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-green-50 text-sm flex items-center gap-2"
+                >
+                  <i class="fas fa-book-open text-green-600"></i>
+                  Zakat Guide
+                </a>
+              </div>
+            </li>
+            <li class="group relative">
+              <a
+                href="#"
+                class="block p-4 hover:text-green-600 transition-colors duration-300 font-medium"
+              >
+                Ways to give
+                <span
+                  class="absolute bottom-0 left-0 w-full h-1 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+                ></span>
+              </a>
+            </li>
+            <li class="group relative">
+              <a
+                href="#"
+                class="block p-4 hover:text-green-600 transition-colors duration-300 font-medium"
+              >
+                Our approach
+                <span
+                  class="absolute bottom-0 left-0 w-full h-1 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+                ></span>
+              </a>
+            </li>
+            <li class="group relative">
+              <a
+                href="#"
+                class="block p-4 hover:text-green-600 transition-colors duration-300 font-medium"
+              >
+                About us
+                <span
+                  class="absolute bottom-0 left-0 w-full h-1 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+                ></span>
+              </a>
+            </li>
+          </ul>
+  
+          <!-- Search bar -->
+          <div
+            class="absolute right-4 top-1/2 transform -translate-y-1/2 hidden md:block"
+          >
+            <div class="relative">
+              <input
+                type="text"
+                placeholder="Search..."
+                class="w-36 focus:w-64 pl-3 pr-10 py-2 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-300"
+              />
+              <button
+                class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-green-600 transition-colors duration-300"
+              >
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+  
+      <!-- Action buttons - Enhanced with icons and better styling -->
+      <div
+        class="bg-white py-3 border-t border-gray-300 relative overflow-x-auto"
+      >
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap gap-3 justify-start md:justify-center">
+            <button
+              class="bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white text-sm px-4 py-2 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+            >
+              <i class="fas fa-calculator"></i>
+              Zakat Calculator
+            </button>
+            <button
+              class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white text-sm px-4 py-2 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+            >
+              <i class="fas fa-hand-holding-heart"></i>
+              Donate
+            </button>
+            <button
+              class="bg-gradient-to-r from-blue-700 to-blue-800 hover:from-blue-800 hover:to-blue-900 text-white text-sm px-4 py-2 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+            >
+              <i class="fas fa-graduation-cap"></i>
+              Student Support
+            </button>
+            <button
+              class="bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-700 hover:to-gray-800 text-white text-sm px-4 py-2 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+            >
+              <i class="fas fa-user"></i>
+              Sign in to donate
+            </button>
+          </div>
+        </div>
+  
+        <!-- Mobile menu indicator -->
+        <div class="absolute right-4 bottom-3 md:hidden">
+          <button
+            id="mobile-menu-expand"
+            class="text-green-600 focus:outline-none"
+          >
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+      </div>
+  
+      <!-- Mobile menu (hidden by default) -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden bg-white border-t border-gray-200 shadow-inner"
+      >
+        <div class="px-4 py-3">
+          <input
+            type="text"
+            placeholder="Search..."
+            class="w-full px-4 py-2 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+          />
+        </div>
+        <nav class="px-4 py-2">
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="#"
+                class="block p-2 hover:bg-green-50 rounded-md text-green-600 font-medium"
+                >Donation</a
+              >
+            </li>
+            <li>
+              <a href="#" class="block p-2 hover:bg-green-50 rounded-md"
+                >Appeals</a
+              >
+            </li>
+            <li>
+              <a href="#" class="block p-2 hover:bg-green-50 rounded-md">Zakat</a>
+            </li>
+            <li>
+              <a href="#" class="block p-2 hover:bg-green-50 rounded-md"
+                >Ways to give</a
+              >
+            </li>
+            <li>
+              <a href="#" class="block p-2 hover:bg-green-50 rounded-md"
+                >Our approach</a
+              >
+            </li>
+            <li>
+              <a href="#" class="block p-2 hover:bg-green-50 rounded-md"
+                >About us</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="px-4 py-3 border-t border-gray-200 grid grid-cols-2 gap-2">
+          <button
+            class="bg-red-600 text-white px-3 py-2 rounded-lg text-sm flex items-center justify-center gap-1"
+          >
+            <i class="fas fa-heart"></i>
+            Donate
+          </button>
+          <button
+            class="border border-gray-300 px-3 py-2 rounded-lg text-sm flex items-center justify-center gap-1"
+          >
+            <i class="fas fa-globe-europe text-green-600"></i>
+            GBP
+          </button>
+          <button
+            class="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm flex items-center justify-center gap-1 col-span-2"
+          >
+            <i class="fas fa-shopping-cart text-green-600"></i>
+            Cart (0)
+          </button>
+        </div>
+      </div>
+    </header>
+  
+    <script is:inline>
+      // Simple JavaScript for mobile menu toggle
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const mobileMenuExpand = document.getElementById("mobile-menu-expand");
+        const navMenu = document.getElementById("nav-menu");
+  
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener("click", function () {
+            mobileMenu.classList.toggle("hidden");
+          });
+        }
+  
+        if (mobileMenuExpand && navMenu) {
+          mobileMenuExpand.addEventListener("click", function () {
+            navMenu.classList.toggle("hidden");
+            const icon = mobileMenuExpand.querySelector("i");
+            if (icon) {
+              icon.classList.toggle("fa-chevron-down");
+              icon.classList.toggle("fa-chevron-up");
+            }
+          });
+        }
+  
+        // Sticky header effect on scroll
+        const header = document.querySelector("header");
+        let lastScrollTop = 0;
+  
+        window.addEventListener("scroll", function () {
+          const scrollTop =
+            window.pageYOffset || document.documentElement.scrollTop;
+  
+          if (scrollTop > 100) {
+            header.classList.add("py-2");
+            header.classList.add("shadow-xl");
+          } else {
+            header.classList.remove("py-2");
+            header.classList.remove("shadow-xl");
+          }
+  
+          if (scrollTop > lastScrollTop && scrollTop > 200) {
+            // Scrolling down
+            header.style.transform = "translateY(-100%)";
+          } else {
+            // Scrolling up
+            header.style.transform = "translateY(0)";
+          }
+  
+          lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+      });
+    </script>

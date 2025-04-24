@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+}
+.footer-gradient {
+  background: linear-gradient(90deg, #00a99d 0%, #0370a5 100%);
+}
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+.playfair {
+  font-family: "Playfair Display", serif;
+}
+
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/api/placeholder/800/400") no-repeat center center;
+  background-size: cover;
+}
+
+.quote-section {
+  background-color: #094b34;
+}
+
+.zakat-section {
+  background-color: #8cbe3f;
+}

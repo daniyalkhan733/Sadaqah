@@ -1,0 +1,119 @@
+---
+// BurgundyDonationAppeals.astro
+import { fetchPrograms } from "./api";
+
+// Interface for Program type matching the provided structure
+type Program = {
+  program_id: number;
+  program_name: string;
+  image: string;
+  program_image_flag: string;
+  program_rate_id: number | null;
+  program_rate: number | null;
+  pr_start_date: string | null;
+  pr_end_date: string | null;
+  country_id: number | null;
+  country_name: string | null;
+  any_amount: string;
+  program_is_animal: string;
+  other_amount: string;
+  donation_url: string;
+  direct_debit_url: string;
+  programId: number;
+};
+
+// Props definition
+interface Props {
+  programId?: number[];
+  programname?: string;
+  title?: string;
+  subtitle?: string;
+}
+
+// Default props
+const { 
+  programId = [], 
+  programname = "Donation",
+  title = "Donation Appeals",
+  subtitle = ""
+} = Astro.props;
+
+// Currency symbol
+const pound = "£";
+
+// Fetch program data
+const data = await fetchPrograms();
+const programs: Program[] = data;
+
+// Filter programs based on programId (if provided)
+const filteredPrograms = programId.length === 0 
+  ? programs 
+  : programs.filter(program => programId.includes(program.program_id));
+
+// Take only the first set of programs for display
+const displayPrograms = filteredPrograms.slice(0, 12);
+---
+
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-[#E31E24] mb-3">{title}</h2>
+        {subtitle && <p class="text-gray-700 max-w-2xl mx-auto">{subtitle}</p>}
+      </div>
+      
+      <!-- Programs Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {displayPrograms.map((program) => (
+          <div key={program.program_id} class="rounded-lg overflow-hidden shadow-md bg-white border border-gray-200">
+            {/* Program Image */}
+            <div class="relative h-64 overflow-hidden bg-gray-100">
+              <img
+                src={program.image || "/api/placeholder/600/400"}
+                alt={program.program_name}
+                class="w-full h-full object-cover"
+              />
+              
+              {/* Country Badge */}
+              <div class="absolute bottom-4 left-1/2 -translate-x-1/2">
+                <div class="flex items-center bg-white py-1 px-4 rounded-full shadow">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-[#444444]" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="font-medium text-[#444444]">{program.country_name || "Pakistan"}</span>
+                </div>
+              </div>
+            </div>
+            
+            {/* Content */}
+            <div class="p-6 text-center">
+              <h3 class="text-xl font-bold text-[#E31E24] mb-4">{program.program_name}</h3>
+              
+              <div class="mb-6">
+                <span class="text-3xl font-bold text-gray-800">
+                  {program.program_rate ? `£${program.program_rate}` : "Any amount"}
+                </span>
+              </div>
+              
+              <div class="flex justify-center gap-3">
+                <a
+                  href={program.donation_url}
+                  class="inline-block bg-[#E31E24] hover:bg-[#C4151A] text-white font-medium py-2 px-8 rounded-full transition duration-300"
+                >
+                  Donate Now
+                </a>
+                <a
+                  href={`/details/${program.program_id}`}
+                  class="inline-block bg-[#1D71B8] hover:bg-[#1A5E9C] text-white font-medium py-2 px-8 rounded-full transition duration-300"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+  
+     
+    </div>
+  </section>

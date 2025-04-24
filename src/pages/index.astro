@@ -1,0 +1,613 @@
+---
+import Layout from "../layout/Layout.astro";
+import DonationCard from "../components/DonationCard.astro";
+---
+
+<Layout>
+  <!-- Enhanced Hero section -->
+  <section
+    class="relative overflow-hidden bg-cover bg-center bg-no-repeat min-h-[500px] flex items-center"
+    style="
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.65)
+          ),
+          url('/api/placeholder/1920/1080');
+      "
+  >
+    <!-- Animated particles overlay -->
+    <div class="absolute inset-0 opacity-20">
+      <div id="particles-js"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-2xl">
+        <h1
+          class="playfair text-4xl md:text-6xl font-bold mb-2 text-white animate-fade-in-up"
+        >
+          <span
+            class="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300"
+            >Palestine</span
+          >
+        </h1>
+        <h2
+          class="playfair text-3xl md:text-5xl italic mb-8 text-white animate-fade-in-up animation-delay-300"
+        >
+          <span class="border-b-2 border-red-600 pb-1">Deliver Change</span>
+        </h2>
+        <p
+          class="text-gray-200 mb-8 text-lg animate-fade-in-up animation-delay-600 max-w-xl"
+        >
+          Your donation can make a real difference in the lives of those
+          affected by the ongoing crisis. Help us provide essential aid, medical
+          support, and hope.
+        </p>
+        <div
+          class="flex flex-wrap gap-4 animate-fade-in-up animation-delay-900"
+        >
+          <button
+            class="group bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-4 rounded-lg shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 font-bold flex items-center gap-2"
+          >
+            <i class="fas fa-heart"></i>
+            Donate Today
+            <i
+              class="fas fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"
+            ></i>
+          </button>
+          <button
+            class="bg-transparent hover:bg-white/10 text-white border-2 border-white px-8 py-3.5 rounded-lg transition-all duration-300 font-medium flex items-center gap-2"
+          >
+            <i class="fas fa-info-circle"></i>
+            Learn More
+          </button>
+        </div>
+
+        <!-- Emergency appeal stats -->
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+          <div
+            class="bg-black/20 backdrop-blur-sm p-4 rounded-lg border border-white/20 transform hover:scale-105 transition-transform duration-300"
+          >
+            <div class="text-3xl font-bold text-white mb-1">6.9M+</div>
+            <div class="text-gray-300 text-sm">Meals Provided</div>
+          </div>
+          <div
+            class="bg-black/20 backdrop-blur-sm p-4 rounded-lg border border-white/20 transform hover:scale-105 transition-transform duration-300"
+          >
+            <div class="text-3xl font-bold text-white mb-1">3.2M+</div>
+            <div class="text-gray-300 text-sm">People Reached</div>
+          </div>
+          <div
+            class="bg-black/20 backdrop-blur-sm p-4 rounded-lg border border-white/20 transform hover:scale-105 transition-transform duration-300"
+          >
+            <div class="text-3xl font-bold text-white mb-1">85%</div>
+            <div class="text-gray-300 text-sm">Funds to Direct Aid</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div
+      class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white animate-bounce"
+    >
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+<DonationCard programId={[]}/>
+  <!-- Enhanced Zakat intro section -->
+  <section
+    class="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden"
+  >
+    <!-- Decorative elements -->
+    <div
+      class="absolute top-0 left-0 w-64 h-64 rounded-full bg-green-500/5 -translate-x-1/2 -translate-y-1/2"
+    >
+    </div>
+    <div
+      class="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-green-500/5 translate-x-1/3 translate-y-1/3"
+    >
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="flex flex-col md:flex-row gap-12 items-center">
+        <div class="md:w-1/2 animate-fade-in-left">
+          <div
+            class="inline-block px-4 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium mb-6"
+          >
+            <i class="fas fa-heart mr-2"></i>Zakat Impact
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 relative">
+            Your Zakat <span class="text-green-600">Changes Lives</span>
+            <div class="absolute -bottom-3 left-0 w-20 h-1 bg-green-600"></div>
+          </h2>
+          <p class="text-lg mb-6 text-gray-700 leading-relaxed">
+            Your Zakat is more than just charity—it's a purification of wealth,
+            a fulfillment of duty, and a means of bringing real change to those
+            who need it most.
+          </p>
+
+          <div
+            class="bg-white p-6 rounded-xl shadow-md border-l-4 border-green-600 mb-6 transform hover:scale-105 transition-all duration-300"
+          >
+            <p class="text-gray-600 mb-1">According to recent statistics:</p>
+            <div class="flex items-center gap-4 mb-2">
+              <div class="bg-green-100 p-3 rounded-full text-green-600">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <div>
+                <div class="font-bold text-xl">6.9 million</div>
+                <div class="text-sm text-gray-500">
+                  Meals provided to people in need
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="bg-green-100 p-3 rounded-full text-green-600">
+                <i class="fas fa-hands-helping"></i>
+              </div>
+              <div>
+                <div class="font-bold text-xl">Reaching thousands</div>
+                <div class="text-sm text-gray-500">
+                  Your Zakat is their lifeline
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative pl-6 border-l-2 border-gray-300">
+            <i
+              class="fas fa-quote-left text-green-600 absolute -left-3 bg-gray-50 text-xl"
+            ></i>
+            <p class="italic text-gray-700 mb-2">
+              "Tell them Zakat is to be taken from their rich and given to their
+              poor."
+            </p>
+            <p class="text-sm font-semibold text-gray-600">
+              - The Prophet Muhammad (pbuh)
+            </p>
+          </div>
+
+          <div class="mt-8 flex gap-4">
+            <button
+              class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2 font-medium"
+            >
+              <i class="fas fa-calculator"></i>
+              Calculate My Zakat
+            </button>
+            <button
+              class="border border-green-600 text-green-600 hover:bg-green-50 px-6 py-3 rounded-lg transition-all duration-300 flex items-center gap-2 font-medium"
+            >
+              <i class="fas fa-book-open"></i>
+              Learn More
+            </button>
+          </div>
+        </div>
+
+        <div class="md:w-1/2 animate-fade-in-right">
+          <div class="relative">
+            <!-- Main image -->
+            <img
+              src="/public/assets/img/about/about-2-2.png"
+              alt="People receiving aid"
+              class="w-full h-auto rounded-2xl shadow-xl object-cover transform hover:scale-105 transition-all duration-500 ease-in-out"
+            />
+
+            <!-- Floating stats cards -->
+            <div
+              class="absolute -top-6 -right-6 bg-white p-4 rounded-xl shadow-lg max-w-[200px] transform rotate-3 hover:rotate-0 transition-all duration-300"
+            >
+              <div class="flex items-center gap-3">
+                <div class="bg-green-100 p-2 rounded-full text-green-600">
+                  <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <div>
+                  <div class="font-bold text-lg">2.5%</div>
+                  <div class="text-xs text-gray-500">
+                    Of wealth gives immeasurable reward
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg max-w-[200px] transform -rotate-2 hover:rotate-0 transition-all duration-300"
+            >
+              <div class="flex items-center gap-3">
+                <div class="bg-green-100 p-2 rounded-full text-green-600">
+                  <i class="fas fa-globe-africa"></i>
+                </div>
+                <div>
+                  <div class="font-bold text-lg">20+ countries</div>
+                  <div class="text-xs text-gray-500">
+                    Where your Zakat makes a difference
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Enhanced Quote section -->
+  <section class="quote-section relative py-16 text-white overflow-hidden">
+    <!-- Background pattern overlay -->
+    <div class="absolute inset-0 opacity-10">
+      <div
+        class="absolute inset-0"
+        style="
+            background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+          "
+      >
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="md:w-2/3">
+          <div class="flex items-center gap-2 mb-6">
+            <div class="w-12 h-1 bg-green-400"></div>
+            <h3 class="text-xl font-medium">
+              The Prophet Muhammad (pbuh) said:
+            </h3>
+          </div>
+
+          <div class="relative">
+            <!-- Decorative quote marks -->
+            <div
+              class="absolute -top-10 -left-4 text-green-400/30 text-7xl font-serif"
+            >
+              "
+            </div>
+
+            <blockquote
+              class="text-2xl md:text-3xl italic mb-6 leading-relaxed relative z-10 pl-6 border-l-4 border-green-400"
+            >
+              "Whoever feeds a person breaking his fast will earn the same
+              reward as him, without anything being lessened from the reward of
+              the fasting person."
+            </blockquote>
+
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-1 bg-green-400"></div>
+              <p class="italic font-medium">- Tirmidhi</p>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <button
+              class="group bg-transparent hover:bg-white border-2 border-white text-white hover:text-green-800 px-6 py-3 rounded-lg transition-all duration-300 font-medium flex items-center gap-2"
+            >
+              Feed the Hungry
+              <i
+                class="fas fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"
+              ></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="md:w-1/3">
+          <div class="relative">
+            <div
+              class="absolute -top-4 -left-4 w-full h-full border-2 border-green-400 rounded-lg transform rotate-3"
+            >
+            </div>
+            <img
+              src="/public/assets/img/about/about-2-2.png"
+              alt="Food illustration"
+              class="relative z-10 rounded-lg shadow-xl object-cover transform hover:scale-105 transition-all duration-500 ease-in-out"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Zakat tools section -->
+  <section
+    class="zakat-section py-16 bg-gradient-to-b from-green-50 to-green-100 relative overflow-hidden"
+  >
+    <!-- Decorative elements -->
+    <div
+      class="absolute top-0 left-0 w-64 h-64 rounded-full bg-green-200/20 -translate-x-1/2 -translate-y-1/2"
+    >
+    </div>
+    <div
+      class="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-green-200/20 translate-x-1/3 translate-y-1/3"
+    >
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <h2 class="text-3xl font-bold text-center mb-12 text-green-800">
+        Your Zakat Changes Lives
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <!-- Zakat Guide -->
+        <div
+          class="bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300"
+        >
+          <img
+            src="/api/placeholder/400/250"
+            alt="Zakat Guide"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="font-bold text-xl mb-4 text-green-800">Zakat Guide</h3>
+            <p class="text-sm text-gray-600 mb-6">
+              Learn more about Zakat and how to calculate it.
+            </p>
+            <button
+              class="bg-green-600 text-white px-6 py-2 rounded-lg w-full hover:bg-green-700 transition-all duration-300"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+
+        <!-- Zakat Calculator -->
+        <div
+          class="bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300"
+        >
+          <img
+            src="/api/placeholder/400/250"
+            alt="Zakat Calculator"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="font-bold text-xl mb-4 text-green-800">
+              Zakat Calculator
+            </h3>
+            <p class="text-sm text-gray-600 mb-6">
+              Use our Zakat calculator to work out how much you owe.
+            </p>
+            <button
+              class="bg-green-600 text-white px-6 py-2 rounded-lg w-full hover:bg-green-700 transition-all duration-300"
+            >
+              Calculate Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Zakat Appeal -->
+        <div
+          class="bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300"
+        >
+          <img
+            src="/api/placeholder/400/250"
+            alt="Zakat Appeal"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="font-bold text-xl mb-4 text-green-800">Zakat Appeal</h3>
+            <p class="text-sm text-gray-600 mb-6">
+              Give your Zakat to help those most in need.
+            </p>
+            <button
+              class="bg-green-600 text-white px-6 py-2 rounded-lg w-full hover:bg-green-700 transition-all duration-300"
+            >
+              Donate Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Statistics section -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="bg-white rounded-lg p-6 shadow-lg transform hover:scale-105 transition-transform duration-300"
+        >
+          <div
+            class="bg-red-600 text-white px-3 py-1 text-sm rounded-full inline-block mb-4"
+          >
+            £2.5 PO
+          </div>
+          <h3 class="font-bold text-lg mb-2 text-green-800">
+            Zakat Can Feed a Family
+          </h3>
+          <p class="text-sm text-gray-600">
+            Your Zakat can feed a family of four for two weeks, providing
+            life-saving food.
+          </p>
+        </div>
+
+        <div
+          class="bg-white rounded-lg p-6 shadow-lg transform hover:scale-105 transition-transform duration-300"
+        >
+          <div
+            class="bg-pink-600 text-white px-3 py-1 text-sm rounded-full inline-block mb-4"
+          >
+            2.5%
+          </div>
+          <h3 class="font-bold text-lg mb-2 text-green-800">
+            Distributing Your Wealth
+          </h3>
+          <p class="text-sm text-gray-600">
+            Zakat is 2.5% of wealth owned over 1 year for those who meet the
+            nisab threshold.
+          </p>
+        </div>
+
+        <div
+          class="bg-white rounded-lg p-6 shadow-lg transform hover:scale-105 transition-transform duration-300"
+        >
+          <div
+            class="bg-red-600 text-white px-3 py-1 text-sm rounded-full inline-block mb-4"
+          >
+            6.9 MILL
+          </div>
+          <h3 class="font-bold text-lg mb-2 text-green-800">
+            People Who Received Zakat
+          </h3>
+          <p class="text-sm text-gray-600">
+            Zakat has provided over 6.9 million meals to those in need over the
+            past 5 years.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container mx-auto px-4">
+    <!-- Blog Section Header -->
+    <div class="text-center my-12">
+      <div class="inline-flex items-center justify-center mb-4">
+        <span class="text-magenta font-medium text-sm">Blog & News</span>
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="ml-2"
+        >
+          <path
+            d="M8 0C3.6 0 0 3.6 0 8C0 12.4 3.6 16 8 16C12.4 16 16 12.4 16 8C16 3.6 12.4 0 8 0ZM9 12H7V7H9V12ZM8 5.5C7.2 5.5 6.5 4.8 6.5 4C6.5 3.2 7.2 2.5 8 2.5C8.8 2.5 9.5 3.2 9.5 4C9.5 4.8 8.8 5.5 8 5.5Z"
+            fill="#E52D6F"></path>
+        </svg>
+      </div>
+      <h2 class="text-3xl font-bold mb-1">Find Out Our Insights</h2>
+      <h2 class="text-3xl font-bold">&amp; News</h2>
+    </div>
+
+    <!-- Blog Cards Container -->
+    <div class="flex flex-wrap -mx-4">
+      <!-- Blog Card 1 -->
+      <div class="w-full md:w-1/3 px-4 mb-8">
+        <div class="rounded-lg overflow-hidden border border-gray-200">
+          <div class="relative">
+            <div class="h-48 bg-lavender"></div>
+            <div class="absolute bottom-4 left-4">
+              <span
+                class="bg-white px-4 py-1 rounded-md text-sm font-medium text-gray-700"
+                >Charity</span
+              >
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex flex-wrap items-center text-sm mb-3">
+              <span
+                class="bg-teal-custom text-white px-3 py-1 rounded-full text-xs"
+                >02 NOV</span
+              >
+              <div class="flex items-center ml-4">
+                <i class="fas fa-user-circle text-magenta mr-1"></i>
+                <span class="text-gray-700">Admin</span>
+              </div>
+              <div class="flex items-center ml-4">
+                <i class="far fa-comment text-magenta mr-1"></i>
+                <span class="text-gray-700">Comment (05)</span>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-3">
+              The Power Of Convening Leading Nonprofits
+            </h3>
+            <p class="text-gray-600 mb-4">
+              A smile is often the first thing we notice when we meet someone
+              new, but for thousands of kids
+            </p>
+            <a href="#" class="block w-full">
+              <div
+                class="bg-teal-custom hover:bg-teal-dark text-white font-medium py-3 px-6 rounded-md flex items-center justify-center transition duration-300"
+              >
+                Learn More <i class="fas fa-arrow-right ml-2"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Card 2 -->
+      <div class="w-full md:w-1/3 px-4 mb-8">
+        <div class="rounded-lg overflow-hidden border border-gray-200">
+          <div class="relative">
+            <div class="h-48 bg-lavender"></div>
+            <div class="absolute bottom-4 left-4">
+              <span
+                class="bg-white px-4 py-1 rounded-md text-sm font-medium text-gray-700"
+                >Charity</span
+              >
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex flex-wrap items-center text-sm mb-3">
+              <span
+                class="bg-teal-custom text-white px-3 py-1 rounded-full text-xs"
+                >02 NOV</span
+              >
+              <div class="flex items-center ml-4">
+                <i class="fas fa-user-circle text-magenta mr-1"></i>
+                <span class="text-gray-700">Admin</span>
+              </div>
+              <div class="flex items-center ml-4">
+                <i class="far fa-comment text-magenta mr-1"></i>
+                <span class="text-gray-700">Comment (05)</span>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-3">
+              The Power Of Convening Leading Nonprofits
+            </h3>
+            <p class="text-gray-600 mb-4">
+              A smile is often the first thing we notice when we meet someone
+              new, but for thousands of kids
+            </p>
+            <a href="#" class="block w-full">
+              <div
+                class="bg-teal-custom hover:bg-teal-dark text-white font-medium py-3 px-6 rounded-md flex items-center justify-center transition duration-300"
+              >
+                Learn More <i class="fas fa-arrow-right ml-2"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Card 3 -->
+      <div class="w-full md:w-1/3 px-4 mb-8">
+        <div class="rounded-lg overflow-hidden border border-gray-200">
+          <div class="relative">
+            <div class="h-48 bg-lavender"></div>
+            <div class="absolute bottom-4 left-4">
+              <span
+                class="bg-white px-4 py-1 rounded-md text-sm font-medium text-gray-700"
+                >Charity</span
+              >
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex flex-wrap items-center text-sm mb-3">
+              <span
+                class="bg-teal-custom text-white px-3 py-1 rounded-full text-xs"
+                >02 NOV</span
+              >
+              <div class="flex items-center ml-4">
+                <i class="fas fa-user-circle text-magenta mr-1"></i>
+                <span class="text-gray-700">Admin</span>
+              </div>
+              <div class="flex items-center ml-4">
+                <i class="far fa-comment text-magenta mr-1"></i>
+                <span class="text-gray-700">Comment (05)</span>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-3">
+              The Power Of Convening Leading Nonprofits
+            </h3>
+            <p class="text-gray-600 mb-4">
+              A smile is often the first thing we notice when we meet someone
+              new, but for thousands of kids
+            </p>
+            <a href="#" class="block w-full">
+              <div
+                class="bg-teal-custom hover:bg-teal-dark text-white font-medium py-3 px-6 rounded-md flex items-center justify-center transition duration-300"
+              >
+                Learn More <i class="fas fa-arrow-right ml-2"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</Layout>

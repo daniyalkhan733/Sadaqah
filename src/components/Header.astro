@@ -89,7 +89,156 @@
       </div>
     </div>
 
+    <!-- Secondary navigation with hover effects and indicators -->
+    <nav
+      class="bg-white border-t border-customgray border-opacity-30 relative md:block hidden"
+    >
+      <div class="container mx-auto px-4">
+        <ul
+          id="nav-menu"
+          class="hidden md:flex flex-col md:flex-row md:space-x-2 text-sm"
+        >
+          <li class="group relative">
+            <a
+              href="#"
+              class="block p-4 hover:text-hotpink transition-colors duration-300 font-medium"
+            >
+              Donation
+              <span
+                class="absolute bottom-0 left-0 w-full h-1 bg-hotpink transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+              ></span>
+            </a>
+            <div
+              class="absolute left-0 mt-1 w-48 bg-white shadow-xl rounded-lg overflow-hidden transform scale-0 group-hover:scale-100 origin-top-left transition-transform duration-200 z-50"
+            >
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-hotpink hover:bg-opacity-10 text-sm flex items-center gap-2"
+              >
+                <i class="fas fa-donate text-hotpink"></i>
+                One-time Donation
+              </a>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-hotpink hover:bg-opacity-10 text-sm flex items-center gap-2"
+              >
+                <i class="fas fa-sync text-hotpink"></i>
+                Monthly Giving
+              </a>
+            </div>
+          </li>
+          <li class="group relative">
+            <a
+              href="#"
+              class="block p-4 hover:text-teal transition-colors duration-300 font-medium"
+            >
+              Appeals
+              <span
+                class="absolute bottom-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+              ></span>
+            </a>
+            <div
+              class="absolute left-0 mt-1 w-48 bg-white shadow-xl rounded-lg overflow-hidden transform scale-0 group-hover:scale-100 origin-top-left transition-transform duration-200 z-50"
+            >
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-teal hover:bg-opacity-10 text-sm flex items-center gap-2"
+              >
+                <i class="fas fa-hands-helping text-teal"></i>
+                Emergency Appeals
+              </a>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-teal hover:bg-opacity-10 text-sm flex items-center gap-2"
+              >
+                <i class="fas fa-hand-holding-heart text-teal"></i>
+                Ongoing Appeals
+              </a>
+            </div>
+          </li>
+          <li class="group relative">
+            <a
+              href="#"
+              class="block p-4 hover:text-customblue transition-colors duration-300 font-medium"
+            >
+              Zakat
+              <span
+                class="absolute bottom-0 left-0 w-full h-1 bg-customblue transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+              ></span>
+            </a>
+            <div
+              class="absolute left-0 mt-1 w-48 bg-white shadow-xl rounded-lg overflow-hidden transform scale-0 group-hover:scale-100 origin-top-left transition-transform duration-200 z-50"
+            >
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-customblue hover:bg-opacity-10 text-sm flex items-center gap-2"
+              >
+                <i class="fas fa-calculator text-customblue"></i>
+                Zakat Calculator
+              </a>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-customblue hover:bg-opacity-10 text-sm flex items-center gap-2"
+              >
+                <i class="fas fa-book-open text-customblue"></i>
+                Zakat Guide
+              </a>
+            </div>
+          </li>
+          <li class="group relative">
+            <a
+              href="#"
+              class="block p-4 hover:text-hotpink transition-colors duration-300 font-medium"
+            >
+              Ways to give
+              <span
+                class="absolute bottom-0 left-0 w-full h-1 bg-hotpink transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+              ></span>
+            </a>
+          </li>
+          <li class="group relative">
+            <a
+              href="#"
+              class="block p-4 hover:text-teal transition-colors duration-300 font-medium"
+            >
+              Our approach
+              <span
+                class="absolute bottom-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+              ></span>
+            </a>
+          </li>
+          <li class="group relative">
+            <a
+              href="#"
+              class="block p-4 hover:text-customblue transition-colors duration-300 font-medium"
+            >
+              About us
+              <span
+                class="absolute bottom-0 left-0 w-full h-1 bg-customblue transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+              ></span>
+            </a>
+          </li>
+        </ul>
 
+        <!-- Search bar -->
+        <div
+          class="absolute right-4 top-1/2 transform -translate-y-1/2 hidden md:block"
+        >
+          <div class="relative">
+            <input
+              type="text"
+              placeholder="Search..."
+              class="w-36 focus:w-64 pl-3 pr-10 py-2 border border-customgray border-opacity-30 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-teal transition-all duration-300"
+            />
+            <button
+              class="absolute right-3 top-1/2 transform -translate-y-1/2 text-customgray hover:text-teal transition-colors duration-300"
+            >
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
 
     <!-- Action buttons - Using solid colors instead of gradients -->
     <div

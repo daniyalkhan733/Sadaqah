@@ -1,226 +1,139 @@
 ---
 import Layout from "../layout/Layout.astro";
 import DonationCard from "../components/DonationCard.astro";
+import HomepageSlider from "../components/HomepageSlider.astro";
 ---
 
 <Layout>
-  <!-- Enhanced Hero section -->
+  <section>
+<HomepageSlider/>
+</section>
+  <DonationCard programId={[]} />
   <section
-    class="relative overflow-hidden bg-cover bg-center bg-no-repeat min-h-[500px] flex items-center"
-    style="
-        background-image: linear-gradient(
-            rgba(0, 0, 0, 0.65),
-            rgba(0, 0, 0, 0.65)
-          ),
-          url('/assets/images/home.jpg');
-      "
+  class="py-16 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden min-h-screen flex items-center"
+>
+  <!-- Decorative elements with brand colors -->
+  <div
+    class="absolute top-0 left-0 w-64 h-64 rounded-full bg-teal/10 -translate-x-1/2 -translate-y-1/2"
   >
-    <!-- Animated particles overlay -->
-    <div class="absolute inset-0 opacity-20">
-      <div id="particles-js"></div>
-    </div>
+  </div>
+  <div
+    class="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-hotpink/10 translate-x-1/3 translate-y-1/3"
+  >
+  </div>
 
-    <div class="container mx-auto px-4 relative z-10">
-      <div class="max-w-2xl">
-        <h1
-          class="playfair text-4xl md:text-6xl font-bold mb-2 text-white animate-fade-in-up"
-        >
-          <span
-            class="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300"
-            >Palestine</span
-          >
-        </h1>
-        <h2
-          class="playfair text-3xl md:text-5xl italic mb-8 text-white animate-fade-in-up animation-delay-300"
-        >
-          <span class="border-b-2 border-red-600 pb-1">Deliver Change</span>
-        </h2>
-        <p
-          class="text-gray-200 mb-8 text-lg animate-fade-in-up animation-delay-600 max-w-xl"
-        >
-          Your donation can make a real difference in the lives of those
-          affected by the ongoing crisis. Help us provide essential aid, medical
-          support, and hope.
-        </p>
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="flex flex-col md:flex-row gap-8 lg:gap-12 items-center">
+      <div class="md:w-1/2 animate-fade-in-left">
         <div
-          class="flex flex-wrap gap-4 animate-fade-in-up animation-delay-900"
+          class="inline-block px-4 py-1 bg-customblue/10 text-customblue rounded-full text-sm font-medium mb-6"
         >
+          <i class="fas fa-heart mr-2"></i>Zakat Impact
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 relative">
+          Your Zakat <span class="text-hotpink">Changes Lives</span>
+          <div class="absolute -bottom-3 left-0 w-20 h-1 bg-hotpink"></div>
+        </h2>
+        <p class="text-lg mb-6 text-customgray leading-relaxed">
+          Your Zakat is more than just charity—it's a purification of wealth,
+          a fulfillment of duty, and a means of bringing real change to those
+          who need it most.
+        </p>
+
+        <div
+          class="bg-white p-5 rounded-xl shadow-md border-l-4 border-teal mb-6 transform hover:scale-102 transition-all duration-300"
+        >
+          <p class="text-customgray mb-2">According to recent statistics:</p>
+          <div class="flex items-center gap-4 mb-3">
+            <div class="bg-teal/10 p-3 rounded-full text-teal">
+              <i class="fas fa-utensils"></i>
+            </div>
+            <div>
+              <div class="font-bold text-xl">6.9 million</div>
+              <div class="text-sm text-customgray/80">
+                Meals provided to people in need
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="bg-teal/10 p-3 rounded-full text-teal">
+              <i class="fas fa-hands-helping"></i>
+            </div>
+            <div>
+              <div class="font-bold text-xl">Reaching thousands</div>
+              <div class="text-sm text-customgray/80">
+                Your Zakat is their lifeline
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative pl-6 border-l-2 border-gray-300 mb-6">
+          <i
+            class="fas fa-quote-left text-customblue absolute -left-3 bg-gray-50 text-xl"
+          ></i>
+          <p class="italic text-customgray mb-2">
+            "Tell them Zakat is to be taken from their rich and given to their
+            poor."
+          </p>
+          <p class="text-sm font-semibold text-customgray">
+            - The Prophet Muhammad (pbuh)
+          </p>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-4">
           <button
-            class="group bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-4 rounded-lg shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 font-bold flex items-center gap-2"
+            class="bg-hotpink hover:bg-opacity-90 text-white px-6 py-3 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2 font-medium"
           >
-            <i class="fas fa-heart"></i>
-            Donate Today
-            <i
-              class="fas fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"
-            ></i>
+            <i class="fas fa-calculator"></i>
+            Calculate My Zakat
           </button>
           <button
-            class="bg-transparent hover:bg-white/10 text-white border-2 border-white px-8 py-3.5 rounded-lg transition-all duration-300 font-medium flex items-center gap-2"
+            class="border border-teal text-teal hover:bg-teal/5 px-6 py-3 rounded-lg transition-all duration-300 flex items-center gap-2 font-medium"
           >
-            <i class="fas fa-info-circle"></i>
+            <i class="fas fa-book-open"></i>
             Learn More
           </button>
         </div>
-
-        <!-- Emergency appeal stats -->
-        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-          <div
-            class="bg-black/20 backdrop-blur-sm p-4 rounded-lg border border-white/20 transform hover:scale-105 transition-transform duration-300"
-          >
-            <div class="text-3xl font-bold text-white mb-1">6.9M+</div>
-            <div class="text-gray-300 text-sm">Meals Provided</div>
-          </div>
-          <div
-            class="bg-black/20 backdrop-blur-sm p-4 rounded-lg border border-white/20 transform hover:scale-105 transition-transform duration-300"
-          >
-            <div class="text-3xl font-bold text-white mb-1">3.2M+</div>
-            <div class="text-gray-300 text-sm">People Reached</div>
-          </div>
-          <div
-            class="bg-black/20 backdrop-blur-sm p-4 rounded-lg border border-white/20 transform hover:scale-105 transition-transform duration-300"
-          >
-            <div class="text-3xl font-bold text-white mb-1">85%</div>
-            <div class="text-gray-300 text-sm">Funds to Direct Aid</div>
-          </div>
-        </div>
       </div>
-    </div>
 
-    <!-- Scroll indicator -->
-    <div
-      class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white animate-bounce"
-    >
-      <i class="fas fa-chevron-down"></i>
-    </div>
-  </section>
-  <DonationCard programId={[]} />
-  <!-- Enhanced Zakat intro section -->
-  <section
-    class="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden"
-  >
-    <!-- Decorative elements -->
-    <div
-      class="absolute top-0 left-0 w-64 h-64 rounded-full bg-green-500/5 -translate-x-1/2 -translate-y-1/2"
-    >
-    </div>
-    <div
-      class="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-green-500/5 translate-x-1/3 translate-y-1/3"
-    >
-    </div>
+      <div class="md:w-1/2 animate-fade-in-right">
+        <div class="relative max-w-md mx-auto md:max-w-none">
+          <!-- Main image -->
+          <img
+            src="/assets/images/home.jpg"
+            alt="People receiving aid"
+            class="w-full h-auto rounded-2xl shadow-xl object-cover max-h-[450px] transform hover:scale-102 transition-all duration-500 ease-in-out"
+          />
 
-    <div class="container mx-auto px-4 relative z-10">
-      <div class="flex flex-col md:flex-row gap-12 items-center">
-        <div class="md:w-1/2 animate-fade-in-left">
+          <!-- Floating stats cards -->
           <div
-            class="inline-block px-4 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium mb-6"
+            class="absolute -top-6 -right-6 bg-white p-4 rounded-xl shadow-lg max-w-[180px] transform rotate-3 hover:rotate-0 transition-all duration-300"
           >
-            <i class="fas fa-heart mr-2"></i>Zakat Impact
-          </div>
-          <h2 class="text-3xl md:text-4xl font-bold mb-6 relative">
-            Your Zakat <span class="text-green-600">Changes Lives</span>
-            <div class="absolute -bottom-3 left-0 w-20 h-1 bg-green-600"></div>
-          </h2>
-          <p class="text-lg mb-6 text-gray-700 leading-relaxed">
-            Your Zakat is more than just charity—it's a purification of wealth,
-            a fulfillment of duty, and a means of bringing real change to those
-            who need it most.
-          </p>
-
-          <div
-            class="bg-white p-6 rounded-xl shadow-md border-l-4 border-green-600 mb-6 transform hover:scale-105 transition-all duration-300"
-          >
-            <p class="text-gray-600 mb-1">According to recent statistics:</p>
-            <div class="flex items-center gap-4 mb-2">
-              <div class="bg-green-100 p-3 rounded-full text-green-600">
-                <i class="fas fa-utensils"></i>
+            <div class="flex items-center gap-3">
+              <div class="bg-hotpink/10 p-2 rounded-full text-hotpink">
+                <i class="fas fa-hand-holding-heart"></i>
               </div>
               <div>
-                <div class="font-bold text-xl">6.9 million</div>
-                <div class="text-sm text-gray-500">
-                  Meals provided to people in need
+                <div class="font-bold text-lg">2.5%</div>
+                <div class="text-xs text-customgray/80">
+                  Of wealth gives immeasurable reward
                 </div>
               </div>
             </div>
-            <div class="flex items-center gap-4">
-              <div class="bg-green-100 p-3 rounded-full text-green-600">
-                <i class="fas fa-hands-helping"></i>
+          </div>
+
+          <div
+            class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg max-w-[180px] transform -rotate-2 hover:rotate-0 transition-all duration-300"
+          >
+            <div class="flex items-center gap-3">
+              <div class="bg-customblue/10 p-2 rounded-full text-customblue">
+                <i class="fas fa-globe-africa"></i>
               </div>
               <div>
-                <div class="font-bold text-xl">Reaching thousands</div>
-                <div class="text-sm text-gray-500">
-                  Your Zakat is their lifeline
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="relative pl-6 border-l-2 border-gray-300">
-            <i
-              class="fas fa-quote-left text-green-600 absolute -left-3 bg-gray-50 text-xl"
-            ></i>
-            <p class="italic text-gray-700 mb-2">
-              "Tell them Zakat is to be taken from their rich and given to their
-              poor."
-            </p>
-            <p class="text-sm font-semibold text-gray-600">
-              - The Prophet Muhammad (pbuh)
-            </p>
-          </div>
-
-          <div class="mt-8 flex gap-4">
-            <button
-              class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2 font-medium"
-            >
-              <i class="fas fa-calculator"></i>
-              Calculate My Zakat
-            </button>
-            <button
-              class="border border-green-600 text-green-600 hover:bg-green-50 px-6 py-3 rounded-lg transition-all duration-300 flex items-center gap-2 font-medium"
-            >
-              <i class="fas fa-book-open"></i>
-              Learn More
-            </button>
-          </div>
-        </div>
-
-        <div class="md:w-1/2 animate-fade-in-right">
-          <div class="relative">
-            <!-- Main image -->
-            <img
-              src="/assets/images/home.jpg"
-              alt="People receiving aid"
-              class="w-full h-auto rounded-2xl shadow-xl object-cover transform hover:scale-105 transition-all duration-500 ease-in-out"
-            />
-
-            <!-- Floating stats cards -->
-            <div
-              class="absolute -top-6 -right-6 bg-white p-4 rounded-xl shadow-lg max-w-[200px] transform rotate-3 hover:rotate-0 transition-all duration-300"
-            >
-              <div class="flex items-center gap-3">
-                <div class="bg-green-100 p-2 rounded-full text-green-600">
-                  <i class="fas fa-hand-holding-heart"></i>
-                </div>
-                <div>
-                  <div class="font-bold text-lg">2.5%</div>
-                  <div class="text-xs text-gray-500">
-                    Of wealth gives immeasurable reward
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg max-w-[200px] transform -rotate-2 hover:rotate-0 transition-all duration-300"
-            >
-              <div class="flex items-center gap-3">
-                <div class="bg-green-100 p-2 rounded-full text-green-600">
-                  <i class="fas fa-globe-africa"></i>
-                </div>
-                <div>
-                  <div class="font-bold text-lg">20+ countries</div>
-                  <div class="text-xs text-gray-500">
-                    Where your Zakat makes a difference
-                  </div>
+                <div class="font-bold text-lg">20+ countries</div>
+                <div class="text-xs text-customgray/80">
+                  Where your Zakat makes a difference
                 </div>
               </div>
             </div>
@@ -228,7 +141,62 @@ import DonationCard from "../components/DonationCard.astro";
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<style>
+  /* Custom animations */
+  .animate-fade-in-left {
+    animation: fadeInLeft 1s ease-out forwards;
+  }
+  
+  .animate-fade-in-right {
+    animation: fadeInRight 1s ease-out forwards;
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Subtle scale hover effect */
+  .hover\:scale-102:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .min-h-screen {
+      min-height: auto;
+    }
+    
+    .container {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+    
+    .absolute {
+      display: none;
+    }
+  }
+</style>
   <!-- Enhanced Quote section -->
   <section class="quote-section relative py-16 text-white overflow-hidden">
     <!-- Background pattern overlay -->
@@ -305,311 +273,359 @@ import DonationCard from "../components/DonationCard.astro";
 
   <!-- Zakat tools section -->
   <section
-    class="zakat-section py-16 bg-gradient-to-b from-green-50 to-green-100 relative overflow-hidden"
+  class="zakat-section py-16 bg-gradient-to-b from-hotpink/5 to-teal/10 relative overflow-hidden"
+>
+  <!-- Decorative elements with brand colors -->
+  <div
+    class="absolute top-0 left-0 w-64 h-64 rounded-full bg-hotpink/10 -translate-x-1/2 -translate-y-1/2"
   >
-    <!-- Decorative elements -->
-    <div
-      class="absolute top-0 left-0 w-64 h-64 rounded-full bg-green-200/20 -translate-x-1/2 -translate-y-1/2"
-    >
-    </div>
-    <div
-      class="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-green-200/20 translate-x-1/3 translate-y-1/3"
-    >
-    </div>
+  </div>
+  <div
+    class="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-teal/10 translate-x-1/3 translate-y-1/3"
+  >
+  </div>
 
-    <div class="container mx-auto px-4 relative z-10">
-      <h2 class="text-3xl font-bold text-center mb-12 text-green-800">
-        Your Zakat Changes Lives
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="text-center mb-12">
+      <span class="inline-block px-4 py-1 bg-hotpink/10 text-hotpink rounded-full text-sm font-medium mb-3">
+        <i class="fas fa-star-and-crescent mr-2"></i>Zakat Services
+      </span>
+      <h2 class="text-3xl md:text-4xl font-bold text-customgray">
+        Your Zakat <span class="text-hotpink">Changes Lives</span>
       </h2>
+      <div class="h-1 w-24 bg-teal mx-auto mt-4"></div>
+    </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-        <!-- Zakat Guide -->
-        <div
-          class="bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300"
-        >
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12">
+      <!-- Zakat Guide -->
+      <div
+        class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+      >
+        <div class="h-48 overflow-hidden relative">
           <img
             src="/assets/images/home.jpg"
             alt="Zakat Guide"
-            class="w-full h-48 object-cover"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
-          <div class="p-6">
-            <h3 class="font-bold text-xl mb-4 text-green-800">Zakat Guide</h3>
-            <p class="text-sm text-gray-600 mb-6">
-              Learn more about Zakat and how to calculate it.
-            </p>
-            <button
-              class="bg-green-600 text-white px-6 py-2 rounded-lg w-full hover:bg-green-700 transition-all duration-300"
-            >
-              Learn More
-            </button>
-          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
+        <div class="p-6 relative">
+          <!-- Accent bar at top -->
+          <div class="absolute top-0 left-0 w-full h-1 bg-hotpink transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+          
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 rounded-full bg-hotpink/10 flex items-center justify-center text-hotpink mr-3">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <h3 class="font-bold text-xl text-customgray">Zakat Guide</h3>
+          </div>
+          
+          <p class="text-customgray/80 mb-6">
+            Learn more about Zakat, its importance, and how to calculate it correctly.
+          </p>
+          <button
+            class="bg-hotpink text-white px-6 py-3 rounded-full w-full hover:bg-opacity-90 transition-all duration-300 flex items-center justify-center group-hover:shadow-md"
+          >
+            <span>Learn More</span>
+            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+          </button>
+        </div>
+      </div>
 
-        <!-- Zakat Calculator -->
-        <div
-          class="bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300"
-        >
+      <!-- Zakat Calculator -->
+      <div
+        class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+      >
+        <div class="h-48 overflow-hidden relative">
           <img
             src="/assets/images/home.jpg"
             alt="Zakat Calculator"
-            class="w-full h-48 object-cover"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
-          <div class="p-6">
-            <h3 class="font-bold text-xl mb-4 text-green-800">
-              Zakat Calculator
-            </h3>
-            <p class="text-sm text-gray-600 mb-6">
-              Use our Zakat calculator to work out how much you owe.
-            </p>
-            <button
-              class="bg-green-600 text-white px-6 py-2 rounded-lg w-full hover:bg-green-700 transition-all duration-300"
-            >
-              Calculate Now
-            </button>
-          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
+        <div class="p-6 relative">
+          <!-- Accent bar at top -->
+          <div class="absolute top-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+          
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 rounded-full bg-teal/10 flex items-center justify-center text-teal mr-3">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <h3 class="font-bold text-xl text-customgray">Zakat Calculator</h3>
+          </div>
+          
+          <p class="text-customgray/80 mb-6">
+            Use our easy Zakat calculator to work out exactly how much you owe.
+          </p>
+          <button
+            class="bg-teal text-white px-6 py-3 rounded-full w-full hover:bg-opacity-90 transition-all duration-300 flex items-center justify-center group-hover:shadow-md"
+          >
+            <span>Calculate Now</span>
+            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+          </button>
+        </div>
+      </div>
 
-        <!-- Zakat Appeal -->
-        <div
-          class="bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300"
-        >
+      <!-- Zakat Appeal -->
+      <div
+        class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+      >
+        <div class="h-48 overflow-hidden relative">
           <img
             src="/assets/images/home.jpg"
             alt="Zakat Appeal"
-            class="w-full h-48 object-cover"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
-          <div class="p-6">
-            <h3 class="font-bold text-xl mb-4 text-green-800">Zakat Appeal</h3>
-            <p class="text-sm text-gray-600 mb-6">
-              Give your Zakat to help those most in need.
-            </p>
-            <button
-              class="bg-green-600 text-white px-6 py-2 rounded-lg w-full hover:bg-green-700 transition-all duration-300"
-            >
-              Donate Now
-            </button>
-          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
-      </div>
-
-      <!-- Statistics section -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div
-          class="bg-white rounded-lg p-6 shadow-lg transform hover:scale-105 transition-transform duration-300"
-        >
-          <div
-            class="bg-red-600 text-white px-3 py-1 text-sm rounded-full inline-block mb-4"
-          >
-            £2.5 PO
+        <div class="p-6 relative">
+          <!-- Accent bar at top -->
+          <div class="absolute top-0 left-0 w-full h-1 bg-customblue transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+          
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 rounded-full bg-customblue/10 flex items-center justify-center text-customblue mr-3">
+              <i class="fas fa-hand-holding-heart"></i>
+            </div>
+            <h3 class="font-bold text-xl text-customgray">Zakat Appeal</h3>
           </div>
-          <h3 class="font-bold text-lg mb-2 text-green-800">
-            Zakat Can Feed a Family
-          </h3>
-          <p class="text-sm text-gray-600">
-            Your Zakat can feed a family of four for two weeks, providing
-            life-saving food.
+          
+          <p class="text-customgray/80 mb-6">
+            Give your Zakat to help those most in need around the world.
           </p>
-        </div>
-
-        <div
-          class="bg-white rounded-lg p-6 shadow-lg transform hover:scale-105 transition-transform duration-300"
-        >
-          <div
-            class="bg-pink-600 text-white px-3 py-1 text-sm rounded-full inline-block mb-4"
+          <button
+            class="bg-customblue text-white px-6 py-3 rounded-full w-full hover:bg-opacity-90 transition-all duration-300 flex items-center justify-center group-hover:shadow-md"
           >
-            2.5%
-          </div>
-          <h3 class="font-bold text-lg mb-2 text-green-800">
-            Distributing Your Wealth
-          </h3>
-          <p class="text-sm text-gray-600">
-            Zakat is 2.5% of wealth owned over 1 year for those who meet the
-            nisab threshold.
-          </p>
-        </div>
-
-        <div
-          class="bg-white rounded-lg p-6 shadow-lg transform hover:scale-105 transition-transform duration-300"
-        >
-          <div
-            class="bg-red-600 text-white px-3 py-1 text-sm rounded-full inline-block mb-4"
-          >
-            6.9 MILL
-          </div>
-          <h3 class="font-bold text-lg mb-2 text-green-800">
-            People Who Received Zakat
-          </h3>
-          <p class="text-sm text-gray-600">
-            Zakat has provided over 6.9 million meals to those in need over the
-            past 5 years.
-          </p>
+            <span>Donate Now</span>
+            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+          </button>
         </div>
       </div>
     </div>
-  </section>
 
-  <section class="py-12 lg:py-16 bg-white">
-    <div class="container mx-auto px-4">
-      <!-- Blog Section Header -->
-      <div class="text-center mb-12">
-        <div class="inline-flex items-center justify-center mb-3 px-4 py-1 bg-gray-100 rounded-full">
-          <span class="text-[#E31E24] font-medium text-sm">Blog & News</span>
-          <svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
-            <path d="M8 0C3.6 0 0 3.6 0 8C0 12.4 3.6 16 8 16C12.4 16 16 12.4 16 8C16 3.6 12.4 0 8 0ZM9 12H7V7H9V12ZM8 5.5C7.2 5.5 6.5 4.8 6.5 4C6.5 3.2 7.2 2.5 8 2.5C8.8 2.5 9.5 3.2 9.5 4C9.5 4.8 8.8 5.5 8 5.5Z" fill="#E31E24"></path>
-          </svg>
+    <!-- Statistics section -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+      <div
+        class="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
+      >
+        <div class="flex items-center mb-4">
+          <div
+            class="bg-hotpink text-white w-12 h-12 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300"
+          >
+            <i class="fas fa-utensils text-lg"></i>
+          </div>
+          <div>
+            <span class="text-hotpink font-bold text-2xl">£2.5</span>
+            <span class="text-hotpink text-sm font-medium ml-1">per day</span>
+          </div>
         </div>
-        <h2 class="text-3xl lg:text-4xl font-bold text-gray-800">Find Out Our <span class="text-[#E31E24]">Insights</span> & News</h2>
-        <div class="w-24 h-1 bg-[#00A651] mx-auto mt-4"></div>
+        <h3 class="font-bold text-lg mb-2 text-customgray">
+          Zakat Can Feed a Family
+        </h3>
+        <p class="text-customgray/80">
+          Your Zakat can feed a family of four for two weeks, providing
+          life-saving food when they need it most.
+        </p>
       </div>
-  
-      <!-- Blog Cards Container -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-        <!-- Blog Card 1 -->
-        <div class="rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
-          <div class="relative">
-            <div class="h-56 bg-gray-200 overflow-hidden">
-              <img src="/assets/images/home.jpg" alt="Blog Image" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
-            </div>
-            <div class="absolute top-4 right-4">
-              <span class="bg-[#1D71B8] text-white px-3 py-1 rounded-full text-xs font-medium">02 NOV</span>
-            </div>
-            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-              <span class="bg-white px-3 py-1 rounded-full text-sm font-medium text-gray-700 hover:bg-[#00A651] hover:text-white transition-colors duration-300">Charity</span>
-            </div>
+
+      <div
+        class="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
+      >
+        <div class="flex items-center mb-4">
+          <div
+            class="bg-teal text-white w-12 h-12 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300"
+          >
+            <i class="fas fa-percentage text-lg"></i>
           </div>
-          <div class="p-6">
-            <div class="flex items-center text-sm mb-3 space-x-4">
-              <div class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#E31E24] mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-                <span class="text-gray-600">Admin</span>
-              </div>
-              <div class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#E31E24] mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
-                <span class="text-gray-600">5 Comments</span>
-              </div>
-            </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-800 group">
-              <a href="#" class="hover:text-[#E31E24] transition-colors duration-300 inline-block">The Power Of Convening Leading Nonprofits</a>
-            </h3>
-            <p class="text-gray-600 mb-5">
-              A smile is often the first thing we notice when we meet someone
-              new, but for thousands of kids...
-            </p>
-            <a href="#" class="group">
-              <div class="bg-[#E31E24] text-white font-medium py-3 px-6 rounded-full flex items-center justify-center transition duration-300 hover:bg-[#C4151A] group-hover:shadow-md">
-                <span>Learn More</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </div>
-            </a>
+          <div>
+            <span class="text-teal font-bold text-2xl">2.5%</span>
+            <span class="text-teal text-sm font-medium ml-1">of wealth</span>
           </div>
         </div>
-  
-        <!-- Blog Card 2 -->
-        <div class="rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
-          <div class="relative">
-            <div class="h-56 bg-gray-200 overflow-hidden">
-              <img src="/assets/images/home.jpg" alt="Blog Image" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
-            </div>
-            <div class="absolute top-4 right-4">
-              <span class="bg-[#1D71B8] text-white px-3 py-1 rounded-full text-xs font-medium">15 OCT</span>
-            </div>
-            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-              <span class="bg-white px-3 py-1 rounded-full text-sm font-medium text-gray-700 hover:bg-[#00A651] hover:text-white transition-colors duration-300">Education</span>
-            </div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center text-sm mb-3 space-x-4">
-              <div class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#E31E24] mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-                <span class="text-gray-600">Admin</span>
-              </div>
-              <div class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#E31E24] mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
-                <span class="text-gray-600">8 Comments</span>
-              </div>
-            </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-800 group">
-              <a href="#" class="hover:text-[#E31E24] transition-colors duration-300 inline-block">Supporting Education in Vulnerable Communities</a>
-            </h3>
-            <p class="text-gray-600 mb-5">
-              Education remains one of the most powerful tools for lifting families out of poverty and building...
-            </p>
-            <a href="#" class="group">
-              <div class="bg-[#E31E24] text-white font-medium py-3 px-6 rounded-full flex items-center justify-center transition duration-300 hover:bg-[#C4151A] group-hover:shadow-md">
-                <span>Learn More</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </div>
-            </a>
-          </div>
-        </div>
-  
-        <!-- Blog Card 3 -->
-        <div class="rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
-          <div class="relative">
-            <div class="h-56 bg-gray-200 overflow-hidden">
-              <img src="/assets/images/home.jpg" alt="Blog Image" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
-            </div>
-            <div class="absolute top-4 right-4">
-              <span class="bg-[#1D71B8] text-white px-3 py-1 rounded-full text-xs font-medium">28 OCT</span>
-            </div>
-            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-              <span class="bg-white px-3 py-1 rounded-full text-sm font-medium text-gray-700 hover:bg-[#00A651] hover:text-white transition-colors duration-300">Relief</span>
-            </div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center text-sm mb-3 space-x-4">
-              <div class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#E31E24] mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-                <span class="text-gray-600">Admin</span>
-              </div>
-              <div class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#E31E24] mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
-                <span class="text-gray-600">12 Comments</span>
-              </div>
-            </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-800 group">
-              <a href="#" class="hover:text-[#E31E24] transition-colors duration-300 inline-block">Emergency Response Teams Making a Difference</a>
-            </h3>
-            <p class="text-gray-600 mb-5">
-              When disaster strikes, quick and efficient response can mean the difference between life and...
-            </p>
-            <a href="#" class="group">
-              <div class="bg-[#E31E24] text-white font-medium py-3 px-6 rounded-full flex items-center justify-center transition duration-300 hover:bg-[#C4151A] group-hover:shadow-md">
-                <span>Learn More</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </div>
-            </a>
-          </div>
-        </div>
+        <h3 class="font-bold text-lg mb-2 text-customgray">
+          Distributing Your Wealth
+        </h3>
+        <p class="text-customgray/80">
+          Zakat is 2.5% of wealth owned over 1 year for those who meet the
+          nisab threshold.
+        </p>
       </div>
-  
-      <!-- View All Button -->
-      <div class="mt-10 text-center">
-        <a href="/blog" class="inline-flex items-center justify-center bg-[#00A651] hover:bg-[#008F45] text-white font-medium px-8 py-3 rounded-full transition duration-300 group">
-          <span>View All Articles</span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </a>
+
+      <div
+        class="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
+      >
+        <div class="flex items-center mb-4">
+          <div
+            class="bg-customblue text-white w-12 h-12 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300"
+          >
+            <i class="fas fa-users text-lg"></i>
+          </div>
+          <div>
+            <span class="text-customblue font-bold text-2xl">6.9M+</span>
+            <span class="text-customblue text-sm font-medium ml-1">meals</span>
+          </div>
+        </div>
+        <h3 class="font-bold text-lg mb-2 text-customgray">
+          People Who Received Zakat
+        </h3>
+        <p class="text-customgray/80">
+          Zakat has provided over 6.9 million meals to those in need over the
+          past 5 years.
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <!-- Blog Section Header -->
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center justify-center mb-3 px-4 py-1 bg-hotpink/10 rounded-full">
+        <span class="text-hotpink font-medium text-sm">Blog & News</span>
+        <i class="fas fa-info-circle ml-2 text-hotpink"></i>
+      </div>
+      <h2 class="text-3xl lg:text-4xl font-bold text-customgray">Find Out Our <span class="text-hotpink">Insights</span> & News</h2>
+      <div class="h-1 w-24 bg-teal mx-auto mt-4"></div>
+    </div>
+
+    <!-- Blog Cards Container -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <!-- Blog Card 1 -->
+      <div class="rounded-xl overflow-hidden shadow-lg border border-gray-100 group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+        <div class="relative">
+          <div class="h-56 bg-gray-200 overflow-hidden">
+            <img src="/assets/images/home.jpg" alt="Blog Image" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          </div>
+          <div class="absolute top-4 right-4">
+            <span class="bg-customblue text-white px-3 py-1 rounded-full text-xs font-medium">02 NOV</span>
+          </div>
+          <div class="absolute -bottom-5 left-4 rounded-full p-1 bg-white shadow-md">
+            <div class="w-10 h-10 rounded-full bg-hotpink/10 flex items-center justify-center text-hotpink">
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 pt-8">
+          <div class="flex items-center text-sm mb-3 space-x-4">
+            <div class="flex items-center">
+              <i class="fas fa-user text-teal text-xs mr-1"></i>
+              <span class="text-customgray/80">Admin</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-comment text-teal text-xs mr-1"></i>
+              <span class="text-customgray/80">5 Comments</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-customgray">
+            <a href="#" class="hover:text-hotpink transition-colors duration-300 inline-block">The Power Of Convening Leading Nonprofits</a>
+          </h3>
+          <p class="text-customgray/70 mb-5 line-clamp-2">
+            A smile is often the first thing we notice when we meet someone
+            new, but for thousands of kids...
+          </p>
+          <a href="#" class="group inline-flex items-center">
+            <span class="text-hotpink font-medium mr-2 group-hover:mr-3 transition-all duration-300">Read More</span>
+            <i class="fas fa-arrow-right text-hotpink transform group-hover:translate-x-1 transition-transform duration-300"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Blog Card 2 -->
+      <div class="rounded-xl overflow-hidden shadow-lg border border-gray-100 group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+        <div class="relative">
+          <div class="h-56 bg-gray-200 overflow-hidden">
+            <img src="/assets/images/home.jpg" alt="Blog Image" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          </div>
+          <div class="absolute top-4 right-4">
+            <span class="bg-customblue text-white px-3 py-1 rounded-full text-xs font-medium">15 OCT</span>
+          </div>
+          <div class="absolute -bottom-5 left-4 rounded-full p-1 bg-white shadow-md">
+            <div class="w-10 h-10 rounded-full bg-teal/10 flex items-center justify-center text-teal">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 pt-8">
+          <div class="flex items-center text-sm mb-3 space-x-4">
+            <div class="flex items-center">
+              <i class="fas fa-user text-teal text-xs mr-1"></i>
+              <span class="text-customgray/80">Admin</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-comment text-teal text-xs mr-1"></i>
+              <span class="text-customgray/80">8 Comments</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-customgray">
+            <a href="#" class="hover:text-teal transition-colors duration-300 inline-block">Supporting Education in Vulnerable Communities</a>
+          </h3>
+          <p class="text-customgray/70 mb-5 line-clamp-2">
+            Education remains one of the most powerful tools for lifting families out of poverty and building...
+          </p>
+          <a href="#" class="group inline-flex items-center">
+            <span class="text-teal font-medium mr-2 group-hover:mr-3 transition-all duration-300">Read More</span>
+            <i class="fas fa-arrow-right text-teal transform group-hover:translate-x-1 transition-transform duration-300"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Blog Card 3 -->
+      <div class="rounded-xl overflow-hidden shadow-lg border border-gray-100 group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+        <div class="relative">
+          <div class="h-56 bg-gray-200 overflow-hidden">
+            <img src="/assets/images/home.jpg" alt="Blog Image" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          </div>
+          <div class="absolute top-4 right-4">
+            <span class="bg-customblue text-white px-3 py-1 rounded-full text-xs font-medium">28 OCT</span>
+          </div>
+          <div class="absolute -bottom-5 left-4 rounded-full p-1 bg-white shadow-md">
+            <div class="w-10 h-10 rounded-full bg-customblue/10 flex items-center justify-center text-customblue">
+              <i class="fas fa-hands-helping"></i>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 pt-8">
+          <div class="flex items-center text-sm mb-3 space-x-4">
+            <div class="flex items-center">
+              <i class="fas fa-user text-teal text-xs mr-1"></i>
+              <span class="text-customgray/80">Admin</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-comment text-teal text-xs mr-1"></i>
+              <span class="text-customgray/80">12 Comments</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-customgray">
+            <a href="#" class="hover:text-customblue transition-colors duration-300 inline-block">Emergency Response Teams Making a Difference</a>
+          </h3>
+          <p class="text-customgray/70 mb-5 line-clamp-2">
+            When disaster strikes, quick and efficient response can mean the difference between life and...
+          </p>
+          <a href="#" class="group inline-flex items-center">
+            <span class="text-customblue font-medium mr-2 group-hover:mr-3 transition-all duration-300">Read More</span>
+            <i class="fas fa-arrow-right text-customblue transform group-hover:translate-x-1 transition-transform duration-300"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- View All Button -->
+    <div class="mt-12 text-center">
+      <a href="/blog" class="inline-flex items-center justify-center bg-[#EE0C6E] text-white font-medium px-8 py-3 rounded-full shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105 group">
+        View All Articles
+        <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
 </Layout>

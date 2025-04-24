@@ -1,4 +1,4 @@
-    <!-- <div
+<!-- <div
       class="bg-teal text-white text-xs p-1 flex justify-between items-center"
     >
       <div class="flex items-center">
@@ -9,281 +9,233 @@
         <span class="font-bold mx-1">USD</span>
       </div>
       <button class="text-white">×</button>
-    </div> -->
+    </div> --><!-- Main navigation - Modern and Interactive -->
+<header
+  class="bg-white shadow-lg sticky top-0 z-50 transition-all duration-300 text-customgray"
+>
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center py-4">
+      <div class="flex items-center">
+        <img
+          src="/api/placeholder/150/50"
+          alt="Sadaqah Online Logo"
+          class="h-12 hover:opacity-80 transition-opacity duration-300"
+        />
+      </div>
 
-  <!-- Main navigation - Modern and Interactive -->
-  <header
-    class="bg-white shadow-lg sticky top-0 z-50 transition-all duration-300 text-customgray"
+      <!-- Mobile menu button -->
+      <button
+        id="mobile-menu-button"
+        class="md:hidden flex items-center focus:outline-none"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+
+      <div class="hidden md:flex space-x-4 items-center">
+        <!-- Changed from red to hotpink -->
+        
+        <!-- <div class="relative group">
+          <button
+            class="border border-customgray px-4 py-2 rounded-lg flex items-center gap-1 hover:bg-gray-50 transition-colors duration-300"
+          >
+            <i class="fas fa-globe-europe text-teal"></i>
+            GBP
+            <i class="fas fa-chevron-down text-xs ml-1"></i>
+          </button>
+          <div
+            class="absolute right-0 mt-2 w-40 bg-white shadow-xl rounded-lg overflow-hidden transform scale-0 group-hover:scale-100 origin-top-right transition-transform duration-200 z-50"
+          >
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-sm"
+              >USD - US Dollar</a
+            >
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-sm"
+              >EUR - Euro</a
+            >
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-sm"
+              >CAD - Canadian Dollar</a
+            >
+          </div>
+        </div> -->
+        <button
+          class="bg-hotpink hover:bg-opacity-90 text-white px-5 py-2 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 font-medium flex items-center gap-2"
+        >
+          <i class="fas fa-heart"></i>
+          Donate Now
+        </button>
+        <!-- <button
+          class="bg-gray-100 hover:bg-gray-200 text-customgray px-4 py-2 rounded-lg transition-colors duration-300 flex items-center gap-2"
+        >
+          <i class="fas fa-shopping-cart text-teal"></i>
+          Cart
+          <span
+            class="inline-flex items-center justify-center w-5 h-5 ml-1 text-xs font-semibold text-white bg-teal rounded-full"
+            >0</span
+          >
+        </button> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Secondary navigation with hover effects and indicators -->
+  <nav
+    class="bg-white border-t border-customgray border-opacity-30 relative md:block hidden"
   >
     <div class="container mx-auto px-4">
-      <div class="flex justify-between items-center py-4">
-        <div class="flex items-center">
-          <img
-            src="/api/placeholder/150/50"
-            alt="Sadaqah Online Logo"
-            class="h-12 hover:opacity-80 transition-opacity duration-300"
-          />
-        </div>
-
-        <!-- Mobile menu button -->
-        <button
-          id="mobile-menu-button"
-          class="md:hidden flex items-center focus:outline-none"
+      <ul
+        id="nav-menu"
+        class="hidden md:flex flex-col md:flex-row md:space-x-2 text-sm"
+      >
+      <li class="group relative">
+        <a
+          href="/"
+          class="block p-4 hover:text-teal transition-colors duration-300 font-medium"
         >
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
+          Home
+          <span
+            class="absolute bottom-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+          ></span>
+        </a>
+      </li>
+      <li class="group relative">
+        <a
+          href="/about"
+          class="block p-4 hover:text-teal transition-colors duration-300 font-medium"
+        >
+          About Us
+          <span
+            class="absolute bottom-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+          ></span>
+        </a>
+      </li>
+        <li class="group relative">
+          <a
+            href="#"
+            class="block p-4 hover:text-hotpink transition-colors duration-300 font-medium text-hotpink"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-        </button>
-
-        <div class="hidden md:flex space-x-4 items-center">
-          <!-- Changed from red to hotpink -->
-          <button
-            class="bg-hotpink hover:bg-opacity-90 text-white px-5 py-2 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 font-medium flex items-center gap-2"
+            Qurbani 2025 <span
+              class="absolute bottom-0 left-0 w-full h-1 bg-hotpink transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+            ></span>
+          </a>
+        </li>
+        <li class="group relative">
+          <a
+            href="#"
+            class="block p-4 hover:text-teal transition-colors duration-300 font-medium"
           >
-            <i class="fas fa-heart"></i>
-            Donate
-          </button>
-          <div class="relative group">
-            <button
-              class="border border-customgray px-4 py-2 rounded-lg flex items-center gap-1 hover:bg-gray-50 transition-colors duration-300"
-            >
-              <i class="fas fa-globe-europe text-teal"></i>
-              GBP
-              <i class="fas fa-chevron-down text-xs ml-1"></i>
-            </button>
-            <div
-              class="absolute right-0 mt-2 w-40 bg-white shadow-xl rounded-lg overflow-hidden transform scale-0 group-hover:scale-100 origin-top-right transition-transform duration-200 z-50"
-            >
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-sm"
-                >USD - US Dollar</a
-              >
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-sm"
-                >EUR - Euro</a
-              >
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-sm"
-                >CAD - Canadian Dollar</a
-              >
-            </div>
-          </div>
-          <button
-            class="bg-gray-100 hover:bg-gray-200 text-customgray px-4 py-2 rounded-lg transition-colors duration-300 flex items-center gap-2"
-          >
-            <i class="fas fa-shopping-cart text-teal"></i>
-            Cart
+            Appeals
             <span
-              class="inline-flex items-center justify-center w-5 h-5 ml-1 text-xs font-semibold text-white bg-teal rounded-full"
-              >0</span
+              class="absolute bottom-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+            ></span>
+          </a>
+          <div
+            class="absolute left-0 mt-1 w-48 bg-white shadow-xl rounded-lg overflow-hidden transform scale-0 group-hover:scale-100 origin-top-left transition-transform duration-200 z-50"
+          >
+            <a
+              href="#"
+              class="block px-4 py-2 hover:bg-teal hover:bg-opacity-10 text-sm flex items-center gap-2 hover:text-white"
             >
+              <!-- <i class="fas fa-hands-helping text-teal"></i> -->
+              Pay Sadaqah Online
+            </a>
+            <a
+              href="#"
+              class="block px-4 py-2 hover:bg-teal hover:bg-opacity-10 text-sm flex items-center gap-2 hover:text-white"
+            >
+              <!-- <i class="fas fa-hand-holding-heart text-teal"></i> -->
+              Water Pump
+            </a>
+          </div>
+        </li>
+        <li class="group relative">
+          <a
+            href="#"
+            class="block p-4 hover:text-teal transition-colors duration-300 font-medium"
+          >
+            Blogs
+            <span
+              class="absolute bottom-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+            ></span>
+          </a>
+        </li>
+        <li class="group relative">
+          <a
+            href="/contact"
+            class="block p-4 hover:text-teal transition-colors duration-300 font-medium"
+          >
+Contact Us            <span
+              class="absolute bottom-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+            ></span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Search bar -->
+      <div
+        class="absolute right-4 top-1/2 transform -translate-y-1/2 hidden md:block"
+      >
+        <div class="relative">
+          <input
+            type="text"
+            placeholder="Search..."
+            class="w-36 focus:w-64 pl-3 pr-10 py-2 border border-customgray border-opacity-30 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-teal transition-all duration-300"
+          />
+          <button
+            class="absolute right-3 top-1/2 transform -translate-y-1/2 text-customgray hover:text-teal transition-colors duration-300"
+          >
+            <i class="fas fa-search"></i>
           </button>
         </div>
       </div>
     </div>
+  </nav>
 
-    <!-- Secondary navigation with hover effects and indicators -->
-    <nav
-      class="bg-white border-t border-customgray border-opacity-30 relative md:block hidden"
-    >
-      <div class="container mx-auto px-4">
-        <ul
-          id="nav-menu"
-          class="hidden md:flex flex-col md:flex-row md:space-x-2 text-sm"
+  <!-- Action buttons - Using solid colors instead of gradients -->
+  <div
+    class="bg-white py-3 border-t border-customgray border-opacity-20 relative overflow-x-auto"
+  >
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap gap-3 justify-start md:justify-center">
+        <button
+          class="bg-hotpink hover:bg-opacity-90 text-white text-sm px-4 py-2 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
         >
-          <li class="group relative">
-            <a
-              href="/"
-              class="block p-4 hover:text-hotpink transition-colors duration-300 font-medium"
-            >
-              Home
-              <span
-                class="absolute bottom-0 left-0 w-full h-1 bg-hotpink transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
-              ></span>
-            </a>
-            <!-- <div
-              class="absolute left-0 mt-1 w-48 bg-white shadow-xl rounded-lg overflow-hidden transform scale-0 group-hover:scale-100 origin-top-left transition-transform duration-200 z-50"
-            >
-              <a
-                href="#"
-                class="block px-4 py-2 hover:bg-hotpink hover:bg-opacity-10 text-sm flex items-center gap-2"
-              >
-                <i class="fas fa-donate text-hotpink"></i>
-                One-time Donation
-              </a>
-              <a
-                href="#"
-                class="block px-4 py-2 hover:bg-hotpink hover:bg-opacity-10 text-sm flex items-center gap-2"
-              >
-                <i class="fas fa-sync text-hotpink"></i>
-                Monthly Giving
-              </a>
-            </div> -->
-          </li>
-          <li class="group relative">
-            <a
-              href="/about"
-              class="block p-4 hover:text-customblue transition-colors duration-300 font-medium"
-            >
-              About us
-              <span
-                class="absolute bottom-0 left-0 w-full h-1 bg-customblue transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
-              ></span>
-            </a>
-          </li>
-          <li class="group relative">
-            <a
-              href="#"
-              class="block p-4 hover:text-hotpink transition-colors duration-300 font-medium text-hotpink"
-            >
-Qurbani 2025              <span
-                class="absolute bottom-0 left-0 w-full h-1 bg-hotpink transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
-              ></span>
-            </a>
-          </li>
-          <li class="group relative">
-            <a
-              href="#"
-              class="block p-4 hover:text-teal transition-colors duration-300 font-medium"
-            >
-              Appeals
-              <span
-                class="absolute bottom-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
-              ></span>
-            </a>
-            <div
-              class="absolute left-0 mt-1 w-48 bg-white shadow-xl rounded-lg overflow-hidden transform scale-0 group-hover:scale-100 origin-top-left transition-transform duration-200 z-50"
-            >
-              <a
-                href="#"
-                class="block px-4 py-2 hover:bg-teal hover:bg-opacity-10 text-sm flex items-center gap-2"
-              >
-                <i class="fas fa-hands-helping text-teal"></i>
-                Pay Sadaqah Online
-              </a>
-              <a
-                href="#"
-                class="block px-4 py-2 hover:bg-teal hover:bg-opacity-10 text-sm flex items-center gap-2"
-              >
-                <i class="fas fa-hand-holding-heart text-teal"></i>
-Water Pump              </a>
-            </div>
-          </li>
-          <!-- <li class="group relative">
-            <a
-              href="#"
-              class="block p-4 hover:text-customblue transition-colors duration-300 font-medium"
-            >
-              Zakat
-              <span
-                class="absolute bottom-0 left-0 w-full h-1 bg-customblue transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
-              ></span>
-            </a>
-            <div
-              class="absolute left-0 mt-1 w-48 bg-white shadow-xl rounded-lg overflow-hidden transform scale-0 group-hover:scale-100 origin-top-left transition-transform duration-200 z-50"
-            >
-              <a
-                href="#"
-                class="block px-4 py-2 hover:bg-customblue hover:bg-opacity-10 text-sm flex items-center gap-2"
-              >
-                <i class="fas fa-calculator text-customblue"></i>
-                Zakat Calculator
-              </a>
-              <a
-                href="#"
-                class="block px-4 py-2 hover:bg-customblue hover:bg-opacity-10 text-sm flex items-center gap-2"
-              >
-                <i class="fas fa-book-open text-customblue"></i>
-                Pay Zakat Online
-              </a>
-            </div>
-          </li> -->
-          
-          <li class="group relative">
-            <a
-              href="#"
-              class="block p-4 hover:text-teal transition-colors duration-300 font-medium"
-            >
-              Blogs
-              <span
-                class="absolute bottom-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
-              ></span>
-            </a>
-          </li>
-          <li class="group relative">
-            <a
-              href="/contact"
-              class="block p-4 hover:text-customblue transition-colors duration-300 font-medium"
-            >
-              Contact Us
-              <span
-                class="absolute bottom-0 left-0 w-full h-1 bg-customblue transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
-              ></span>
-            </a>
-          </li>
-        </ul>
-
-        <!-- Search bar -->
-        <div
-          class="absolute right-4 top-1/2 transform -translate-y-1/2 hidden md:block"
+          <i class="fas fa-calculator"></i>
+          Zakat Calculator
+        </button>
+        <button
+          class="bg-teal hover:bg-opacity-90 text-white text-sm px-4 py-2 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
         >
-          <div class="relative">
-            <input
-              type="text"
-              placeholder="Search..."
-              class="w-36 focus:w-64 pl-3 pr-10 py-2 border border-customgray border-opacity-30 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-teal transition-all duration-300"
-            />
-            <button
-              class="absolute right-3 top-1/2 transform -translate-y-1/2 text-customgray hover:text-teal transition-colors duration-300"
-            >
-              <i class="fas fa-search"></i>
-            </button>
-          </div>
-        </div>
+          <i class="fas fa-hand-holding-heart"></i>
+          Donate
+        </button>
+        <button
+          class="bg-customblue hover:bg-opacity-90 text-white text-sm px-4 py-2 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+        >
+          <i class="fa-solid fa-headset"></i>
+          Contact Us
+        </button>
+        <button
+          class="bg-customgray hover:bg-opacity-90 text-white text-sm px-4 py-2 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+        >
+          <i class="fas fa-user"></i>
+          Sign in to donate
+        </button>
       </div>
-    </nav>
+    </div>
 
-    <!-- Action buttons - Using solid colors instead of gradients -->
-    <div
-      class="bg-white py-3 border-t border-customgray border-opacity-20 relative overflow-x-auto"
-    >
-      <div class="container mx-auto px-4">
-        <div class="flex flex-wrap gap-3 justify-start md:justify-center">
-          <button
-            class="bg-hotpink hover:bg-opacity-90 text-white text-sm px-4 py-2 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
-          >
-            <i class="fas fa-calculator"></i>
-            Zakat Calculator
-          </button>
-          <button
-            class="bg-teal hover:bg-opacity-90 text-white text-sm px-4 py-2 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
-          >
-            <i class="fas fa-hand-holding-heart"></i>
-            Donate
-          </button>
-          <button
-            class="bg-customblue hover:bg-opacity-90 text-white text-sm px-4 py-2 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
-          >
-            <i class="fa-solid fa-headset"></i>
-Contact Us          </button>
-          <button
-            class="bg-customgray hover:bg-opacity-90 text-white text-sm px-4 py-2 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
-          >
-            <i class="fas fa-user"></i>
-            Sign in to donate
-          </button>
-        </div>
-      </div>
-
-      <!-- Mobile menu indicator -->
-      <!-- <div class="absolute right-4 bottom-3 md:hidden">
+    <!-- Mobile menu indicator -->
+    <!-- <div class="absolute right-4 bottom-3 md:hidden">
         <button
           id="mobile-menu-expand"
           class="text-teal focus:outline-none"
@@ -291,127 +243,165 @@ Contact Us          </button>
           <i class="fas fa-chevron-down"></i>
         </button>
       </div> -->
-    </div>
+  </div>
 
-    <!-- Mobile menu (hidden by default) -->
+  <!-- Mobile menu (hidden by default) -->
+  <div
+    id="mobile-menu"
+    class="md:hidden hidden bg-white border-t border-customgray border-opacity-20 shadow-inner"
+  >
+    <div class="px-4 py-3">
+      <input
+        type="text"
+        placeholder="Search..."
+        class="w-full px-4 py-2 border border-customgray border-opacity-30 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-teal"
+      />
+    </div>
+    <nav class="px-4 py-2">
+      <ul class="space-y-2">
+        <li>
+          <a
+        href="/"
+        class="block p-2 hover:text-teal transition-colors duration-300 font-medium"
+          >
+        Home
+        <span
+          class="absolute bottom-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+        ></span>
+          </a>
+        </li>
+        <li>
+          <a
+        href="/about"
+        class="block p-2 hover:text-teal transition-colors duration-300 font-medium"
+          >
+        About Us
+        <span
+          class="absolute bottom-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+        ></span>
+          </a>
+        </li>
+        <li>
+          <a
+        href="#"
+        class="block p-2 hover:text-hotpink transition-colors duration-300 font-medium text-hotpink"
+          >
+        Qurbani 2025
+        <span
+          class="absolute bottom-0 left-0 w-full h-1 bg-hotpink transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+        ></span>
+          </a>
+        </li>
+        <li>
+          <a
+        href="#"
+        class="block p-2 hover:text-teal transition-colors duration-300 font-medium"
+          >
+        Appeals
+        <span
+          class="absolute bottom-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+        ></span>
+          </a>
+        </li>
+        <li>
+          <a
+        href="#"
+        class="block p-2 hover:text-teal transition-colors duration-300 font-medium"
+          >
+        Blogs
+        <span
+          class="absolute bottom-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+        ></span>
+          </a>
+        </li>
+        <li>
+          <a
+        href="/contact"
+        class="block p-2 hover:text-teal transition-colors duration-300 font-medium"
+          >
+        Contact Us
+        <span
+          class="absolute bottom-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+        ></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
     <div
-      id="mobile-menu"
-      class="md:hidden hidden bg-white border-t border-customgray border-opacity-20 shadow-inner"
+      class="px-4 py-3 border-t border-customgray border-opacity-20 grid grid-cols-1 gap-2"
     >
-      <div class="px-4 py-3">
-        <input
-          type="text"
-          placeholder="Search..."
-          class="w-full px-4 py-2 border border-customgray border-opacity-30 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-teal"
-        />
-      </div>
-      <nav class="px-4 py-2">
-        <ul class="space-y-2">
-          <li>
-            <a
-              href="#"
-              class="block p-2 hover:bg-hotpink hover:bg-opacity-10 rounded-md text-hotpink font-medium"
-              >Donation</a
-            >
-          </li>
-          <li>
-            <a href="#" class="block p-2 hover:bg-teal hover:bg-opacity-10 rounded-md"
-              >Appeals</a
-            >
-          </li>
-          <li>
-            <a href="#" class="block p-2 hover:bg-customblue hover:bg-opacity-10 rounded-md">Zakat</a>
-          </li>
-          <li>
-            <a href="#" class="block p-2 hover:bg-hotpink hover:bg-opacity-10 rounded-md"
-              >Ways to give</a
-            >
-          </li>
-          <li>
-            <a href="#" class="block p-2 hover:bg-teal hover:bg-opacity-10 rounded-md"
-              >Our approach</a
-            >
-          </li>
-          <li>
-            <a href="#" class="block p-2 hover:bg-customblue hover:bg-opacity-10 rounded-md"
-              >About us</a
-            >
-          </li>
-        </ul>
-      </nav>
-      <div class="px-4 py-3 border-t border-customgray border-opacity-20 grid grid-cols-2 gap-2">
-        <button
-          class="bg-hotpink text-white px-3 py-2 rounded-lg text-sm flex items-center justify-center gap-1"
-        >
-          <i class="fas fa-heart"></i>
-          Donate
-        </button>
-        <button
-          class="border border-customgray border-opacity-30 px-3 py-2 rounded-lg text-sm flex items-center justify-center gap-1"
-        >
-          <i class="fas fa-globe-europe text-teal"></i>
-          GBP
-        </button>
-        <button
-          class="bg-gray-100 text-customgray px-3 py-2 rounded-lg text-sm flex items-center justify-center gap-1 col-span-2"
-        >
-          <i class="fas fa-shopping-cart text-teal"></i>
-          Cart (0)
-        </button>
-      </div>
+      <button
+        class="bg-hotpink text-white px-3 py-2 rounded-lg text-sm flex items-center justify-center gap-1"
+      >
+        <i class="fas fa-heart"></i>
+        Donate Now
+      </button>
+      <!-- <button
+        class="border border-customgray border-opacity-30 px-3 py-2 rounded-lg text-sm flex items-center justify-center gap-1"
+      >
+        <i class="fas fa-globe-europe text-teal"></i>
+        GBP
+      </button> -->
+      <!-- <button
+        class="bg-gray-100 text-customgray px-3 py-2 rounded-lg text-sm flex items-center justify-center gap-1 col-span-2"
+      >
+        <i class="fas fa-shopping-cart text-teal"></i>
+        Cart (0)
+      </button> -->
     </div>
-  </header>
+  </div>
+</header>
 
-  <script is:inline>
-    // Simple JavaScript for mobile menu toggle
-    document.addEventListener("DOMContentLoaded", function () {
-      const mobileMenuButton = document.getElementById("mobile-menu-button");
-      const mobileMenu = document.getElementById("mobile-menu");
-      const mobileMenuExpand = document.getElementById("mobile-menu-expand");
-      const navMenu = document.getElementById("nav-menu");
+<script is:inline>
+  // Simple JavaScript for mobile menu toggle
+  document.addEventListener("DOMContentLoaded", function () {
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileMenuExpand = document.getElementById("mobile-menu-expand");
+    const navMenu = document.getElementById("nav-menu");
 
-      if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener("click", function () {
-          mobileMenu.classList.toggle("hidden");
-        });
-      }
-
-      if (mobileMenuExpand && navMenu) {
-        mobileMenuExpand.addEventListener("click", function () {
-          navMenu.classList.toggle("hidden");
-          const icon = mobileMenuExpand.querySelector("i");
-          if (icon) {
-            icon.classList.toggle("fa-chevron-down");
-            icon.classList.toggle("fa-chevron-up");
-          }
-        });
-      }
-
-      // Sticky header effect on scroll
-      const header = document.querySelector("header");
-      let lastScrollTop = 0;
-
-      window.addEventListener("scroll", function () {
-        const scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
-
-        if (scrollTop > 100) {
-          header.classList.add("py-2");
-          header.classList.add("shadow-xl");
-        } else {
-          header.classList.remove("py-2");
-          header.classList.remove("shadow-xl");
-        }
-
-        if (scrollTop > lastScrollTop && scrollTop > 200) {
-          // Scrolling down
-          header.style.transform = "translateY(-100%)";
-        } else {
-          // Scrolling up
-          header.style.transform = "translateY(0)";
-        }
-
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
       });
+    }
+
+    if (mobileMenuExpand && navMenu) {
+      mobileMenuExpand.addEventListener("click", function () {
+        navMenu.classList.toggle("hidden");
+        const icon = mobileMenuExpand.querySelector("i");
+        if (icon) {
+          icon.classList.toggle("fa-chevron-down");
+          icon.classList.toggle("fa-chevron-up");
+        }
+      });
+    }
+
+    // Sticky header effect on scroll
+    const header = document.querySelector("header");
+    let lastScrollTop = 0;
+
+    window.addEventListener("scroll", function () {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > 100) {
+        header.classList.add("py-2");
+        header.classList.add("shadow-xl");
+      } else {
+        header.classList.remove("py-2");
+        header.classList.remove("shadow-xl");
+      }
+
+      if (scrollTop > lastScrollTop && scrollTop > 200) {
+        // Scrolling down
+        header.style.transform = "translateY(-100%)";
+      } else {
+        // Scrolling up
+        header.style.transform = "translateY(0)";
+      }
+
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     });
-  </script>
+  });
+</script>

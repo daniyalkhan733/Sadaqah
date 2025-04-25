@@ -1,0 +1,437 @@
+---
+import MainLayout from "../layout/Layout.astro";
+---
+
+<MainLayout title="Contact Us | Education For Every Child">
+  <section class="relative w-full overflow-hidden ">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/assets/images/home.jpg"
+        alt="Children in a classroom"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-[#0E173B]/75"></div>
+    </div>
+
+    <!-- Content Container -->
+    <div
+      class="relative z-10 container mx-auto px-4 py-24 md:py-32 lg:py-40 flex flex-col items-center justify-center text-center"
+    >
+      <!-- Breadcrumbs -->
+
+      <!-- Main Content -->
+      <div class="w-full max-w-3xl mx-auto">
+        <!-- Tag Animation -->
+        <div
+          class="my-6 transform transition duration-700 hover:scale-105 hover:-rotate-1 inline-block"
+        >
+          <span
+            class="bg-[#EE0C6E] text-white text-xs md:text-sm font-semibold px-4 py-1.5 rounded-full"
+          >
+            Home / Contact Us
+          </span>
+        </div>
+
+        <!-- Title with Animation -->
+        <h1
+          class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 transition-all duration-700 ease-in-out transform translate-y-0 opacity-100 text-shadow-lg"
+        >
+          <span class="inline-block hoverable-text">Contact </span>
+          <span class="inline-block hoverable-text text-[#EE0C6E]">Us</span>
+        </h1>
+
+        <!-- Description with Animation -->
+        <p
+          class="text-lg md:text-xl text-white mb-8 mx-auto transition-all duration-500 ease-in-out transform translate-y-0 opacity-100 leading-relaxed font-medium text-shadow-sm"
+        >
+          Empowering children through education is our mission. Join us in
+          breaking down barriers and creating opportunities for children
+          impacted by poverty and conflict worldwide.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section
+    class="bg-gradient-to-b from-gray-50 to-white py-16 md:py-24 relative overflow-hidden"
+  >
+ 
+ 
+   
+
+    <div class="container mx-auto px-4 max-w-6xl relative z-10">
+      <div class="mb-12 text-center">
+        <span
+          class="inline-block px-4 py-1.5 bg-[#01A6A0]/10 text-[#01A6A0] font-medium rounded-full mb-4 transform transition duration-500 hover:scale-105"
+          >Reach Out To Us</span
+        >
+        <h2 class="text-3xl md:text-4xl font-bold text-[#0E173B] mb-3">
+          Get in Touch
+        </h2>
+        <div class="w-16 h-1 bg-[#EE0C6E] mx-auto mb-6"></div>
+        <p class="text-[#5B5A59] max-w-xl mx-auto text-lg">
+          We'd love to hear from you! Send us a message and we'll get back to
+          you as soon as possible.
+        </p>
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-8 mb-16">
+        <!-- Contact Form -->
+        <div
+          class="w-full md:w-2/3 bg-white rounded-2xl p-6 md:p-8 shadow-lg transform transition duration-300 hover:-translate-y-1 hover:shadow-xl border-t-4 border-teal contact-card"
+        >
+          <h3 class="text-2xl font-bold text-[#0E173B] mb-6 flex items-center">
+            <span
+              class="w-8 h-8 rounded-full bg-[#EE0C6E] flex items-center justify-center text-white mr-3"
+            >
+              <i class="fa-solid fa-message text-sm"></i>
+            </span>
+            Send us a message
+          </h3>
+          <form>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label for="name" class="block text-[#5B5A59] font-medium mb-2"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 theme-focus transition duration-200"
+                  placeholder="Your name"
+                />
+              </div>
+              <div>
+                <label for="email" class="block text-[#5B5A59] font-medium mb-2"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 theme-focus transition duration-200"
+                  placeholder="your@email.com"
+                />
+              </div>
+            </div>
+            <div class="mb-6">
+              <label for="subject" class="block text-[#5B5A59] font-medium mb-2"
+                >Subject</label
+              >
+              <input
+                type="text"
+                id="subject"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 theme-focus transition duration-200"
+                placeholder="What is this regarding?"
+              />
+            </div>
+            <div class="mb-6">
+              <label for="message" class="block text-[#5B5A59] font-medium mb-2"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                rows="5"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 theme-focus transition duration-200"
+                placeholder="Your message..."></textarea>
+            </div>
+            <button
+              type="submit"
+              class="bg-[#EE0C6E] hover:bg-[#EE0C6E]/90 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="w-full md:w-1/3 flex flex-col gap-6">
+          <div
+            class="bg-white rounded-2xl p-6 shadow-lg transform transition duration-300 hover:-translate-y-1 hover:shadow-xl border-l-4 border-teal contact-card"
+          >
+            <div class="flex items-center mb-4">
+           
+              <p class="text-lg font-semibold text-hotpink ml-3">
+                <i class="fa-solid fa-phone text-hotpink"></i>&nbsp; Phone
+              </p>
+            </div>
+            <div class="flex items-center mb-4">
+              
+              <a
+                href="tel:+1234567890"
+                class="text-[#5B5A59] hover:text-[#01A6A0] transition-colors duration-300"
+                >+1 (234) 567-890</a
+              >
+            </div>
+
+           
+          </div>
+
+          <div
+            class="bg-white rounded-2xl p-6 shadow-lg transform transition duration-300 hover:-translate-y-1 hover:shadow-xl border-l-4 border-teal contact-card"
+          >
+            <div class="flex items-center mb-4">
+              <p class="text-lg font-semibold text-hotpink ml-3">
+                <i class="fa-solid fa-envelope text-hotpink"></i>&nbsp; Email
+              </p>
+            </div>
+            <a
+              href="mailto:info@example.com"
+              class="text-[#5B5A59] hover:text-[#01A6A0] transition-colors duration-300"
+              >info@example.com</a
+            >
+          </div>
+
+          <div
+            class="bg-white rounded-2xl p-6 shadow-lg transform transition duration-300 hover:-translate-y-1 hover:shadow-xl border-l-4 border-teal contact-card"
+          >
+            <div class="flex items-center mb-4">
+              <p class="text-lg font-semibold text-hotpink ml-3">
+                <i class="fa-solid fa-location-dot text-hotpink"></i>&nbsp; Location
+              </p>
+            </div>
+            <p class="text-[#5B5A59]">
+              123 Main Street,<br />City, State 12345
+            </p>
+          </div>
+
+          <div
+            class=" rounded-2xl p-6 shadow-lg border-l-4 border-teal contact-card"
+          >
+            <p class="text-lg font-semibold text-hotpink mb-4">
+              Connect with us
+            </p>
+            <div class="flex space-x-4 ">
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-black hover:bg-[#EE0C6E] transition-all duration-300 ease-in-out transform hover:-translate-y-1"
+              >
+                <i class="fa-brands fa-facebook-f text-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-black hover:bg-[#EE0C6E] transition-all duration-300 ease-in-out transform hover:-translate-y-1"
+              >
+                <i class="fa-brands fa-instagram text-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-black hover:bg-[#EE0C6E] transition-all duration-300 ease-in-out transform hover:-translate-y-1"
+              >
+                <i class="fa-brands fa-x-twitter text-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-black hover:bg-[#EE0C6E] transition-all duration-300 ease-in-out transform hover:-translate-y-1"
+              >
+                <i class="fa-brands fa-linkedin-in text-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-black hover:bg-[#EE0C6E] transition-all duration-300 ease-in-out transform hover:-translate-y-1"
+              >
+                <i class="fa-brands fa-youtube text-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Google Maps Section -->
+      <div class="w-full py-16 relative">
+      
+
+        <div
+          class="bg-white rounded-2xl p-4 shadow-lg overflow-hidden border border-gray-100 transform transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+        >
+          <div class="w-full h-96 rounded-xl overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.3059445135!2d-74.25986613799748!3d40.69714941680757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sus!4v1650822252292!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full h-full"
+              title="Our Location on Google Maps"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* Custom hover effect for title text */
+    .hoverable-text {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .hoverable-text:hover {
+      transform: translateY(-2px);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Text shadow utilities */
+    .text-shadow-sm {
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .text-shadow-lg {
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Form Animation Effects */
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    /* Add form validation styles */
+    input:invalid:focus,
+    textarea:invalid:focus {
+      border-color: #ee0c6e;
+      box-shadow: 0 0 0 2px rgba(238, 12, 110, 0.2);
+    }
+
+    /* Decorative circle animations */
+    .animated-circle {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .animated-circle:nth-child(2) {
+      animation-delay: 1s;
+    }
+
+    .animated-circle:nth-child(3) {
+      animation-delay: 2s;
+    }
+
+    .animated-circle:nth-child(4) {
+      animation-delay: 3s;
+    }
+
+    /* Card hover effects */
+    .contact-card {
+      transition: all 0.3s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Custom focus styles using theme colors */
+    .theme-focus:focus {
+      border-color: var(--color-teal);
+      box-shadow: 0 0 0 3px rgba(1, 166, 160, 0.2);
+      outline: none;
+    }
+  </style>
+
+  <script is:inline>
+    // Form validation and animation script
+    document.addEventListener("DOMContentLoaded", () => {
+      // Form handling
+      const form = document.querySelector("form");
+      if (form) {
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const message = document.getElementById("message").value;
+
+          if (name && email && message) {
+            // Simulate form submission
+            const submitButton = form.querySelector('button[type="submit"]');
+            submitButton.innerHTML =
+              '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Sending...';
+            submitButton.disabled = true;
+
+            // Simulate API call
+            setTimeout(() => {
+              submitButton.innerHTML =
+                '<i class="fa-solid fa-check mr-2"></i> Message Sent!';
+              submitButton.classList.remove("bg-[#EE0C6E]");
+              submitButton.classList.remove("hover:bg-[#EE0C6E]/90");
+              submitButton.classList.add("bg-[#01A6A0]");
+
+              // Reset form
+              setTimeout(() => {
+                form.reset();
+                submitButton.innerHTML = "Send Message";
+                submitButton.classList.remove("bg-[#01A6A0]");
+                submitButton.classList.add("bg-[#EE0C6E]");
+                submitButton.classList.add("hover:bg-[#EE0C6E]/90");
+                submitButton.disabled = false;
+              }, 2000);
+            }, 1500);
+          } else {
+            alert("Please fill in all required fields.");
+          }
+        });
+      }
+
+      // Add input animation effects
+      const inputs = document.querySelectorAll("input, textarea");
+      inputs.forEach((input) => {
+        // Add focus effects
+        input.addEventListener("focus", () => {
+          input.parentElement.classList.add("relative");
+
+          // Create and append highlight effect if it doesn't exist
+          if (!input.parentElement.querySelector(".input-highlight")) {
+            const highlight = document.createElement("span");
+            highlight.className =
+              "input-highlight absolute bottom-0 left-0 w-0 h-0.5 bg-[#01A6A0] transition-all duration-300";
+            input.parentElement.appendChild(highlight);
+          }
+
+          // Expand highlight
+          setTimeout(() => {
+            const highlight =
+              input.parentElement.querySelector(".input-highlight");
+            if (highlight) {
+              highlight.classList.remove("w-0");
+              highlight.classList.add("w-full");
+            }
+          }, 10);
+        });
+
+        // Remove highlight on blur
+        input.addEventListener("blur", () => {
+          const highlight =
+            input.parentElement.querySelector(".input-highlight");
+          if (highlight) {
+            highlight.classList.remove("w-full");
+            highlight.classList.add("w-0");
+          }
+        });
+      });
+
+      // Add hover animations to contact cards
+      const cards = document.querySelectorAll(".contact-card");
+      cards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          card.classList.add("transform", "scale-105");
+          setTimeout(() => {
+            card.classList.remove("scale-105");
+            card.classList.add("scale-100");
+          }, 300);
+        });
+      });
+    });
+  </script>
+</MainLayout>

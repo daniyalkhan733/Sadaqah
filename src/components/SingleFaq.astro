@@ -12,12 +12,16 @@ const { question, answer } = Astro.props;
 
 <div class="faq-item mb-4">
   <div class="bg-white rounded-xl shadow-sm border border-gray-100">
-    <button class="w-full py-4 px-6 text-left flex justify-between items-center faq-toggle">
+    <button
+      class="w-full py-4 px-6 text-left flex justify-between items-center faq-toggle"
+    >
       <h3 class="font-medium text-customgray text-lg">{question}</h3>
       <span class="text-hotpink text-2xl font-thin">+</span>
     </button>
-    
-    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6">
+
+    <div
+      class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6"
+    >
       <div class="py-4 border-t border-gray-100">
         <p class="text-customgray/80 border-l-4 border-hotpink pl-4">
           {answer}
@@ -27,53 +31,53 @@ const { question, answer } = Astro.props;
   </div>
 </div>
 <script is:inline>
-    // Function to toggle FAQ items
-    function toggleFAQ(element) {
-      // Get the parent FAQ item
-      const faqItem = element.closest('.faq-item');
-      
-      // Get the content and plus/minus sign
-      const content = faqItem.querySelector('.faq-content');
-      const plusSign = element.querySelector('span');
-      
-      // Toggle the active state
-      if (content.classList.contains('active')) {
-        // Close the FAQ item
-        content.style.maxHeight = '0px';
-        content.classList.remove('active');
-        plusSign.textContent = '+';
-      } else {
-        // Close all other FAQ items first
-        const allContents = document.querySelectorAll('.faq-content');
-        const allPlusSigns = document.querySelectorAll('.faq-toggle span');
-        
-        allContents.forEach(item => {
-          item.style.maxHeight = '0px';
-          item.classList.remove('active');
-        });
-        
-        allPlusSigns.forEach(sign => {
-          sign.textContent = '+';
-        });
-        
-        // Open the clicked FAQ item
-        content.style.maxHeight = content.scrollHeight + 'px';
-        content.classList.add('active');
-        plusSign.textContent = '−'; // Using a minus sign when open
-      }
-    }
-    
-    // Add click event listeners to all FAQ toggles
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggles = document.querySelectorAll('.faq-toggle');
-      toggles.forEach(toggle => {
-        toggle.addEventListener('click', () => toggleFAQ(toggle));
+  // Function to toggle FAQ items
+  function toggleFAQ(element) {
+    // Get the parent FAQ item
+    const faqItem = element.closest(".faq-item");
+
+    // Get the content and plus/minus sign
+    const content = faqItem.querySelector(".faq-content");
+    const plusSign = element.querySelector("span");
+
+    // Toggle the active state
+    if (content.classList.contains("active")) {
+      // Close the FAQ item
+      content.style.maxHeight = "0px";
+      content.classList.remove("active");
+      plusSign.textContent = "+";
+    } else {
+      // Close all other FAQ items first
+      const allContents = document.querySelectorAll(".faq-content");
+      const allPlusSigns = document.querySelectorAll(".faq-toggle span");
+
+      allContents.forEach((item) => {
+        item.style.maxHeight = "0px";
+        item.classList.remove("active");
       });
 
-      // Initialize: hide all FAQ content initially
-      const faqContents = document.querySelectorAll('.faq-content');
-      faqContents.forEach(content => {
-        content.style.maxHeight = '0px';
+      allPlusSigns.forEach((sign) => {
+        sign.textContent = "+";
       });
+
+      // Open the clicked FAQ item
+      content.style.maxHeight = content.scrollHeight + "px";
+      content.classList.add("active");
+      plusSign.textContent = "−"; // Using a minus sign when open
+    }
+  }
+
+  // Add click event listeners to all FAQ toggles
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggles = document.querySelectorAll(".faq-toggle");
+    toggles.forEach((toggle) => {
+      toggle.addEventListener("click", () => toggleFAQ(toggle));
     });
-  </script>
+
+    // Initialize: hide all FAQ content initially
+    const faqContents = document.querySelectorAll(".faq-content");
+    faqContents.forEach((content) => {
+      content.style.maxHeight = "0px";
+    });
+  });
+</script>

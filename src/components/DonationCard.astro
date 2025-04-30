@@ -32,12 +32,12 @@ interface Props {
 }
 
 // Default props
-const { 
-  programId = [], 
+const {
+  programId = [],
   programname = "Donation",
   title = "Donation Appeals",
   subtitle = "",
-  maxDisplay = 12
+  maxDisplay = 12,
 } = Astro.props;
 
 // Currency symbol
@@ -48,9 +48,10 @@ const data = await fetchPrograms();
 const programs: Program[] = data;
 
 // Filter programs based on programId (if provided)
-const filteredPrograms = programId.length === 0 
-  ? programs 
-  : programs.filter(program => programId.includes(program.program_id));
+const filteredPrograms =
+  programId.length === 0
+    ? programs
+    : programs.filter((program) => programId.includes(program.program_id));
 
 // Take only the first set of programs for display
 const displayPrograms = filteredPrograms.slice(0, maxDisplay);
@@ -58,13 +59,20 @@ const displayPrograms = filteredPrograms.slice(0, maxDisplay);
 // Category mapping helper - this is a placeholder, you may need to adapt it based on actual program data
 const getCategoryIcon = (program: Program): string => {
   // This is simplified - you may need more sophisticated logic to determine category
-  if (program.program_name.toLowerCase().includes("emergency")) return "fa-exclamation-circle";
+  if (program.program_name.toLowerCase().includes("emergency"))
+    return "fa-exclamation-circle";
   if (program.program_name.toLowerCase().includes("water")) return "fa-tint";
   if (program.program_name.toLowerCase().includes("food")) return "fa-utensils";
-  if (program.program_name.toLowerCase().includes("education")) return "fa-graduation-cap";
-  if (program.program_name.toLowerCase().includes("medical") || program.program_name.toLowerCase().includes("health")) return "fa-medkit";
+  if (program.program_name.toLowerCase().includes("education"))
+    return "fa-graduation-cap";
+  if (
+    program.program_name.toLowerCase().includes("medical") ||
+    program.program_name.toLowerCase().includes("health")
+  )
+    return "fa-medkit";
   if (program.program_name.toLowerCase().includes("orphan")) return "fa-child";
-  if (program.program_name.toLowerCase().includes("zakat")) return "fa-star-and-crescent";
+  if (program.program_name.toLowerCase().includes("zakat"))
+    return "fa-star-and-crescent";
   return "fa-hands-helping"; // Default icon
 };
 ---
@@ -77,102 +85,108 @@ const getCategoryIcon = (program: Program): string => {
         <h2 class="text-4xl font-bold text-hotpink mb-3">{title}</h2>
         <div class="h-1 w-24 bg-teal rounded-full mx-auto"></div>
       </div>
-      {subtitle && <p class="text-customgray max-w-2xl mx-auto mt-4">{subtitle}</p>}
+      {
+        subtitle && (
+          <p class="text-customgray max-w-2xl mx-auto mt-4">{subtitle}</p>
+        )
+      }
     </div>
-        
+
     <!-- Programs Grid with hover effects -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {displayPrograms.slice(0,6).map((program, index) => {
-        // Alternate colors for visual interest
-        const buttonColor = index % 3 === 0 ? "hotpink" : 
-                           index % 3 === 1 ? "teal" : "customblue";
-        const categoryIcon = getCategoryIcon(program);
-        
-        return (
-          <div class="group relative overflow-hidden rounded-xl bg-white border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-            {/* Decorative accent line at top */}
-            <div class={`h-1 w-full bg-${buttonColor}`}></div>
-            
-            {/* Program Image with overlay */}
-            <div class="relative h-64 overflow-hidden">
-              <img
-                src={program.image || "/api/placeholder/600/400"}
-                alt={program.program_name}
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              
-              {/* Gradient overlay */}
-              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
-              
-              {/* Country Badge */}
-              <div class="absolute bottom-4 left-4">
-                <div class="flex items-center bg-white py-1.5 px-4 rounded-full shadow-md">
-                  <i class="fas fa-globe-asia text-customblue mr-2"></i>
-                  <span class="font-medium text-customgray">{program.country_name || "Pakistan"}</span>
+      {
+        displayPrograms.slice(0, 6).map((program, index) => {
+          // Alternate colors for visual interest
+          const buttonColor =
+            index % 3 === 0
+              ? "hotpink"
+              : index % 3 === 1
+                ? "teal"
+                : "customblue";
+          const categoryIcon = getCategoryIcon(program);
+
+          return (
+            <div class="group relative overflow-hidden rounded-xl bg-white border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+              {/* Decorative accent line at top */}
+              <div class={`h-1 w-full bg-${buttonColor}`} />
+
+              {/* Program Image with overlay */}
+              <div class="relative h-64 overflow-hidden">
+                <img
+                  src={program.image || "/api/placeholder/600/400"}
+                  alt={program.program_name}
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+
+                {/* Gradient overlay */}
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60" />
+
+                {/* Country Badge */}
+                <div class="absolute bottom-4 left-4">
+                  <div class="flex items-center bg-white py-1.5 px-4 rounded-full shadow-md">
+                    <i class="fas fa-globe-asia text-customblue mr-2" />
+                    <span class="font-medium text-customgray">
+                      {program.country_name || "Pakistan"}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Category icon */}
+                <div class="absolute top-4 right-4">
+                  <div
+                    class={`flex items-center justify-center w-10 h-10 rounded-full bg-${buttonColor} text-white shadow-md`}
+                  >
+                    <i class={`fas ${categoryIcon}`} />
+                  </div>
                 </div>
               </div>
-              
-              {/* Category icon */}
-              <div class="absolute top-4 right-4">
-                <div class={`flex items-center justify-center w-10 h-10 rounded-full bg-${buttonColor} text-white shadow-md`}>
-                  <i class={`fas ${categoryIcon}`}></i>
+
+              {/* Content with improved spacing */}
+              <div class="p-6">
+                <h3
+                  class={`text-xl font-bold text-${buttonColor} mb-3 line-clamp-2 h-14`}
+                >
+                  {program.program_name}
+                </h3>
+
+                <div class="flex items-center justify-between mb-6">
+                  <span class="text-2xl font-bold text-customgray">
+                    {program.program_rate
+                      ? `${pound}${program.program_rate}`
+                      : "Any amount"}
+                  </span>
+
+                  {/* Progress indicator - for visual interest */}
+                  <div class="w-20 h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                    <div
+                      class={`h-full bg-${buttonColor}`}
+                      style={`width: ${Math.floor(Math.random() * 100)}%`}
+                    />
+                  </div>
+                </div>
+
+                <div class="flex justify-between gap-3">
+                  <a
+                    href={program.donation_url}
+                    class={`group flex-1 inline-flex items-center justify-center bg-${buttonColor} hover:bg-opacity-90 text-white font-medium py-2.5 px-4 rounded-full transition duration-300 shadow-sm hover:shadow`}
+                  >
+                    <i class="fas fa-heart mr-2" />
+                    <span>Donate Now</span>
+                  </a>
+                  <a
+                    href={`/details/${program.program_id}`}
+                    class="group flex-grow-0 inline-flex items-center justify-center border border-customgray/30 hover:border-customgray/50 text-customgray font-medium py-2.5 w-12 rounded-full transition duration-300"
+                  >
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300" />
+                  </a>
                 </div>
               </div>
             </div>
-                    
-            {/* Content with improved spacing */}
-            <div class="p-6">
-              <h3 class={`text-xl font-bold text-${buttonColor} mb-3 line-clamp-2 h-14`}>
-                {program.program_name}
-              </h3>
-              
-              <div class="flex items-center justify-between mb-6">
-                <span class="text-2xl font-bold text-customgray">
-                  {program.program_rate ? `${pound}${program.program_rate}` : "Any amount"}
-                </span>
-                
-                {/* Progress indicator - for visual interest */}
-                <div class="w-20 h-1.5 bg-gray-200 rounded-full overflow-hidden">
-                  <div 
-                    class={`h-full bg-${buttonColor}`} 
-                    style={`width: ${Math.floor(Math.random() * 100)}%`}
-                  ></div>
-                </div>
-              </div>
-                    
-              <div class="flex justify-between gap-3">
-                <a
-                  href={program.donation_url}
-                  class={`group flex-1 inline-flex items-center justify-center bg-${buttonColor} hover:bg-opacity-90 text-white font-medium py-2.5 px-4 rounded-full transition duration-300 shadow-sm hover:shadow`}
-                >
-                  <i class="fas fa-heart mr-2"></i>
-                  <span>Donate Now</span>
-                </a>
-                <a
-                  href={`/details/${program.program_id}`}
-                  class="group flex-grow-0 inline-flex items-center justify-center border border-customgray/30 hover:border-customgray/50 text-customgray font-medium py-2.5 w-12 rounded-full transition duration-300"
-                >
-                  <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        )
-      })}
+          );
+        })
+      }
     </div>
-    
-    {/* View All Button - if there are more programs than displayed */}
-    <!-- {filteredPrograms.length > maxDisplay && (
-      <div class="mt-12 text-center">
-        <a 
-          href="/donations" 
-          class="inline-flex items-center justify-center bg-customgray hover:bg-opacity-90 text-white font-medium py-3 px-8 rounded-full transition duration-300 group"
-        >
-          View All Appeals
-          <i class="fas fa-chevron-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-        </a>
-      </div>
-    )} -->
+
   </div>
 </section>
 
@@ -181,7 +195,7 @@ const getCategoryIcon = (program: Program): string => {
   .group:hover .group-hover\:scale-110 {
     transform: scale(1.1);
   }
-  
+
   /* Line clamp for consistent card heights */
   .line-clamp-2 {
     display: -webkit-box;
@@ -189,7 +203,7 @@ const getCategoryIcon = (program: Program): string => {
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-  
+
   /* Ensure consistent title heights */
   .h-14 {
     height: 3.5rem;

@@ -6,15 +6,24 @@ import FAQItem from "../../components/SingleFaq.astro";
 ---
 
 <Layout>
-    <AppealsBanner title="Sadaqah" description="Your Qurbani, Their Relief" image="/assets/images/home.jpg" />
-
+  <AppealsBanner
+    title="Sadaqah"
+    description="Your Qurbani, Their Relief"
+    image="/assets/images/home.jpg"
+  />
 
   <DonationCard programId={[]} />
   <section class="relative py-14 overflow-hidden max-w-7xl mx-auto">
     <!-- Decorative background elements -->
-    <div class="absolute w-full h-full top-0 left-0 bg-gradient-to-br from-teal/5 via-white to-hotpink/5 z-0"></div>
-    <div class="absolute -bottom-24 -right-24 w-64 h-64 rounded-full bg-teal/5 z-0"></div>
-    
+    <div
+      class="absolute w-full h-full top-0 left-0 bg-gradient-to-br from-teal/5 via-white to-hotpink/5 z-0"
+    >
+    </div>
+    <div
+      class="absolute -bottom-24 -right-24 w-64 h-64 rounded-full bg-teal/5 z-0"
+    >
+    </div>
+
     <div class="container mx-auto px-4 relative z-10">
       <!-- Two-column layout -->
       <div class="flex flex-col lg:flex-row gap-8 items-center">
@@ -22,52 +31,81 @@ import FAQItem from "../../components/SingleFaq.astro";
         <div class="lg:w-2/5">
           <div class="relative">
             <!-- Main image with styling -->
-            <div class="rounded-tr-3xl rounded-bl-3xl overflow-hidden shadow-md">
-              <img 
-                src="/assets/images/home.jpg" 
-                alt="Qurbani distribution" 
+            <div
+              class="rounded-tr-3xl rounded-bl-3xl overflow-hidden shadow-md"
+            >
+              <img
+                src="/assets/images/home.jpg"
+                alt="Qurbani distribution"
                 class="w-full h-auto object-cover"
               />
             </div>
-            
+
             <!-- Decorative element -->
-            <div class="absolute -bottom-3 -right-3 w-24 h-24 bg-hotpink/10 rounded-tl-2xl"></div>
-            <div class="absolute -top-3 -left-3 w-24 h-24 bg-teal/10 rounded-br-2xl"></div>
+            <div
+              class="absolute -bottom-3 -right-3 w-24 h-24 bg-hotpink/10 rounded-tl-2xl"
+            >
+            </div>
+            <div
+              class="absolute -top-3 -left-3 w-24 h-24 bg-teal/10 rounded-br-2xl"
+            >
+            </div>
           </div>
         </div>
-        
+
         <!-- Right column: Content -->
         <div class="lg:w-3/5">
-          <div class="inline-block px-3 py-1 bg-hotpink/10 text-hotpink/90 rounded-full text-xs font-medium mb-4 shadow-sm">
+          <div
+            class="inline-block px-3 py-1 bg-hotpink/10 text-hotpink/90 rounded-full text-xs font-medium mb-4 shadow-sm"
+          >
             Understanding Qurbani
           </div>
-          
-          <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-customgray relative">
+
+          <h2
+            class="text-2xl md:text-3xl font-semibold mb-6 text-customgray relative"
+          >
             The Significance & Impact
             <span class="block w-12 h-0.5 bg-teal mt-3"></span>
           </h2>
-          
+
           <!-- Paragraphs without bullet points -->
           <div class="prose prose-lg text-customgray/80 max-w-none space-y-4">
             <p>
-              Qurbani honors Prophet Ibrahim's devotion and willingness to sacrifice what he loved most for Allah. This act of worship connects us to our heritage while providing essential nutrition to communities where protein is scarce and malnutrition rates are high.
+              Qurbani honors Prophet Ibrahim's devotion and willingness to
+              sacrifice what he loved most for Allah. This act of worship
+              connects us to our heritage while providing essential nutrition to
+              communities where protein is scarce and malnutrition rates are
+              high.
             </p>
-            
+
             <p>
-              Our Qurbani program ensures the highest standards of both religious compliance and ethical distribution. All sacrifices are performed by qualified Muslims following proper Islamic guidelines, with animals meeting the required health and age specifications. 
+              Our Qurbani program ensures the highest standards of both
+              religious compliance and ethical distribution. All sacrifices are
+              performed by qualified Muslims following proper Islamic
+              guidelines, with animals meeting the required health and age
+              specifications.
             </p>
-            
+
             <p>
-              When you entrust your Qurbani to us, families receive fresh meat within 48 hours of sacrifice – often the only protein they'll have access to for months. Your contribution creates moments of celebration and dignity for those who would otherwise go without during this blessed occasion.
+              When you entrust your Qurbani to us, families receive fresh meat
+              within 48 hours of sacrifice – often the only protein they'll have
+              access to for months. Your contribution creates moments of
+              celebration and dignity for those who would otherwise go without
+              during this blessed occasion.
             </p>
           </div>
-          
+
           <!-- Subtle separator -->
-          <div class="w-full h-px bg-gradient-to-r from-transparent via-customgray/20 to-transparent my-6"></div>
-          
+          <div
+            class="w-full h-px bg-gradient-to-r from-transparent via-customgray/20 to-transparent my-6"
+          >
+          </div>
+
           <!-- Simple stat cards -->
           <div class="flex flex-wrap gap-4 items-center justify-start">
-            <div class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3">
+            <div
+              class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3"
+            >
               <div class="text-hotpink">
                 <i class="fas fa-mosque text-lg"></i>
               </div>
@@ -75,8 +113,10 @@ import FAQItem from "../../components/SingleFaq.astro";
                 <div class="font-medium">100% Shariah Compliance</div>
               </div>
             </div>
-            
-            <div class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3">
+
+            <div
+              class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3"
+            >
               <div class="text-teal">
                 <i class="fas fa-hand-holding-heart text-lg"></i>
               </div>
@@ -84,8 +124,10 @@ import FAQItem from "../../components/SingleFaq.astro";
                 <div class="font-medium">Zero Admin Fees</div>
               </div>
             </div>
-            
-            <div class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3">
+
+            <div
+              class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3"
+            >
               <div class="text-customblue">
                 <i class="fas fa-camera text-lg"></i>
               </div>
@@ -100,91 +142,128 @@ import FAQItem from "../../components/SingleFaq.astro";
   </section>
   <section class="relative py-14 overflow-hidden max-w-7xl mx-auto">
     <!-- Decorative background elements -->
-    <div class="absolute w-full h-full top-0 left-0 bg-gradient-to-br from-teal/5 via-white to-hotpink/5 z-0"></div>
-    <div class="absolute -bottom-24 -right-24 w-64 h-64 rounded-full bg-teal/5 z-0"></div>
-    
+    <div
+      class="absolute w-full h-full top-0 left-0 bg-gradient-to-br from-teal/5 via-white to-hotpink/5 z-0"
+    >
+    </div>
+    <div
+      class="absolute -bottom-24 -right-24 w-64 h-64 rounded-full bg-teal/5 z-0"
+    >
+    </div>
+
     <div class="container mx-auto px-4 relative z-10">
       <!-- Two-column layout -->
       <div class="flex flex-col lg:flex-row gap-8 items-center">
         <!-- Left column: Image -->
         <div class="lg:w-3/5">
-            <div class="inline-block px-3 py-1 bg-hotpink/10 text-hotpink/90 rounded-full text-xs font-medium mb-4 shadow-sm">
-              Understanding Qurbani
-            </div>
-            
-            <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-customgray relative">
-              The Significance & Impact
-              <span class="block w-12 h-0.5 bg-teal mt-3"></span>
-            </h2>
-            
-            <!-- Paragraphs without bullet points -->
-            <div class="prose prose-lg text-customgray/80 max-w-none space-y-4">
-              <p>
-                Qurbani honors Prophet Ibrahim's devotion and willingness to sacrifice what he loved most for Allah. This act of worship connects us to our heritage while providing essential nutrition to communities where protein is scarce and malnutrition rates are high.
-              </p>
-              
-              <p>
-                Our Qurbani program ensures the highest standards of both religious compliance and ethical distribution. All sacrifices are performed by qualified Muslims following proper Islamic guidelines, with animals meeting the required health and age specifications. 
-              </p>
-              
-              <p>
-                When you entrust your Qurbani to us, families receive fresh meat within 48 hours of sacrifice – often the only protein they'll have access to for months. Your contribution creates moments of celebration and dignity for those who would otherwise go without during this blessed occasion.
-              </p>
-            </div>
-            
-            <!-- Subtle separator -->
-            <div class="w-full h-px bg-gradient-to-r from-transparent via-customgray/20 to-transparent my-6"></div>
-            
-            <!-- Simple stat cards -->
-            <div class="flex flex-wrap gap-4 items-center justify-start">
-              <div class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3">
-                <div class="text-hotpink">
-                  <i class="fas fa-mosque text-lg"></i>
-                </div>
-                <div>
-                  <div class="font-medium">100% Shariah Compliance</div>
-                </div>
+          <div
+            class="inline-block px-3 py-1 bg-hotpink/10 text-hotpink/90 rounded-full text-xs font-medium mb-4 shadow-sm"
+          >
+            Understanding Qurbani
+          </div>
+
+          <h2
+            class="text-2xl md:text-3xl font-semibold mb-6 text-customgray relative"
+          >
+            The Significance & Impact
+            <span class="block w-12 h-0.5 bg-teal mt-3"></span>
+          </h2>
+
+          <!-- Paragraphs without bullet points -->
+          <div class="prose prose-lg text-customgray/80 max-w-none space-y-4">
+            <p>
+              Qurbani honors Prophet Ibrahim's devotion and willingness to
+              sacrifice what he loved most for Allah. This act of worship
+              connects us to our heritage while providing essential nutrition to
+              communities where protein is scarce and malnutrition rates are
+              high.
+            </p>
+
+            <p>
+              Our Qurbani program ensures the highest standards of both
+              religious compliance and ethical distribution. All sacrifices are
+              performed by qualified Muslims following proper Islamic
+              guidelines, with animals meeting the required health and age
+              specifications.
+            </p>
+
+            <p>
+              When you entrust your Qurbani to us, families receive fresh meat
+              within 48 hours of sacrifice – often the only protein they'll have
+              access to for months. Your contribution creates moments of
+              celebration and dignity for those who would otherwise go without
+              during this blessed occasion.
+            </p>
+          </div>
+
+          <!-- Subtle separator -->
+          <div
+            class="w-full h-px bg-gradient-to-r from-transparent via-customgray/20 to-transparent my-6"
+          >
+          </div>
+
+          <!-- Simple stat cards -->
+          <div class="flex flex-wrap gap-4 items-center justify-start">
+            <div
+              class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3"
+            >
+              <div class="text-hotpink">
+                <i class="fas fa-mosque text-lg"></i>
               </div>
-              
-              <div class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3">
-                <div class="text-teal">
-                  <i class="fas fa-hand-holding-heart text-lg"></i>
-                </div>
-                <div>
-                  <div class="font-medium">Zero Admin Fees</div>
-                </div>
+              <div>
+                <div class="font-medium">100% Shariah Compliance</div>
               </div>
-              
-              <div class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3">
-                <div class="text-customblue">
-                  <i class="fas fa-camera text-lg"></i>
-                </div>
-                <div>
-                  <div class="font-medium">Photo Confirmation</div>
-                </div>
+            </div>
+
+            <div
+              class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3"
+            >
+              <div class="text-teal">
+                <i class="fas fa-hand-holding-heart text-lg"></i>
+              </div>
+              <div>
+                <div class="font-medium">Zero Admin Fees</div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3"
+            >
+              <div class="text-customblue">
+                <i class="fas fa-camera text-lg"></i>
+              </div>
+              <div>
+                <div class="font-medium">Photo Confirmation</div>
               </div>
             </div>
           </div>
-      
-        
+        </div>
+
         <!-- Right column: Content -->
         <div class="lg:w-2/5">
-            <div class="relative">
-              <!-- Main image with styling -->
-              <div class="rounded-tr-3xl rounded-bl-3xl overflow-hidden shadow-md">
-                <img 
-                  src="/assets/images/home.jpg" 
-                  alt="Qurbani distribution" 
-                  class="w-full h-auto object-cover"
-                />
-              </div>
-              
-              <!-- Decorative element -->
-              <div class="absolute -bottom-3 -right-3 w-24 h-24 bg-hotpink/10 rounded-tl-2xl"></div>
-              <div class="absolute -top-3 -left-3 w-24 h-24 bg-teal/10 rounded-br-2xl"></div>
+          <div class="relative">
+            <!-- Main image with styling -->
+            <div
+              class="rounded-tr-3xl rounded-bl-3xl overflow-hidden shadow-md"
+            >
+              <img
+                src="/assets/images/home.jpg"
+                alt="Qurbani distribution"
+                class="w-full h-auto object-cover"
+              />
+            </div>
+
+            <!-- Decorative element -->
+            <div
+              class="absolute -bottom-3 -right-3 w-24 h-24 bg-hotpink/10 rounded-tl-2xl"
+            >
+            </div>
+            <div
+              class="absolute -top-3 -left-3 w-24 h-24 bg-teal/10 rounded-br-2xl"
+            >
             </div>
           </div>
-      
+        </div>
       </div>
     </div>
   </section>
@@ -192,26 +271,37 @@ import FAQItem from "../../components/SingleFaq.astro";
     <div class="container mx-auto px-4">
       <!-- Section Header -->
       <div class="text-center mb-12">
-        <div class="inline-block px-4 py-1 bg-teal/10 text-teal rounded-full text-sm font-medium mb-3">
+        <div
+          class="inline-block px-4 py-1 bg-teal/10 text-teal rounded-full text-sm font-medium mb-3"
+        >
           <i class="fas fa-info-circle mr-2"></i>What You Need To Know
         </div>
         <h2 class="text-3xl font-bold mb-4">Understanding Your Qurbani</h2>
         <div class="w-20 h-1 bg-hotpink mx-auto"></div>
       </div>
-      
+
       <!-- Content Paragraphs -->
       <div class="max-w-7xl mx-auto">
         <p class="text-lg mb-6 text-customgray leading-relaxed">
-          Qurbani, also known as Udhiyah, is the sacred act of animal sacrifice performed during Eid al-Adha. It commemorates Prophet Ibrahim's willingness to sacrifice his son in obedience to Allah. Today, it serves as both a religious obligation and a means to provide essential nutrition to those in need.
+          Qurbani, also known as Udhiyah, is the sacred act of animal sacrifice
+          performed during Eid al-Adha. It commemorates Prophet Ibrahim's
+          willingness to sacrifice his son in obedience to Allah. Today, it
+          serves as both a religious obligation and a means to provide essential
+          nutrition to those in need.
         </p>
-        
+
         <p class="text-lg mb-8 text-customgray leading-relaxed">
-          When you give your Qurbani through our organization, we ensure that meat is distributed fairly among beneficiaries within 48 hours of sacrifice. Each family receives approximately 2-3kg of fresh meat, often the only protein they'll have access to for months.
+          When you give your Qurbani through our organization, we ensure that
+          meat is distributed fairly among beneficiaries within 48 hours of
+          sacrifice. Each family receives approximately 2-3kg of fresh meat,
+          often the only protein they'll have access to for months.
         </p>
-        
+
         <!-- Key Points -->
         <div class="grid md:grid-cols-2 gap-6 mt-8">
-          <div class="bg-customblue/5 p-6 rounded-xl border-l-4 border-customblue">
+          <div
+            class="bg-customblue/5 p-6 rounded-xl border-l-4 border-customblue"
+          >
             <div class="flex items-center gap-3 mb-3">
               <div class="bg-customblue/10 p-3 rounded-full text-customblue">
                 <i class="fas fa-check-circle"></i>
@@ -233,7 +323,7 @@ import FAQItem from "../../components/SingleFaq.astro";
               </li>
             </ul>
           </div>
-          
+
           <div class="bg-teal/5 p-6 rounded-xl border-l-4 border-teal">
             <div class="flex items-center gap-3 mb-3">
               <div class="bg-teal/10 p-3 rounded-full text-teal">
@@ -261,14 +351,15 @@ import FAQItem from "../../components/SingleFaq.astro";
     </div>
   </section>
 
-
-
-
   <!-- Video Section -->
-  <section class="py-16 bg-gradient-to-b from-teal/5 to-white relative overflow-hidden">
+  <section
+    class="py-16 bg-gradient-to-b from-teal/5 to-white relative overflow-hidden"
+  >
     <div class="container mx-auto px-4 relative z-10">
       <div class="text-center mb-12">
-        <span class="inline-block px-4 py-1 bg-teal/10 text-teal rounded-full text-sm font-medium mb-3">
+        <span
+          class="inline-block px-4 py-1 bg-teal/10 text-teal rounded-full text-sm font-medium mb-3"
+        >
           <i class="fas fa-video mr-2"></i>See The Impact
         </span>
         <h2 class="text-3xl md:text-4xl font-bold text-customgray">
@@ -280,39 +371,50 @@ import FAQItem from "../../components/SingleFaq.astro";
       <div class="max-w-7xl mx-auto">
         <div class="relative rounded-2xl overflow-hidden shadow-xl bg-black">
           <!-- Video thumbnail with play overlay (for better page load performance) -->
-          <div class="relative aspect-auto h-96 group cursor-pointer video-container">
+          <div
+            class="relative aspect-auto h-96 group cursor-pointer video-container"
+          >
             <!-- Replace with your actual YouTube embed, this is a placeholder structure -->
-            <iframe 
-              class="w-full h-full rounded-xl" 
-              src="https://www.youtube.com/embed/VIDEO_ID_HERE?rel=0" 
-              title="Qurbani 2024 Impact" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen>
+            <iframe
+              class="w-full h-full rounded-xl"
+              src="https://www.youtube.com/embed/VIDEO_ID_HERE?rel=0"
+              title="Qurbani 2024 Impact"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
             </iframe>
           </div>
         </div>
-        
-        <div class="mt-8 bg-white p-6 rounded-xl shadow-md border-l-4 border-teal">
-          <h3 class="font-bold text-xl text-customgray mb-3">Last Year's Qurbani Distribution</h3>
+
+        <div
+          class="mt-8 bg-white p-6 rounded-xl shadow-md border-l-4 border-teal"
+        >
+          <h3 class="font-bold text-xl text-customgray mb-3">
+            Last Year's Qurbani Distribution
+          </h3>
           <p class="text-customgray/80">
-            Watch how your generosity brought joy to thousands of families during Eid al-Adha last year. For many, this was the only meat they received all year.
+            Watch how your generosity brought joy to thousands of families
+            during Eid al-Adha last year. For many, this was the only meat they
+            received all year.
           </p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- FAQ Section -->
+  <section class="py-16 bg-white relative overflow-hidden">
+    <div
+      class="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-hotpink/10 -translate-x-1/2 translate-y-1/2"
+    >
+    </div>
 
-
-
-<!-- FAQ Section -->
-<section class="py-16 bg-white relative overflow-hidden">
-    <div class="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-hotpink/10 -translate-x-1/2 translate-y-1/2"></div>
-    
     <div class="container mx-auto px-4 relative z-10">
       <div class="text-center mb-12">
-        <span class="inline-block px-4 py-1 bg-hotpink/10 text-hotpink rounded-full text-sm font-medium mb-3">
+        <span
+          class="inline-block px-4 py-1 bg-hotpink/10 text-hotpink rounded-full text-sm font-medium mb-3"
+        >
           <i class="fas fa-question-circle mr-2"></i>About Donations
         </span>
         <h2 class="text-3xl md:text-4xl font-bold text-customgray">
@@ -322,68 +424,67 @@ import FAQItem from "../../components/SingleFaq.astro";
       </div>
 
       <div class="max-w-3xl mx-auto">
-        <FAQItem 
-          question="How is my donation used?" 
-          answer="Your donation is used directly for the Qurbani program, with a small portion allocated to administrative costs to ensure the efficient delivery of services." 
+        <FAQItem
+          question="How is my donation used?"
+          answer="Your donation is used directly for the Qurbani program, with a small portion allocated to administrative costs to ensure the efficient delivery of services."
         />
-        
-        <FAQItem 
-          question="Can I donate on behalf of someone else?" 
-          answer="Yes, you can make a donation on behalf of a loved one, living or deceased. Simply add their name during the checkout process." 
+
+        <FAQItem
+          question="Can I donate on behalf of someone else?"
+          answer="Yes, you can make a donation on behalf of a loved one, living or deceased. Simply add their name during the checkout process."
         />
-        
-        <FAQItem 
-          question="Is my donation tax-deductible?" 
-          answer="Yes, all donations are tax-deductible in most countries. You will receive a tax receipt at the end of the financial year." 
+
+        <FAQItem
+          question="Is my donation tax-deductible?"
+          answer="Yes, all donations are tax-deductible in most countries. You will receive a tax receipt at the end of the financial year."
         />
       </div>
     </div>
 
-
-
-  <style>
-    /* Custom animations */
-    .animate-fade-in-left {
-      animation: fadeInLeft 1s ease-out forwards;
-    }
-
-    .animate-fade-in-right {
-      animation: fadeInRight 1s ease-out forwards;
-    }
-
-    @keyframes fadeInLeft {
-      from {
-        opacity: 0;
-        transform: translateX(-20px);
+    <style>
+      /* Custom animations */
+      .animate-fade-in-left {
+        animation: fadeInLeft 1s ease-out forwards;
       }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
 
-    @keyframes fadeInRight {
-      from {
-        opacity: 0;
-        transform: translateX(20px);
+      .animate-fade-in-right {
+        animation: fadeInRight 1s ease-out forwards;
       }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
 
-    /* Subtle scale hover effect */
-    .hover\:scale-102:hover {
-      transform: scale(1.02);
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .container {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+      @keyframes fadeInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
       }
-    }
-  </style>
-</Layout>
+
+      @keyframes fadeInRight {
+        from {
+          opacity: 0;
+          transform: translateX(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      /* Subtle scale hover effect */
+      .hover\:scale-102:hover {
+        transform: scale(1.02);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .container {
+          padding-top: 2rem;
+          padding-bottom: 2rem;
+        }
+      }
+    </style>
+  </section></Layout
+>

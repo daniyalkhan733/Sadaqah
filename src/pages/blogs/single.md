@@ -51,4 +51,3 @@ At the end of the first 10 days of Ramadan, the Human Aid Foundation looks back 
 ## Conclusion:
 
 During the first 10 days of Ramadan, the Human Aid Foundation shows what it means to be compassionate and generous. They help people who are struggling and show support for those in need. As we continue through Ramadan, let their efforts inspire us and do what we can to help others in our communities.
-

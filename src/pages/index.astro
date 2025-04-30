@@ -211,8 +211,7 @@ import BlogCard from "../components/BlogCard.astro";
       </div>
     </div>
 
-
-    <div class="container mx-auto px-4 relative z-10 ">
+    <div class="container mx-auto px-4 relative z-10">
       <div class="flex flex-col md:flex-row items-center gap-8">
         <div class="md:w-2/3">
           <div class="flex items-center gap-2 mb-6">
@@ -518,38 +517,51 @@ import BlogCard from "../components/BlogCard.astro";
 
   <section id="featured" class="py-16 md:py-24 bg-white">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl md:text-4xl font-bold mb-2 text-[#0E173B]">Featured Articles</h2>
+      <h2 class="text-3xl md:text-4xl font-bold mb-2 text-[#0E173B]">
+        Featured Articles
+      </h2>
       <div class="w-20 h-1 bg-[#EE0C6E] mb-10"></div>
-      
+
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <BlogCard 
-          title="The Future of AI in Design" 
-          excerpt="How artificial intelligence is transforming the creative industry" 
-          date="April 23, 2025" 
+        <BlogCard
+          title="The Future of AI in Design"
+          excerpt="How artificial intelligence is transforming the creative industry"
+          date="April 23, 2025"
           image="/assets/images/home.jpg"
           category="Technology"
         />
-        <BlogCard 
-          title="Sustainable Web Development" 
-          excerpt="Practices for building eco-friendly digital products" 
-          date="April 20, 2025" 
+        <BlogCard
+          title="Sustainable Web Development"
+          excerpt="Practices for building eco-friendly digital products"
+          date="April 20, 2025"
           image="/assets/images/home.jpg"
           category="Development"
         />
-        <BlogCard 
-          title="User-Centric Design Principles" 
-          excerpt="Creating experiences that truly resonate with your audience" 
-          date="April 18, 2025" 
+        <BlogCard
+          title="User-Centric Design Principles"
+          excerpt="Creating experiences that truly resonate with your audience"
+          date="April 18, 2025"
           image="/assets/images/home.jpg"
           category="Design"
         />
       </div>
-      
+
       <div class="text-center mt-12">
-        <a href="/blogs" class="inline-flex items-center gap-2 text-[#EE0C6E] hover:text-[#d00a62] font-medium text-lg transition-all duration-300">
+        <a
+          href="/blogs"
+          class="inline-flex items-center gap-2 text-[#EE0C6E] hover:text-[#d00a62] font-medium text-lg transition-all duration-300"
+        >
           View all articles
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
           </svg>
         </a>
       </div>

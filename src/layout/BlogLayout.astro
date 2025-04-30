@@ -1,0 +1,61 @@
+---
+import BlogsBanner from "../components/BlogsBanner.astro";
+import MainLayout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<MainLayout>
+  <BlogsBanner
+    title={frontmatter.title}
+    description={frontmatter.description}
+    image={frontmatter.image}
+  />
+
+  <!-- Blog content -->
+  <main class="container mx-auto px-4 py-8 max-w-4xl">
+    <!-- Blog header -->
+    <div class="mb-8">
+      <div class="flex flex-wrap items-center text-gray-500 my-6 gap-4">
+        <div class="flex items-center">
+          <img
+            src="/assets/images/logo-short.png"
+            alt="Author"
+            class="w-10 h-10 rounded-full mr-3"
+          />
+          <span
+            >By
+            <a
+              href="#"
+              class="text-teal hover:text-hotpink transition-colors duration-300"
+              >My Sadaqah Online</a
+            ></span
+          >
+        </div>
+        <div class="flex items-center">
+          <i class="far fa-calendar-alt mr-2 text-teal"></i>
+          <span>April 25, 2025</span>
+        </div>
+        <div class="flex items-center">
+          <i class="far fa-clock mr-2 text-teal"></i>
+          <span>5 min read</span>
+        </div>
+        <div class="flex items-center">
+          <i class="fas fa-tag mr-2 text-teal"></i>
+          <a href="#" class="hover:text-teal transition-colors duration-300"
+            >Charity</a
+          >,
+          <a
+            href="#"
+            class="ml-1 hover:text-teal transition-colors duration-300"
+            >Development</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <slot />
+    </div>
+
+  </main>
+</MainLayout>

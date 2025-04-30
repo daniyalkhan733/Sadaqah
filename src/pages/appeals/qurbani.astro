@@ -1,0 +1,796 @@
+---
+import Banner from "../../components/Banner.astro";
+import Layout from "../../layout/Layout.astro";
+import DonationCard from "../../components/DonationCard.astro";
+import FAQItem from "../../components/SingleFaq.astro";
+---
+
+<Layout>
+    <Banner title="Qurbani 2025" description="Your Qurbani, Their Relief" image="/assets/images/home.jpg" />
+
+  <!-- Hero Section -->
+  <section class="relative py-20 overflow-hidden bg-gradient-to-b from-teal/5 to-customblue/5 max-w-7xl mx-auto">
+    <!-- Decorative elements with brand colors -->
+    <div class="absolute top-0 left-0 w-64 h-64 rounded-full bg-hotpink/10 -translate-x-1/2 -translate-y-1/2"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-teal/10 translate-x-1/3 translate-y-1/3"></div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="flex flex-col md:flex-row gap-8 lg:gap-12 items-center">
+        <div class="md:w-1/2 animate-fade-in-left">
+          <div class="inline-block px-4 py-1 bg-hotpink/10 text-hotpink rounded-full text-sm font-medium mb-6">
+            <i class="fas fa-sheep mr-2"></i>Qurbani 2025
+          </div>
+          <h1 class="text-3xl md:text-5xl font-bold mb-6 relative">
+            Your Qurbani, <span class="text-hotpink">Their Relief</span>
+            <div class="absolute -bottom-3 left-0 w-20 h-1 bg-hotpink"></div>
+          </h1>
+          <p class="text-lg mb-6 text-customgray leading-relaxed">
+            Fulfill your sacred duty and bring joy to families in need. Your Qurbani sacrifice will provide nutritious meat to vulnerable communities across 20+ countries worldwide.
+          </p>
+
+          <div class="bg-white p-5 rounded-xl shadow-md border-l-4 border-teal mb-6 transform hover:scale-102 transition-all duration-300">
+            <p class="text-customgray mb-2">Last year's impact:</p>
+            <div class="flex items-center gap-4 mb-3">
+              <div class="bg-teal/10 p-3 rounded-full text-teal">
+                <i class="fas fa-users"></i>
+              </div>
+              <div>
+                <div class="font-bold text-xl">850,000+</div>
+                <div class="text-sm text-customgray/80">
+                  People received fresh Qurbani meat
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="bg-teal/10 p-3 rounded-full text-teal">
+                <i class="fas fa-globe-africa"></i>
+              </div>
+              <div>
+                <div class="font-bold text-xl">25 countries</div>
+                <div class="text-sm text-customgray/80">
+                  Across Africa, Asia, and the Middle East
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 flex flex-wrap gap-4">
+            <a href="#donate-now" class="bg-hotpink hover:bg-opacity-90 text-white px-6 py-3 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2 font-medium cursor-pointer">
+              <i class="fas fa-hand-holding-heart"></i>
+              Give Qurbani Now
+            </a>
+            <button class="border border-teal text-teal hover:bg-teal/5 px-6 py-3 rounded-lg transition-all duration-300 flex items-center gap-2 font-medium">
+              <i class="fas fa-book-open"></i>
+              Learn More
+            </button>
+          </div>
+        </div>
+
+        <div class="md:w-1/2 animate-fade-in-right">
+          <div class="relative max-w-md mx-auto md:max-w-none">
+            <!-- Main image -->
+            <img
+              src="/assets/images/home.jpg"
+              alt="Family receiving Qurbani meat"
+              class="w-full h-auto rounded-2xl shadow-xl object-cover max-h-[450px] transform hover:scale-102 transition-all duration-500 ease-in-out"
+            />
+
+            <!-- Floating stats cards -->
+            <div class="absolute -top-6 -right-6 bg-white p-4 rounded-xl shadow-lg max-w-[180px] transform rotate-3 hover:rotate-0 transition-all duration-300">
+              <div class="flex items-center gap-3">
+                <div class="bg-hotpink/10 p-2 rounded-full text-hotpink">
+                  <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div>
+                  <div class="font-bold text-lg">16-19 June</div>
+                  <div class="text-xs text-customgray/80">
+                    Eid al-Adha 2025
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg max-w-[180px] transform -rotate-2 hover:rotate-0 transition-all duration-300">
+              <div class="flex items-center gap-3">
+                <div class="bg-customblue/10 p-2 rounded-full text-customblue">
+                  <i class="fas fa-percent"></i>
+                </div>
+                <div>
+                  <div class="font-bold text-lg">100% Donation</div>
+                  <div class="text-xs text-customgray/80">
+                    Policy
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <DonationCard programId={[]} />
+  <section class="relative py-14 overflow-hidden max-w-7xl mx-auto">
+    <!-- Decorative background elements -->
+    <div class="absolute w-full h-full top-0 left-0 bg-gradient-to-br from-teal/5 via-white to-hotpink/5 z-0"></div>
+    <div class="absolute -bottom-24 -right-24 w-64 h-64 rounded-full bg-teal/5 z-0"></div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <!-- Two-column layout -->
+      <div class="flex flex-col lg:flex-row gap-8 items-center">
+        <!-- Left column: Image -->
+        <div class="lg:w-2/5">
+          <div class="relative">
+            <!-- Main image with styling -->
+            <div class="rounded-tr-3xl rounded-bl-3xl overflow-hidden shadow-md">
+              <img 
+                src="/assets/images/home.jpg" 
+                alt="Qurbani distribution" 
+                class="w-full h-auto object-cover"
+              />
+            </div>
+            
+            <!-- Decorative element -->
+            <div class="absolute -bottom-3 -right-3 w-24 h-24 bg-hotpink/10 rounded-tl-2xl"></div>
+            <div class="absolute -top-3 -left-3 w-24 h-24 bg-teal/10 rounded-br-2xl"></div>
+          </div>
+        </div>
+        
+        <!-- Right column: Content -->
+        <div class="lg:w-3/5">
+          <div class="inline-block px-3 py-1 bg-hotpink/10 text-hotpink/90 rounded-full text-xs font-medium mb-4 shadow-sm">
+            Understanding Qurbani
+          </div>
+          
+          <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-customgray relative">
+            The Significance & Impact
+            <span class="block w-12 h-0.5 bg-teal mt-3"></span>
+          </h2>
+          
+          <!-- Paragraphs without bullet points -->
+          <div class="prose prose-lg text-customgray/80 max-w-none space-y-4">
+            <p>
+              Qurbani honors Prophet Ibrahim's devotion and willingness to sacrifice what he loved most for Allah. This act of worship connects us to our heritage while providing essential nutrition to communities where protein is scarce and malnutrition rates are high.
+            </p>
+            
+            <p>
+              Our Qurbani program ensures the highest standards of both religious compliance and ethical distribution. All sacrifices are performed by qualified Muslims following proper Islamic guidelines, with animals meeting the required health and age specifications. 
+            </p>
+            
+            <p>
+              When you entrust your Qurbani to us, families receive fresh meat within 48 hours of sacrifice – often the only protein they'll have access to for months. Your contribution creates moments of celebration and dignity for those who would otherwise go without during this blessed occasion.
+            </p>
+          </div>
+          
+          <!-- Subtle separator -->
+          <div class="w-full h-px bg-gradient-to-r from-transparent via-customgray/20 to-transparent my-6"></div>
+          
+          <!-- Simple stat cards -->
+          <div class="flex flex-wrap gap-4 items-center justify-start">
+            <div class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3">
+              <div class="text-hotpink">
+                <i class="fas fa-mosque text-lg"></i>
+              </div>
+              <div>
+                <div class="font-medium">100% Shariah Compliance</div>
+              </div>
+            </div>
+            
+            <div class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3">
+              <div class="text-teal">
+                <i class="fas fa-hand-holding-heart text-lg"></i>
+              </div>
+              <div>
+                <div class="font-medium">Zero Admin Fees</div>
+              </div>
+            </div>
+            
+            <div class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3">
+              <div class="text-customblue">
+                <i class="fas fa-camera text-lg"></i>
+              </div>
+              <div>
+                <div class="font-medium">Photo Confirmation</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="relative py-14 overflow-hidden max-w-7xl mx-auto">
+    <!-- Decorative background elements -->
+    <div class="absolute w-full h-full top-0 left-0 bg-gradient-to-br from-teal/5 via-white to-hotpink/5 z-0"></div>
+    <div class="absolute -bottom-24 -right-24 w-64 h-64 rounded-full bg-teal/5 z-0"></div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <!-- Two-column layout -->
+      <div class="flex flex-col lg:flex-row gap-8 items-center">
+        <!-- Left column: Image -->
+        <div class="lg:w-3/5">
+            <div class="inline-block px-3 py-1 bg-hotpink/10 text-hotpink/90 rounded-full text-xs font-medium mb-4 shadow-sm">
+              Understanding Qurbani
+            </div>
+            
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-customgray relative">
+              The Significance & Impact
+              <span class="block w-12 h-0.5 bg-teal mt-3"></span>
+            </h2>
+            
+            <!-- Paragraphs without bullet points -->
+            <div class="prose prose-lg text-customgray/80 max-w-none space-y-4">
+              <p>
+                Qurbani honors Prophet Ibrahim's devotion and willingness to sacrifice what he loved most for Allah. This act of worship connects us to our heritage while providing essential nutrition to communities where protein is scarce and malnutrition rates are high.
+              </p>
+              
+              <p>
+                Our Qurbani program ensures the highest standards of both religious compliance and ethical distribution. All sacrifices are performed by qualified Muslims following proper Islamic guidelines, with animals meeting the required health and age specifications. 
+              </p>
+              
+              <p>
+                When you entrust your Qurbani to us, families receive fresh meat within 48 hours of sacrifice – often the only protein they'll have access to for months. Your contribution creates moments of celebration and dignity for those who would otherwise go without during this blessed occasion.
+              </p>
+            </div>
+            
+            <!-- Subtle separator -->
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-customgray/20 to-transparent my-6"></div>
+            
+            <!-- Simple stat cards -->
+            <div class="flex flex-wrap gap-4 items-center justify-start">
+              <div class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3">
+                <div class="text-hotpink">
+                  <i class="fas fa-mosque text-lg"></i>
+                </div>
+                <div>
+                  <div class="font-medium">100% Shariah Compliance</div>
+                </div>
+              </div>
+              
+              <div class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3">
+                <div class="text-teal">
+                  <i class="fas fa-hand-holding-heart text-lg"></i>
+                </div>
+                <div>
+                  <div class="font-medium">Zero Admin Fees</div>
+                </div>
+              </div>
+              
+              <div class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3">
+                <div class="text-customblue">
+                  <i class="fas fa-camera text-lg"></i>
+                </div>
+                <div>
+                  <div class="font-medium">Photo Confirmation</div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+        
+        <!-- Right column: Content -->
+        <div class="lg:w-2/5">
+            <div class="relative">
+              <!-- Main image with styling -->
+              <div class="rounded-tr-3xl rounded-bl-3xl overflow-hidden shadow-md">
+                <img 
+                  src="/assets/images/home.jpg" 
+                  alt="Qurbani distribution" 
+                  class="w-full h-auto object-cover"
+                />
+              </div>
+              
+              <!-- Decorative element -->
+              <div class="absolute -bottom-3 -right-3 w-24 h-24 bg-hotpink/10 rounded-tl-2xl"></div>
+              <div class="absolute -top-3 -left-3 w-24 h-24 bg-teal/10 rounded-br-2xl"></div>
+            </div>
+          </div>
+      
+      </div>
+    </div>
+  </section>
+  <section class="relative py-16 bg-white max-w-7xl mx-auto">
+    <div class="container mx-auto px-4">
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <div class="inline-block px-4 py-1 bg-teal/10 text-teal rounded-full text-sm font-medium mb-3">
+          <i class="fas fa-info-circle mr-2"></i>What You Need To Know
+        </div>
+        <h2 class="text-3xl font-bold mb-4">Understanding Your Qurbani</h2>
+        <div class="w-20 h-1 bg-hotpink mx-auto"></div>
+      </div>
+      
+      <!-- Content Paragraphs -->
+      <div class="max-w-7xl mx-auto">
+        <p class="text-lg mb-6 text-customgray leading-relaxed">
+          Qurbani, also known as Udhiyah, is the sacred act of animal sacrifice performed during Eid al-Adha. It commemorates Prophet Ibrahim's willingness to sacrifice his son in obedience to Allah. Today, it serves as both a religious obligation and a means to provide essential nutrition to those in need.
+        </p>
+        
+        <p class="text-lg mb-8 text-customgray leading-relaxed">
+          When you give your Qurbani through our organization, we ensure that meat is distributed fairly among beneficiaries within 48 hours of sacrifice. Each family receives approximately 2-3kg of fresh meat, often the only protein they'll have access to for months.
+        </p>
+        
+        <!-- Key Points -->
+        <div class="grid md:grid-cols-2 gap-6 mt-8">
+          <div class="bg-customblue/5 p-6 rounded-xl border-l-4 border-customblue">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="bg-customblue/10 p-3 rounded-full text-customblue">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <h3 class="font-bold text-xl">Religious Compliance</h3>
+            </div>
+            <ul class="space-y-2 text-customgray">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-circle text-xs mt-1.5 text-hotpink"></i>
+                <span>All sacrifices performed by qualified Muslims</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-circle text-xs mt-1.5 text-hotpink"></i>
+                <span>Adheres strictly to Islamic requirements</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-circle text-xs mt-1.5 text-hotpink"></i>
+                <span>Animals inspected for health and age compliance</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="bg-teal/5 p-6 rounded-xl border-l-4 border-teal">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="bg-teal/10 p-3 rounded-full text-teal">
+                <i class="fas fa-heart"></i>
+              </div>
+              <h3 class="font-bold text-xl">Impact & Transparency</h3>
+            </div>
+            <ul class="space-y-2 text-customgray">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-circle text-xs mt-1.5 text-hotpink"></i>
+                <span>100% of your donation goes to Qurbani program</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-circle text-xs mt-1.5 text-hotpink"></i>
+                <span>Digital confirmation with distribution photos</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-circle text-xs mt-1.5 text-hotpink"></i>
+                <span>Focus on most vulnerable communities</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Where We Work Section -->
+  <section class="py-16 bg-gradient-to-b from-customblue/5 to-white relative overflow-hidden max-w-7xl mx-auto">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 right-0 w-64 h-64 rounded-full bg-teal/10 translate-x-1/2 -translate-y-1/2"></div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="text-center mb-12">
+        <span class="inline-block px-4 py-1 bg-customblue/10 text-customblue rounded-full text-sm font-medium mb-3">
+          <i class="fas fa-globe mr-2"></i>Our Reach
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold text-customgray">
+          Where Your <span class="text-customblue">Qurbani Goes</span>
+        </h2>
+        <div class="h-1 w-24 bg-hotpink mx-auto mt-4"></div>
+        <p class="text-lg mt-6 text-customgray max-w-2xl mx-auto">
+          Your Qurbani will reach the most vulnerable communities across Africa, Asia, and the Middle East - including conflict zones, refugee camps, and areas affected by natural disasters.
+        </p>
+      </div>
+
+      <!-- Countries Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <!-- Country Card 1 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="h-48 overflow-hidden relative">
+            <img
+              src="/assets/images/home.jpg"
+              alt="Yemen"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <h3 class="font-bold text-xl">Yemen</h3>
+            </div>
+          </div>
+          <div class="p-5">
+            <p class="text-customgray/80 mb-4">
+              Over 16 million people in Yemen are food insecure. Your Qurbani provides vital protein to families affected by conflict.
+            </p>
+            <div class="flex items-center gap-2">
+              <div class="bg-hotpink/10 p-2 rounded-full text-hotpink">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <div>
+                <div class="font-bold">15,000+ families</div>
+                <div class="text-sm text-customgray/80">received Qurbani in 2024</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Country Card 2 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="h-48 overflow-hidden relative">
+            <img
+              src="/assets/images/home.jpg"
+              alt="Syria"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <h3 class="font-bold text-xl">Syria</h3>
+            </div>
+          </div>
+          <div class="p-5">
+            <p class="text-customgray/80 mb-4">
+              After years of conflict, millions of Syrians struggle to access basic necessities. Your Qurbani brings hope during Eid.
+            </p>
+            <div class="flex items-center gap-2">
+              <div class="bg-teal/10 p-2 rounded-full text-teal">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <div>
+                <div class="font-bold">22,000+ families</div>
+                <div class="text-sm text-customgray/80">received Qurbani in 2024</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Country Card 3 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="h-48 overflow-hidden relative">
+            <img
+              src="/assets/images/home.jpg"
+              alt="Palestine"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <h3 class="font-bold text-xl">Palestine</h3>
+            </div>
+          </div>
+          <div class="p-5">
+            <p class="text-customgray/80 mb-4">
+              Families in Gaza and the West Bank face severe food insecurity. Your Qurbani provides essential nutrition during hardship.
+            </p>
+            <div class="flex items-center gap-2">
+              <div class="bg-customblue/10 p-2 rounded-full text-customblue">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <div>
+                <div class="font-bold">18,000+ families</div>
+                <div class="text-sm text-customgray/80">received Qurbani in 2024</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- View All Countries Button -->
+      <!-- <div class="text-center mt-10">
+        <button class="bg-customblue hover:bg-opacity-90 text-white px-6 py-3 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2 font-medium mx-auto">
+          <i class="fas fa-globe"></i>
+          View All 25 Countries
+        </button>
+      </div> -->
+    </div>
+  </section>
+
+  <section class="py-16 bg-white relative overflow-hidden max-w-7xl mx-auto">
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="text-center mb-12">
+        <span class="inline-block px-4 py-1 bg-hotpink/10 text-hotpink rounded-full text-sm font-medium mb-3">
+          <i class="fas fa-question-circle mr-2"></i>The Process
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold text-customgray">
+          How Your <span class="text-hotpink">Qurbani Works</span>
+        </h2>
+        <div class="h-1 w-24 bg-teal mx-auto mt-4"></div>
+        <p class="text-lg mt-6 text-customgray max-w-2xl mx-auto">
+          From your donation to the distribution of meat to families in need, we ensure your Qurbani is performed according to Islamic guidelines.
+        </p>
+      </div>
+  
+      <!-- Steps -->
+      <div class="relative">
+        <!-- Connecting line -->
+        <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-gray-200 hidden md:block transform -translate-x-1/2"></div>
+  
+        <!-- Step 1 (Odd - Left) -->
+        <div class="flex flex-col md:flex-row items-center mb-16 md:mb-24 relative">
+          <!-- Content for larger screens - left side -->
+          <div class="md:w-1/2 mb-6 md:mb-0 md:pr-12 text-right hidden md:block animate-fade-in-right">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 inline-block">
+              <h3 class="text-xl font-bold text-customgray mb-3 flex items-center justify-end">
+                <span>Choose Your Qurbani</span>
+                <div class="w-10 h-10 rounded-full bg-hotpink/10 flex items-center justify-center text-hotpink ml-3">
+                  <i class="fas fa-hand-pointer"></i>
+                </div>
+              </h3>
+              <p class="text-customgray/80">
+                Select the type of Qurbani you wish to give and the country where you'd like it to be performed.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Center circle with number -->
+          <div class="md:absolute md:left-1/2 md:transform md:-translate-x-1/2 z-10 bg-white rounded-full p-2 mb-4 md:mb-0">
+            <div class="w-16 h-16 bg-hotpink rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+              1
+            </div>
+          </div>
+          
+          <!-- Content for mobile - stacked -->
+          <div class="md:w-1/2 md:pl-12 md:text-left block md:hidden">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+              <h3 class="text-xl font-bold text-customgray mb-3 flex items-center">
+                <div class="w-10 h-10 rounded-full bg-hotpink/10 flex items-center justify-center text-hotpink mr-3">
+                  <i class="fas fa-hand-pointer"></i>
+                </div>
+                <span>Choose Your Qurbani</span>
+              </h3>
+              <p class="text-customgray/80">
+                Select the type of Qurbani you wish to give and the country where you'd like it to be performed.
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Step 2 (Even - Right) -->
+        <div class="flex flex-col md:flex-row items-center mb-16 md:mb-24 relative">
+          <!-- Empty div for left side (on large screens) -->
+          <div class="md:w-1/2 hidden md:block"></div>
+          
+          <!-- Center circle with number -->
+          <div class="md:absolute md:left-1/2 md:transform md:-translate-x-1/2 z-10 bg-white rounded-full p-2 mb-4 md:mb-0">
+            <div class="w-16 h-16 bg-teal rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+              2
+            </div>
+          </div>
+          
+          <!-- Content for larger screens - right side -->
+          <div class="md:w-1/2 md:pl-12 md:text-left animate-fade-in-left">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+              <h3 class="text-xl font-bold text-customgray mb-3 flex items-center">
+                <div class="w-10 h-10 rounded-full bg-teal/10 flex items-center justify-center text-teal mr-3">
+                  <i class="fas fa-sheep"></i>
+                </div>
+                <span>We Purchase the Animals</span>
+              </h3>
+              <p class="text-customgray/80">
+                Our teams on the ground source healthy animals that meet Islamic requirements for sacrifice.
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Step 3 (Odd - Left) -->
+        <div class="flex flex-col md:flex-row items-center mb-16 md:mb-24 relative">
+          <!-- Content for larger screens - left side -->
+          <div class="md:w-1/2 mb-6 md:mb-0 md:pr-12 text-right hidden md:block animate-fade-in-right">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 inline-block">
+              <h3 class="text-xl font-bold text-customgray mb-3 flex items-center justify-end">
+                <span>Qurbani is Performed</span>
+                <div class="w-10 h-10 rounded-full bg-customblue/10 flex items-center justify-center text-customblue ml-3">
+                  <i class="fas fa-hand-holding-heart"></i>
+                </div>
+              </h3>
+              <p class="text-customgray/80">
+                Sacrifices are carried out by qualified butchers according to Islamic principles during the days of Eid al-Adha.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Center circle with number -->
+          <div class="md:absolute md:left-1/2 md:transform md:-translate-x-1/2 z-10 bg-white rounded-full p-2 mb-4 md:mb-0">
+            <div class="w-16 h-16 bg-customblue rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+              3
+            </div>
+          </div>
+          
+          <!-- Content for mobile - stacked -->
+          <div class="md:w-1/2 md:pl-12 md:text-left block md:hidden">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+              <h3 class="text-xl font-bold text-customgray mb-3 flex items-center">
+                <div class="w-10 h-10 rounded-full bg-customblue/10 flex items-center justify-center text-customblue mr-3">
+                  <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <span>Qurbani is Performed</span>
+              </h3>
+              <p class="text-customgray/80">
+                Sacrifices are carried out by qualified butchers according to Islamic principles during the days of Eid al-Adha.
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Step 4 (Even - Right) -->
+        <div class="flex flex-col md:flex-row items-center relative">
+          <!-- Empty div for left side (on large screens) -->
+          <div class="md:w-1/2 hidden md:block"></div>
+          
+          <!-- Center circle with number -->
+          <div class="md:absolute md:left-1/2 md:transform md:-translate-x-1/2 z-10 bg-white rounded-full p-2 mb-4 md:mb-0">
+            <div class="w-16 h-16 bg-hotpink rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+              4
+            </div>
+          </div>
+          
+          <!-- Content for larger screens - right side -->
+          <div class="md:w-1/2 md:pl-12 md:text-left animate-fade-in-left">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+              <h3 class="text-xl font-bold text-customgray mb-3 flex items-center">
+                <div class="w-10 h-10 rounded-full bg-hotpink/10 flex items-center justify-center text-hotpink mr-3">
+                  <i class="fas fa-utensils"></i>
+                </div>
+                <span>Meat is Distributed</span>
+              </h3>
+              <p class="text-customgray/80">
+                Fresh meat is quickly distributed to vulnerable families, orphans, widows, and displaced persons.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <style>
+      @keyframes fadeInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+  
+      @keyframes fadeInRight {
+        from {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+  
+      .animate-fade-in-left {
+        animation: fadeInLeft 1s ease-out forwards;
+      }
+  
+      .animate-fade-in-right {
+        animation: fadeInRight 1s ease-out forwards;
+      }
+    </style>
+  </section>
+
+  <!-- Video Section -->
+  <section class="py-16 bg-gradient-to-b from-teal/5 to-white relative overflow-hidden">
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="text-center mb-12">
+        <span class="inline-block px-4 py-1 bg-teal/10 text-teal rounded-full text-sm font-medium mb-3">
+          <i class="fas fa-video mr-2"></i>See The Impact
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold text-customgray">
+          Witness Your <span class="text-teal">Qurbani in Action</span>
+        </h2>
+        <div class="h-1 w-24 bg-hotpink mx-auto mt-4"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto">
+        <div class="relative rounded-2xl overflow-hidden shadow-xl bg-black">
+          <!-- Video thumbnail with play overlay (for better page load performance) -->
+          <div class="relative aspect-auto h-96 group cursor-pointer video-container">
+            <!-- Replace with your actual YouTube embed, this is a placeholder structure -->
+            <iframe 
+              class="w-full h-full rounded-xl" 
+              src="https://www.youtube.com/embed/VIDEO_ID_HERE?rel=0" 
+              title="Qurbani 2024 Impact" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        
+        <div class="mt-8 bg-white p-6 rounded-xl shadow-md border-l-4 border-teal">
+          <h3 class="font-bold text-xl text-customgray mb-3">Last Year's Qurbani Distribution</h3>
+          <p class="text-customgray/80">
+            Watch how your generosity brought joy to thousands of families during Eid al-Adha last year. For many, this was the only meat they received all year.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+<!-- FAQ Section -->
+<section class="py-16 bg-white relative overflow-hidden">
+    <div class="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-hotpink/10 -translate-x-1/2 translate-y-1/2"></div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="text-center mb-12">
+        <span class="inline-block px-4 py-1 bg-hotpink/10 text-hotpink rounded-full text-sm font-medium mb-3">
+          <i class="fas fa-question-circle mr-2"></i>About Donations
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold text-customgray">
+          Donation <span class="text-hotpink">FAQs</span>
+        </h2>
+        <div class="h-1 w-24 bg-hotpink mx-auto mt-4"></div>
+      </div>
+
+      <div class="max-w-3xl mx-auto">
+        <FAQItem 
+          question="How is my donation used?" 
+          answer="Your donation is used directly for the Qurbani program, with a small portion allocated to administrative costs to ensure the efficient delivery of services." 
+        />
+        
+        <FAQItem 
+          question="Can I donate on behalf of someone else?" 
+          answer="Yes, you can make a donation on behalf of a loved one, living or deceased. Simply add their name during the checkout process." 
+        />
+        
+        <FAQItem 
+          question="Is my donation tax-deductible?" 
+          answer="Yes, all donations are tax-deductible in most countries. You will receive a tax receipt at the end of the financial year." 
+        />
+      </div>
+    </div>
+
+
+
+  <style>
+    /* Custom animations */
+    .animate-fade-in-left {
+      animation: fadeInLeft 1s ease-out forwards;
+    }
+
+    .animate-fade-in-right {
+      animation: fadeInRight 1s ease-out forwards;
+    }
+
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Subtle scale hover effect */
+    .hover\:scale-102:hover {
+      transform: scale(1.02);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+    }
+  </style>
+</Layout>

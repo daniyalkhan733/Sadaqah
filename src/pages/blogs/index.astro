@@ -1,0 +1,76 @@
+---
+// src/pages/index.astro
+import Layout from '../../layout/Layout.astro';
+import BlogCard from '../../components/BlogCard.astro';
+---
+
+<Layout title="Modern Blog | Home">
+  <div class="relative">
+    <!-- Hero Section -->
+    <section class="bg-[#0E173B] text-white">
+      <div class="container mx-auto px-4 py-20 md:py-32">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+            <span class="text-[#EE0C6E]">Insights</span> for the modern world
+          </h1>
+          <p class="text-lg md:text-xl mb-10 text-gray-300">
+            Exploring technology, design, and innovation with a fresh perspective
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#featured" class="bg-[#EE0C6E] hover:bg-[#d00a62] text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl">
+              Explore Articles
+            </a>
+            <a href="#newsletter" class="bg-transparent border-2 border-[#01A6A0] text-[#01A6A0] hover:bg-[#01A6A0] hover:text-white px-8 py-3 rounded-lg font-medium transition-all duration-300">
+              Subscribe
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+    </section>
+
+    <!-- Featured Articles -->
+    <section id="featured" class="py-16 md:py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold mb-2 text-[#0E173B]">Featured Articles</h2>
+        <div class="w-20 h-1 bg-[#EE0C6E] mb-10"></div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <BlogCard 
+            title="The Future of AI in Design" 
+            excerpt="How artificial intelligence is transforming the creative industry" 
+            date="April 23, 2025" 
+            image="/images/article1.jpg"
+            category="Technology"
+          />
+          <BlogCard 
+            title="Sustainable Web Development" 
+            excerpt="Practices for building eco-friendly digital products" 
+            date="April 20, 2025" 
+            image="/images/article2.jpg"
+            category="Development"
+          />
+          <BlogCard 
+            title="User-Centric Design Principles" 
+            excerpt="Creating experiences that truly resonate with your audience" 
+            date="April 18, 2025" 
+            image="/images/article3.jpg"
+            category="Design"
+          />
+        </div>
+        
+        <div class="text-center mt-12">
+          <a href="/blog" class="inline-flex items-center gap-2 text-[#EE0C6E] hover:text-[#d00a62] font-medium text-lg transition-all duration-300">
+            View all articles
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+
+  </div>
+</Layout>

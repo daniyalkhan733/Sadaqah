@@ -1,7 +1,6 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -10,7 +9,7 @@ import "../styles/global.css";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Sadaqah Online</title>
-    <link rel="icon" href="/assets/images/logo-short.png" type="image/x-icon">
+    <link rel="icon" href="/assets/images/logo-short.png" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -21,20 +20,122 @@ import "../styles/global.css";
 
     <meta property="og:locale" content="en" />
     <meta property="og:title" content="My Sadaqah Online" />
-    <meta
-      property="og:image"
-      content="/assets/images/logo.png"
-    />
+    <meta property="og:image" content="/assets/images/logo.png" />
 
     <meta property="og:url" content="https://sadaqah-website.netlify.app/" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="My Sadaqah Online" />
     <meta property="og:logo" content="/assets/images/logo.png" />
 
+    <style>
+      /* Enhanced scroll behavior */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Custom scrollbar styling for a premium feel */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+
+      /* Add subtle transitions for smoother feel */
+      * {
+        transition: transform 0.2s ease-out;
+      }
+
+      /* Optimize performance for scrolling */
+      .parallax-section {
+        transform: translateZ(0);
+        will-change: transform;
+      }
+    </style>
   </head>
   <body>
     <Header />
     <slot />
     <Footer />
+
+    <script is:inline>
+      // Advanced smooth scroll functionality
+      document.addEventListener("DOMContentLoaded", () => {
+        // Get all links that have href starting with #
+        const links = document.querySelectorAll('a[href^="#"]');
+
+        links.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+
+            // Skip if the href is just "#"
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+              // Get the target position with offset for fixed headers if needed
+              const headerOffset = 80; // Adjust based on your header height
+              const targetPosition =
+                targetElement.getBoundingClientRect().top +
+                window.pageYOffset -
+                headerOffset;
+              const startPosition = window.pageYOffset;
+              const distance = targetPosition - startPosition;
+
+              // Animation parameters - adjust for desired effect
+              const duration = 800; // ms - higher for slower animation
+              const easing = (t) =>
+                t < 0.5
+                  ? 4 * t * t * t
+                  : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1; // Cubic easing
+              let start = null;
+
+              // Animation function with requestAnimationFrame for smoother performance
+              function step(timestamp) {
+                if (!start) start = timestamp;
+                const progress = timestamp - start;
+                const time = Math.min(1, progress / duration);
+                const easedTime = easing(time);
+
+                window.scrollTo({
+                  top: startPosition + distance * easedTime,
+                  behavior: "auto", // We're handling the smoothness ourselves
+                });
+
+                if (progress < duration) {
+                  requestAnimationFrame(step);
+                }
+              }
+
+              // Start the animation
+              requestAnimationFrame(step);
+            }
+          });
+        });
+      });
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+ 
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+  
+    </style>
   </body>
 </html>

@@ -3,9 +3,52 @@ import AppealsBanner from "../../components/AppealsBanner.astro";
 import Layout from "../../layout/Layout.astro";
 import DonationCard from "../../components/DonationCard.astro";
 import FAQItem from "../../components/SingleFaq.astro";
+import { SEO } from "astro-seo";
+const pageImage = "/assets/images/logo.png";
+const title = "My Sadaqah Online";
+const description ="My Sadaqah Online is a platform that connects donors with charitable projects, making it easy to give and track your donations.";
+const keywords = "charity, donations, sadaqah, zakat, online giving, humanitarian aid, social impact, community support, fundraising, non-profit organization, philanthropy, global giving, charitable projects, transparent donations, impact-driven giving";
 ---
 
-<Layout>
+<SEO
+  title={title}
+  description={description}
+  canonical=""
+  openGraph={{
+    basic: {
+      title: `${title}`,
+      type: "website",
+      image: `${pageImage}`,
+    },
+    optional: {
+      description: `${description}`,
+    },
+  }}
+  twitter={{
+    creator: "@jonasmerlins1",
+  }}
+  extend={{
+    // extending the default link tags
+    link: [{ rel: "icon", href: "/favicon.png" }],
+    // extending the default meta tags
+    meta: [
+      {
+        name: "twitter:image",
+        content: `${pageImage ? pageImage : "/assets/images/logo.png"}`,
+      },
+      {
+        name: "twitter:title",
+        content: `${title}`,
+      },
+      {
+        name: "twitter:description",
+        content: `${description}`,
+      },
+      { name: "keywords", content: `${keywords}` },
+    ],
+  }}
+/>
+<Layout title={title} description={description} pageImage={pageImage ? pageImage : "/assets/images/logo.png"}>
   <AppealsBanner
     title="Sadaqah"
     description="Your Qurbani, Their Relief"

@@ -21,14 +21,14 @@ const { title, excerpt, date, image, category } = Astro.props;
     <h3
       class="text-xl font-bold text-[#0E173B] mb-2 hover:text-[#EE0C6E] transition-colors duration-300"
     >
-      <a href={`/blog/${title.toLowerCase().replace(/\s+/g, "-")}`}>
+      <a href={`/blogs/${title.toLowerCase().replace(/\s+/g, "-")}`}>
         {title}
       </a>
     </h3>
     <p class="text-[#5B5A59] mb-4">{excerpt}</p>
 
     <a
-      href={`/blog/${title.toLowerCase().replace(/\s+/g, "-")}`}
+      href={`/blogs/${title.toLowerCase().replace(/\s+/g, "-")}`}
       class="inline-flex items-center text-[#EE0C6E] hover:text-[#d00a62] font-medium transition-colors duration-300"
     >
       Read More

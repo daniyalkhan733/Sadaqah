@@ -1,14 +1,15 @@
 ---
-import BlogsBanner from "../components/BlogsBanner.astro";
-import MainLayout from "./Layout.astro";
+import BlogsBanner from "../../components/BlogsBanner.astro";
+import MainLayout from "../../layout/Layout.astro";
 const { frontmatter } = Astro.props;
 ---
 
 <MainLayout>
   <BlogsBanner
-    title={frontmatter.title}
-    description={frontmatter.description}
-    image={frontmatter.image}
+    title="10 Ways to Give Charity Without Your Budget"
+
+    description="Discover how to make a difference in the world without spending a dime. Explore creative ways to give back and support those in need."
+    image="/assets/images/home.jpg"
   />
 
   <!-- Blog content -->
@@ -39,7 +40,7 @@ const { frontmatter } = Astro.props;
           <i class="far fa-clock mr-2 text-teal"></i>
           <span>5 min read</span>
         </div>
-        <div class="flex items-center">
+        <!-- <div class="flex items-center">
           <i class="fas fa-tag mr-2 text-teal"></i>
           <a href="#" class="hover:text-teal transition-colors duration-300"
             >Charity</a
@@ -49,7 +50,7 @@ const { frontmatter } = Astro.props;
             class="ml-1 hover:text-teal transition-colors duration-300"
             >Development</a
           >
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -68,11 +69,7 @@ const { frontmatter } = Astro.props;
           <p class="text-gray-700 leading-relaxed">
               The first 10 days of Ramadan are really important in Islam. They're seen as days of mercy and forgiveness. Muslims try to do more good deeds during this time, like helping others and giving to charity.
           </p>
-          <div class="my-8 bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-r">
-              <p class="italic text-emerald-700">
-                  "The best charity is that given in Ramadan." - Prophet Muhammad (PBUH)
-              </p>
-          </div>
+       
       </section>
 
       <!-- Human Aid Foundation -->
@@ -81,19 +78,7 @@ const { frontmatter } = Astro.props;
           <p class="text-gray-700 leading-relaxed">
               The Human Aid Foundation is a group that helps people in need, no matter who they are. During Ramadan, they work even harder to help those who are hungry or suffering. They want to show compassion and solidarity with those who are struggling.
           </p>
-          <div class="my-6 bg-gray-100 p-6 rounded-lg">
-              <div class="flex items-center mb-4">
-                  <i class="fas fa-heart text-red-500 text-xl mr-3"></i>
-                  <h3 class="text-xl font-semibold text-gray-800">Core Values of Human Aid Foundation</h3>
-              </div>
-              <ul class="list-disc pl-6 text-gray-700">
-                  <li class="mb-2">Compassion for all humanity</li>
-                  <li class="mb-2">Transparency in all operations</li>
-                  <li class="mb-2">Dignity for recipients</li>
-                  <li class="mb-2">Sustainable solutions</li>
-                  <li>Global reach with local impact</li>
-              </ul>
-          </div>
+     
       </section>
 
       <!-- Fasting and Feeding -->
@@ -110,29 +95,7 @@ const { frontmatter } = Astro.props;
           <p class="text-gray-700 leading-relaxed">
               In the first 10 days of Ramadan, the Human Aid Foundation gives out food to people who need it. They go to places where there isn't enough food, like refugee camps or poor communities. They give out things like rice, flour, and cooking oil to make sure families have enough to eat during Ramadan.
           </p>
-          <div class="my-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div class="bg-white p-4 rounded-lg shadow-md">
-                  <div class="text-center mb-2">
-                      <i class="fas fa-utensils text-3xl text-teal-500"></i>
-                  </div>
-                  <h4 class="text-lg font-semibold text-center">Daily Iftar Meals</h4>
-                  <p class="text-gray-600 text-sm text-center">Providing hot meals for breaking fast</p>
-              </div>
-              <div class="bg-white p-4 rounded-lg shadow-md">
-                  <div class="text-center mb-2">
-                      <i class="fas fa-box-open text-3xl text-teal-500"></i>
-                  </div>
-                  <h4 class="text-lg font-semibold text-center">Food Parcels</h4>
-                  <p class="text-gray-600 text-sm text-center">Monthly supplies for families in need</p>
-              </div>
-              <div class="bg-white p-4 rounded-lg shadow-md">
-                  <div class="text-center mb-2">
-                      <i class="fas fa-truck text-3xl text-teal-500"></i>
-                  </div>
-                  <h4 class="text-lg font-semibold text-center">Mobile Kitchens</h4>
-                  <p class="text-gray-600 text-sm text-center">Reaching remote communities</p>
-              </div>
-          </div>
+  
       </section>
 
       <!-- Zakat and Sadaqah Initiatives -->
@@ -173,13 +136,7 @@ const { frontmatter } = Astro.props;
           <p class="text-gray-700 leading-relaxed">
               The Human Aid Foundation doesn't just help with immediate needs. They also run programs to help people become more independent in the long run. This includes things like job training, helping people start their businesses, and giving out small loans.
           </p>
-          <div class="mt-6 bg-teal-50 p-6 rounded-lg">
-              <h3 class="text-xl font-semibold text-teal-700 mb-4">Success Stories</h3>
-              <div class="italic text-gray-700">
-                  <p class="mb-4">"Thanks to the skills training program, I was able to start my own sewing business and support my family." - Fatima, 34</p>
-                  <p>"The microfinance initiative helped me expand my small grocery store. Now I can afford to send all my children to school." - Ahmad, 42</p>
-              </div>
-          </div>
+
       </section>
 
       <!-- Impact and Reflection -->
@@ -188,27 +145,7 @@ const { frontmatter } = Astro.props;
           <p class="text-gray-700 leading-relaxed">
               At the end of the first 10 days of Ramadan, the Human Aid Foundation looks back on what they've done and how many lives they've helped. They're proud of the work they've done, but they know there's still more to do. They're grateful for the chance to make a positive impact on people's lives.
           </p>
-          <div class="my-8 bg-gray-100 p-6 rounded-lg">
-              <h3 class="text-xl font-semibold text-gray-800 mb-4">Impact By Numbers</h3>
-              <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                  <div>
-                      <span class="block text-3xl font-bold text-teal-600">10,000+</span>
-                      <span class="text-gray-600">Meals Distributed</span>
-                  </div>
-                  <div>
-                      <span class="block text-3xl font-bold text-teal-600">5,000+</span>
-                      <span class="text-gray-600">Medical Consultations</span>
-                  </div>
-                  <div>
-                      <span class="block text-3xl font-bold text-teal-600">2,500+</span>
-                      <span class="text-gray-600">Education Packages</span>
-                  </div>
-                  <div>
-                      <span class="block text-3xl font-bold text-teal-600">1,000+</span>
-                      <span class="text-gray-600">Families Housed</span>
-                  </div>
-              </div>
-          </div>
+       
       </section>
 
       <!-- Conclusion -->
@@ -217,16 +154,7 @@ const { frontmatter } = Astro.props;
           <p class="text-gray-700 leading-relaxed">
               During the first 10 days of Ramadan, the Human Aid Foundation shows what it means to be compassionate and generous. They help people who are struggling and show support for those in need. As we continue through Ramadan, let their efforts inspire us and do what we can to help others in our communities.
           </p>
-          <div class="mt-8 bg-emerald-100 p-6 rounded-lg">
-              <h3 class="text-xl font-semibold text-emerald-700 mb-4">How You Can Help</h3>
-              <ul class="list-disc pl-6 text-gray-700">
-                  <li class="mb-2">Donate to the Human Aid Foundation</li>
-                  <li class="mb-2">Volunteer your time and skills</li>
-                  <li class="mb-2">Spread awareness about their initiatives</li>
-                  <li class="mb-2">Organize collection drives in your community</li>
-                  <li>Partner with them for corporate social responsibility programs</li>
-              </ul>
-          </div>
+     
       </section>
   </article>
   </main>

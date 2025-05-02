@@ -1,0 +1,128 @@
+---
+import BlogsBanner from "../../components/BlogsBanner.astro";
+import MainLayout from "../../layout/Layout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<MainLayout>
+  <BlogsBanner
+    title="Make Your Qurbani Count This Year with My Sadaqah Online"
+
+    description="Qurbani is more than just a ritual—it's an act of devotion, compassion, and care for others. As we prepare for Eid ul-Adha, many of us reflect on how to make our Qurbani truly meaningful."
+    image="/assets/images/home.jpg"
+  />
+
+  <!-- Blog content -->
+  <main class="container mx-auto px-4 py-8 max-w-4xl">
+    <!-- Blog header -->
+    <div class="mb-8">
+      <div class="flex flex-wrap items-center text-gray-500 my-6 gap-4">
+        <div class="flex items-center">
+          <img
+            src="/assets/images/logo-short.png"
+            alt="Author"
+            class="w-10 h-10 rounded-full mr-3"
+          />
+          <span
+            >By
+            <a
+              href="#"
+              class="text-teal hover:text-hotpink transition-colors duration-300"
+              >My Sadaqah Online</a
+            ></span
+          >
+        </div>
+        <div class="flex items-center">
+          <i class="far fa-calendar-alt mr-2 text-teal"></i>
+          <span>April 25, 2025</span>
+        </div>
+        <div class="flex items-center">
+          <i class="far fa-clock mr-2 text-teal"></i>
+          <span>5 min read</span>
+        </div>
+
+      </div>
+    </div>
+
+    <article class="prose prose-lg max-w-none">
+        <!-- Introduction -->
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Make Your Qurbani Count This Year with My Sadaqah Online</h2>
+          <p class="text-gray-700 leading-relaxed">
+            Qurbani is more than just a ritual—it's an act of devotion, compassion, and care for others. As we prepare for Eid ul-Adha, many of us reflect on how to make our Qurbani truly meaningful. This year, let your sacrifice go beyond obligation and become a source of real impact.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            With <strong>My Sadaqah Online</strong>, your Qurbani can reach those who need it most—quickly, safely, and in accordance with Islamic guidelines.
+          </p>
+        </section>
+      
+        <!-- What It Means to Make Your Qurbani "Count" -->
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">What It Means to Make Your Qurbani "Count"</h2>
+          <p class="text-gray-700 leading-relaxed">
+            Making your Qurbani count means giving with intention and ensuring your sacrifice brings genuine relief to others. It's about:
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 leading-relaxed">
+            <li>Fulfilling your religious duty with sincerity</li>
+            <li>Supporting communities where meat is a rare blessing</li>
+            <li>Choosing a platform that ensures ethical and Shariah-compliant practices</li>
+          </ul>
+          <p class="text-gray-700 leading-relaxed">
+            When you choose to give through My Sadaqah Online, you're not just ticking a box—you're sharing your blessings in a way that matters.
+          </p>
+        </section>
+      
+        <!-- How My Sadaqah Online Delivers Real Impact -->
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">How My Sadaqah Online Delivers Real Impact</h2>
+          <p class="text-gray-700 leading-relaxed">
+            We work in some of the world's most vulnerable regions—places where poverty, hunger, and hardship are daily realities.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            By partnering with trusted local teams, <strong>My Sadaqah Online</strong> ensures your Qurbani meat reaches families who otherwise wouldn't have anything special for Eid. These include:
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 leading-relaxed">
+            <li>Widows, orphans, and refugees</li>
+            <li>Low-income households in rural villages</li>
+            <li>Conflict-affected and food-insecure areas</li>
+          </ul>
+          <p class="text-gray-700 leading-relaxed">
+            Every sacrifice helps spread joy, dignity, and hope.
+          </p>
+        </section>
+      
+        <!-- Simple and Secure Qurbani Process -->
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Simple and Secure Qurbani Process</h2>
+          <p class="text-gray-700 leading-relaxed">
+            Giving Qurbani through our platform is easy, secure, and stress-free:
+          </p>
+          <ol class="list-decimal pl-6 text-gray-700 leading-relaxed">
+            <li><strong>Choose Your Animal</strong> – Cow, goat, sheep, or camel options available</li>
+            <li><strong>Select a Location</strong> – Target your Qurbani to a region close to your heart</li>
+            <li><strong>Make a Secure Payment</strong> – All transactions are protected and encrypted</li>
+            <li><strong>Receive Confirmation</strong> – We'll keep you updated and informed throughout</li>
+          </ol>
+          <p class="text-gray-700 leading-relaxed">
+            We also ensure that all animals are slaughtered humanely and in accordance with Islamic principles.
+          </p>
+        </section>
+      
+        <!-- Why Donors Trust My Sadaqah Online -->
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Why Donors Trust My Sadaqah Online</h2>
+          <p class="text-gray-700 leading-relaxed">
+            Thousands of donors return to us each year because we focus on:
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 leading-relaxed">
+            <li><strong>Transparency</strong> – You'll know where your Qurbani is going and who it's helping</li>
+            <li><strong>Reliability</strong> – We've built a strong network of on-the-ground teams</li>
+            <li><strong>Integrity</strong> – Every step is guided by ethics and Islamic values</li>
+          </ul>
+          <p class="text-gray-700 leading-relaxed">
+            Our past campaigns have delivered Qurbani to people in need across Africa, Asia, and the Middle East—with powerful results and heartfelt gratitude from recipients.
+          </p>
+        </section>
+      </article>
+  </main>
+</MainLayout>

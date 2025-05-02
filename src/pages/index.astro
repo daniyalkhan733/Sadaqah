@@ -6,8 +6,10 @@ import BlogCard from "../components/BlogCard.astro";
 import { SEO } from "astro-seo";
 const pageImage = "/assets/images/logo.png";
 const title = "My Sadaqah Online";
-const description ="My Sadaqah Online is a platform that connects donors with charitable projects, making it easy to give and track your donations.";
-const keywords = "charity, donations, sadaqah, zakat, online giving, humanitarian aid, social impact, community support, fundraising, non-profit organization, philanthropy, global giving, charitable projects, transparent donations, impact-driven giving";
+const description =
+  "My Sadaqah Online is a platform that connects donors with charitable projects, making it easy to give and track your donations.";
+const keywords =
+  "charity, donations, sadaqah, zakat, online giving, humanitarian aid, social impact, community support, fundraising, non-profit organization, philanthropy, global giving, charitable projects, transparent donations, impact-driven giving";
 ---
 
 <SEO
@@ -48,7 +50,11 @@ const keywords = "charity, donations, sadaqah, zakat, online giving, humanitaria
     ],
   }}
 />
-<Layout title={title} description={description} pageImage={pageImage ? pageImage : "/assets/images/logo.png"}>
+<Layout
+  title={title}
+  description={description}
+  pageImage={pageImage ? pageImage : "/assets/images/logo.png"}
+>
   <section>
     <HomepageSlider />
   </section>
@@ -245,11 +251,7 @@ const keywords = "charity, donations, sadaqah, zakat, online giving, humanitaria
   <section class="bg-[#094b34] relative py-16 text-white overflow-hidden">
     <!-- Background pattern overlay -->
     <div class="absolute inset-0 opacity-10">
-      <div
-        class="absolute inset-0"
-        style="
-            background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
-          "
+      <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"
       >
       </div>
     </div>
@@ -567,28 +569,27 @@ const keywords = "charity, donations, sadaqah, zakat, online giving, humanitaria
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <BlogCard
-          title="T10 Ways To Give Charity Without Your Budget"
-          excerpt="How artificial intelligence is transforming the creative industry"
+          title="My Sadaqah Online Makes Qurbani 2025 Easy & Secure"
+          excerpt="It reflects the spirit of sacrifice and compassion, and reminds us to care for those in need."
           date="April 23, 2025"
           image="/assets/images/home.jpg"
           category="Technology"
         />
         <BlogCard
-          title="Sustainable Web Development"
-          excerpt="Practices for building eco-friendly digital products"
+          title="Your Sadaqah Can Fund a Water Pump This Year"
+          excerpt=" This daily struggle affects health, education, and quality of life—especially for women and children."
           date="April 20, 2025"
           image="/assets/images/home.jpg"
           category="Development"
         />
         <BlogCard
-          title="User-Centric Design Principles"
-          excerpt="Creating experiences that truly resonate with your audience"
+          title="Make Your Qurbani Count This Year with My Sadaqah Online"
+          excerpt="Qurbani is more than just a ritual—it's an act of devotion, compassion, and care for others"
           date="April 18, 2025"
           image="/assets/images/home.jpg"
           category="Design"
         />
       </div>
-
       <div class="text-center mt-12">
         <a
           href="/blogs"

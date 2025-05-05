@@ -5,9 +5,9 @@ import DonationCard from "../../components/DonationCard.astro";
 import FAQItem from "../../components/SingleFaq.astro";
 import { SEO } from "astro-seo";
 const pageImage = "/assets/images/logo.png";
-const title = "My Sadaqah Online";
-const description ="My Sadaqah Online is a platform that connects donors with charitable projects, making it easy to give and track your donations.";
-const keywords = "charity, donations, sadaqah, zakat, online giving, humanitarian aid, social impact, community support, fundraising, non-profit organization, philanthropy, global giving, charitable projects, transparent donations, impact-driven giving";
+const title = "Give Sadaqah Online and Support Those in Greatest Need";
+const description = "Donate Sadaqah online easily and securely. Help provide food, water, and care to those in need. 100% of your donation goes to trusted causes.";
+const keywords = "Sadaqah Donation, Donate Sadaqah, Give Sadaqah, Donate Sadaqah Online, Sadaqah Jariyah";
 ---
 
 <SEO
@@ -34,7 +34,7 @@ const keywords = "charity, donations, sadaqah, zakat, online giving, humanitaria
     meta: [
       {
         name: "twitter:image",
-        content: `${pageImage ? pageImage : "/assets/images/logo.png"}`,
+        content: `${pageImage}`,
       },
       {
         name: "twitter:title",
@@ -48,60 +48,27 @@ const keywords = "charity, donations, sadaqah, zakat, online giving, humanitaria
     ],
   }}
 />
-<Layout title={title} description={description} pageImage={pageImage ? pageImage : "/assets/images/logo.png"}>
+<Layout title={title} description={description} pageImage={pageImage}>
   <AppealsBanner
     title="Sadaqah"
-    description="Your Qurbani, Their Relief"
+    description="Pay Your Sadaqah Online and Help Those Most in Need"
     image="/assets/images/home.jpg"
   />
 
   <DonationCard programId={[]} />
+
   <section class="relative py-14 overflow-hidden max-w-7xl mx-auto">
-    <!-- Decorative background elements -->
-    <div
-      class="absolute w-full h-full top-0 left-0 bg-gradient-to-br from-teal/5 via-white to-hotpink/5 z-0"
-    >
-    </div>
-    <div
-      class="absolute -bottom-24 -right-24 w-64 h-64 rounded-full bg-teal/5 z-0"
-    >
-    </div>
+
 
     <div class="container mx-auto px-4 relative z-10">
       <!-- Two-column layout -->
       <div class="flex flex-col lg:flex-row gap-8 items-center">
         <!-- Left column: Image -->
-        <div class="lg:w-2/5">
-          <div class="relative">
-            <!-- Main image with styling -->
-            <div
-              class="rounded-tr-3xl rounded-bl-3xl overflow-hidden shadow-md"
-            >
-              <img
-                src="/assets/images/home.jpg"
-                alt="Qurbani distribution"
-                class="w-full h-auto object-cover"
-              />
-            </div>
-
-            <!-- Decorative element -->
-            <div
-              class="absolute -bottom-3 -right-3 w-24 h-24 bg-hotpink/10 rounded-tl-2xl"
-            >
-            </div>
-            <div
-              class="absolute -top-3 -left-3 w-24 h-24 bg-teal/10 rounded-br-2xl"
-            >
-            </div>
-          </div>
-        </div>
-
-        <!-- Right column: Content -->
         <div class="lg:w-3/5">
           <div
             class="inline-block px-3 py-1 bg-hotpink/10 text-hotpink/90 rounded-full text-xs font-medium mb-4 shadow-sm"
           >
-            Understanding Qurbani
+            Why Give Sadaqah with Us?
           </div>
 
           <h2
@@ -114,27 +81,11 @@ const keywords = "charity, donations, sadaqah, zakat, online giving, humanitaria
           <!-- Paragraphs without bullet points -->
           <div class="prose prose-lg text-customgray/80 max-w-none space-y-4">
             <p>
-              Qurbani honors Prophet Ibrahim's devotion and willingness to
-              sacrifice what he loved most for Allah. This act of worship
-              connects us to our heritage while providing essential nutrition to
-              communities where protein is scarce and malnutrition rates are
-              high.
+              Giving Sadaqah online is now easier and more impactful than ever. My Sadaqah Online offers a trusted, secure platform that allows you to donate to causes that matter most—whether it's supporting orphans, disaster relief, or building water wells. Your donation goes directly to verified projects, ensuring maximum impact and transparency.
             </p>
 
             <p>
-              Our Qurbani program ensures the highest standards of both
-              religious compliance and ethical distribution. All sacrifices are
-              performed by qualified Muslims following proper Islamic
-              guidelines, with animals meeting the required health and age
-              specifications.
-            </p>
-
-            <p>
-              When you entrust your Qurbani to us, families receive fresh meat
-              within 48 hours of sacrifice – often the only protein they'll have
-              access to for months. Your contribution creates moments of
-              celebration and dignity for those who would otherwise go without
-              during this blessed occasion.
+              You can give once or set up recurring donations with ease. We believe in making giving simple and heartfelt. Every Sadaqah you make through us is more than just money—it's mercy, it's hope, it's life-changing. Start giving today and see how your small act of kindness can bring big change.
             </p>
           </div>
 
@@ -150,10 +101,10 @@ const keywords = "charity, donations, sadaqah, zakat, online giving, humanitaria
               class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3"
             >
               <div class="text-hotpink">
-                <i class="fas fa-mosque text-lg"></i>
+                <i class="fas fa-check-circle text-lg"></i>
               </div>
               <div>
-                <div class="font-medium">100% Shariah Compliance</div>
+                <div class="font-medium">Verified Projects</div>
               </div>
             </div>
 
@@ -161,10 +112,10 @@ const keywords = "charity, donations, sadaqah, zakat, online giving, humanitaria
               class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3"
             >
               <div class="text-teal">
-                <i class="fas fa-hand-holding-heart text-lg"></i>
+                <i class="fas fa-repeat text-lg"></i>
               </div>
               <div>
-                <div class="font-medium">Zero Admin Fees</div>
+                <div class="font-medium">Recurring Donations</div>
               </div>
             </div>
 
@@ -172,111 +123,10 @@ const keywords = "charity, donations, sadaqah, zakat, online giving, humanitaria
               class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3"
             >
               <div class="text-customblue">
-                <i class="fas fa-camera text-lg"></i>
+                <i class="fas fa-coins text-lg"></i>
               </div>
               <div>
-                <div class="font-medium">Photo Confirmation</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="relative py-14 overflow-hidden max-w-7xl mx-auto">
-    <!-- Decorative background elements -->
-    <div
-      class="absolute w-full h-full top-0 left-0 bg-gradient-to-br from-teal/5 via-white to-hotpink/5 z-0"
-    >
-    </div>
-    <div
-      class="absolute -bottom-24 -right-24 w-64 h-64 rounded-full bg-teal/5 z-0"
-    >
-    </div>
-
-    <div class="container mx-auto px-4 relative z-10">
-      <!-- Two-column layout -->
-      <div class="flex flex-col lg:flex-row gap-8 items-center">
-        <!-- Left column: Image -->
-        <div class="lg:w-3/5">
-          <div
-            class="inline-block px-3 py-1 bg-hotpink/10 text-hotpink/90 rounded-full text-xs font-medium mb-4 shadow-sm"
-          >
-            Understanding Qurbani
-          </div>
-
-          <h2
-            class="text-2xl md:text-3xl font-semibold mb-6 text-customgray relative"
-          >
-            The Significance & Impact
-            <span class="block w-12 h-0.5 bg-teal mt-3"></span>
-          </h2>
-
-          <!-- Paragraphs without bullet points -->
-          <div class="prose prose-lg text-customgray/80 max-w-none space-y-4">
-            <p>
-              Qurbani honors Prophet Ibrahim's devotion and willingness to
-              sacrifice what he loved most for Allah. This act of worship
-              connects us to our heritage while providing essential nutrition to
-              communities where protein is scarce and malnutrition rates are
-              high.
-            </p>
-
-            <p>
-              Our Qurbani program ensures the highest standards of both
-              religious compliance and ethical distribution. All sacrifices are
-              performed by qualified Muslims following proper Islamic
-              guidelines, with animals meeting the required health and age
-              specifications.
-            </p>
-
-            <p>
-              When you entrust your Qurbani to us, families receive fresh meat
-              within 48 hours of sacrifice – often the only protein they'll have
-              access to for months. Your contribution creates moments of
-              celebration and dignity for those who would otherwise go without
-              during this blessed occasion.
-            </p>
-          </div>
-
-          <!-- Subtle separator -->
-          <div
-            class="w-full h-px bg-gradient-to-r from-transparent via-customgray/20 to-transparent my-6"
-          >
-          </div>
-
-          <!-- Simple stat cards -->
-          <div class="flex flex-wrap gap-4 items-center justify-start">
-            <div
-              class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3"
-            >
-              <div class="text-hotpink">
-                <i class="fas fa-mosque text-lg"></i>
-              </div>
-              <div>
-                <div class="font-medium">100% Shariah Compliance</div>
-              </div>
-            </div>
-
-            <div
-              class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3"
-            >
-              <div class="text-teal">
-                <i class="fas fa-hand-holding-heart text-lg"></i>
-              </div>
-              <div>
-                <div class="font-medium">Zero Admin Fees</div>
-              </div>
-            </div>
-
-            <div
-              class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3"
-            >
-              <div class="text-customblue">
-                <i class="fas fa-camera text-lg"></i>
-              </div>
-              <div>
-                <div class="font-medium">Photo Confirmation</div>
+                <div class="font-medium">Maximum Impact</div>
               </div>
             </div>
           </div>
@@ -291,20 +141,12 @@ const keywords = "charity, donations, sadaqah, zakat, online giving, humanitaria
             >
               <img
                 src="/assets/images/home.jpg"
-                alt="Qurbani distribution"
+                alt="Sadaqah distribution"
                 class="w-full h-auto object-cover"
               />
             </div>
 
-            <!-- Decorative element -->
-            <div
-              class="absolute -bottom-3 -right-3 w-24 h-24 bg-hotpink/10 rounded-tl-2xl"
-            >
-            </div>
-            <div
-              class="absolute -top-3 -left-3 w-24 h-24 bg-teal/10 rounded-br-2xl"
-            >
-            </div>
+         
           </div>
         </div>
       </div>
@@ -317,27 +159,20 @@ const keywords = "charity, donations, sadaqah, zakat, online giving, humanitaria
         <div
           class="inline-block px-4 py-1 bg-teal/10 text-teal rounded-full text-sm font-medium mb-3"
         >
-          <i class="fas fa-info-circle mr-2"></i>What You Need To Know
+          <i class="fas fa-info-circle mr-2"></i>Make an Impact Today
         </div>
-        <h2 class="text-3xl font-bold mb-4">Understanding Your Qurbani</h2>
+        <h2 class="text-3xl font-bold mb-4">How Your Giving Helps</h2>
         <div class="w-20 h-1 bg-hotpink mx-auto"></div>
       </div>
 
       <!-- Content Paragraphs -->
       <div class="max-w-7xl mx-auto">
         <p class="text-lg mb-6 text-customgray leading-relaxed">
-          Qurbani, also known as Udhiyah, is the sacred act of animal sacrifice
-          performed during Eid al-Adha. It commemorates Prophet Ibrahim's
-          willingness to sacrifice his son in obedience to Allah. Today, it
-          serves as both a religious obligation and a means to provide essential
-          nutrition to those in need.
+          Your Sadaqah can bring food, warmth, and safety to those with nothing. At My Sadaqah Online, your donation supports people in urgent need—from conflict zones to disaster-stricken areas. Even a small amount can help feed a family, provide clean water, or offer shelter.
         </p>
 
         <p class="text-lg mb-8 text-customgray leading-relaxed">
-          When you give your Qurbani through our organization, we ensure that
-          meat is distributed fairly among beneficiaries within 48 hours of
-          sacrifice. Each family receives approximately 2-3kg of fresh meat,
-          often the only protein they'll have access to for months.
+          Join thousands who give with sincerity and purpose. Choose a cause, donate with confidence, and watch your generosity create real change. Pay your Sadaqah online and become a lifeline for those who need it most.
         </p>
 
         <!-- Key Points -->
@@ -347,22 +182,22 @@ const keywords = "charity, donations, sadaqah, zakat, online giving, humanitaria
           >
             <div class="flex items-center gap-3 mb-3">
               <div class="bg-customblue/10 p-3 rounded-full text-customblue">
-                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-hands"></i>
               </div>
-              <h3 class="font-bold text-xl">Religious Compliance</h3>
+              <h3 class="font-bold text-xl">What Your Sadaqah Supports</h3>
             </div>
             <ul class="space-y-2 text-customgray">
               <li class="flex items-start gap-2">
                 <i class="fas fa-circle text-xs mt-1.5 text-hotpink"></i>
-                <span>All sacrifices performed by qualified Muslims</span>
+                <span>Food, clean water, and healthcare aid</span>
               </li>
               <li class="flex items-start gap-2">
                 <i class="fas fa-circle text-xs mt-1.5 text-hotpink"></i>
-                <span>Adheres strictly to Islamic requirements</span>
+                <span>Shelter for families and education for children</span>
               </li>
               <li class="flex items-start gap-2">
                 <i class="fas fa-circle text-xs mt-1.5 text-hotpink"></i>
-                <span>Animals inspected for health and age compliance</span>
+                <span>Sustainable projects for long-term impact</span>
               </li>
             </ul>
           </div>
@@ -370,22 +205,22 @@ const keywords = "charity, donations, sadaqah, zakat, online giving, humanitaria
           <div class="bg-teal/5 p-6 rounded-xl border-l-4 border-teal">
             <div class="flex items-center gap-3 mb-3">
               <div class="bg-teal/10 p-3 rounded-full text-teal">
-                <i class="fas fa-heart"></i>
+                <i class="fas fa-star"></i>
               </div>
-              <h3 class="font-bold text-xl">Impact & Transparency</h3>
+              <h3 class="font-bold text-xl">Why Choose My Sadaqah Online</h3>
             </div>
             <ul class="space-y-2 text-customgray">
               <li class="flex items-start gap-2">
                 <i class="fas fa-circle text-xs mt-1.5 text-hotpink"></i>
-                <span>100% of your donation goes to Qurbani program</span>
+                <span>100% donation policy to your selected cause</span>
               </li>
               <li class="flex items-start gap-2">
                 <i class="fas fa-circle text-xs mt-1.5 text-hotpink"></i>
-                <span>Digital confirmation with distribution photos</span>
+                <span>Trusted charity partners and transparent updates</span>
               </li>
               <li class="flex items-start gap-2">
                 <i class="fas fa-circle text-xs mt-1.5 text-hotpink"></i>
-                <span>Focus on most vulnerable communities</span>
+                <span>Easy platform for one-time or regular giving</span>
               </li>
             </ul>
           </div>
@@ -406,7 +241,7 @@ const keywords = "charity, donations, sadaqah, zakat, online giving, humanitaria
           <i class="fas fa-video mr-2"></i>See The Impact
         </span>
         <h2 class="text-3xl md:text-4xl font-bold text-customgray">
-          Witness Your <span class="text-teal">Qurbani in Action</span>
+          Witness Your <span class="text-teal">Sadaqah in Action</span>
         </h2>
         <div class="h-1 w-24 bg-hotpink mx-auto mt-4"></div>
       </div>
@@ -421,7 +256,7 @@ const keywords = "charity, donations, sadaqah, zakat, online giving, humanitaria
             <iframe
               class="w-full h-full rounded-xl"
               src="https://www.youtube.com/embed/VIDEO_ID_HERE?rel=0"
-              title="Qurbani 2024 Impact"
+              title="Sadaqah Impact 2024"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
@@ -434,12 +269,10 @@ const keywords = "charity, donations, sadaqah, zakat, online giving, humanitaria
           class="mt-8 bg-white p-6 rounded-xl shadow-md border-l-4 border-teal"
         >
           <h3 class="font-bold text-xl text-customgray mb-3">
-            Last Year's Qurbani Distribution
+            Your Sadaqah Makes a Difference
           </h3>
           <p class="text-customgray/80">
-            Watch how your generosity brought joy to thousands of families
-            during Eid al-Adha last year. For many, this was the only meat they
-            received all year.
+            Watch how your contributions have transformed lives across different communities. Every donation creates ripples of positive change.
           </p>
         </div>
       </div>
@@ -448,10 +281,7 @@ const keywords = "charity, donations, sadaqah, zakat, online giving, humanitaria
 
   <!-- FAQ Section -->
   <section class="py-16 bg-white relative overflow-hidden">
-    <div
-      class="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-hotpink/10 -translate-x-1/2 translate-y-1/2"
-    >
-    </div>
+
 
     <div class="container mx-auto px-4 relative z-10">
       <div class="text-center mb-12">
@@ -469,7 +299,7 @@ const keywords = "charity, donations, sadaqah, zakat, online giving, humanitaria
       <div class="max-w-3xl mx-auto">
         <FAQItem
           question="How is my donation used?"
-          answer="Your donation is used directly for the Qurbani program, with a small portion allocated to administrative costs to ensure the efficient delivery of services."
+          answer="Your donation is used directly for the Sadaqah program, with a small portion allocated to administrative costs to ensure the efficient delivery of services."
         />
 
         <FAQItem

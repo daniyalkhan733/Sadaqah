@@ -55,26 +55,6 @@ const filteredPrograms =
 
 // Take only the first set of programs for display
 const displayPrograms = filteredPrograms.slice(0, maxDisplay);
-
-// Category mapping helper - this is a placeholder, you may need to adapt it based on actual program data
-const getCategoryIcon = (program: Program): string => {
-  // This is simplified - you may need more sophisticated logic to determine category
-  if (program.program_name.toLowerCase().includes("emergency"))
-    return "fa-exclamation-circle";
-  if (program.program_name.toLowerCase().includes("water")) return "fa-tint";
-  if (program.program_name.toLowerCase().includes("food")) return "fa-utensils";
-  if (program.program_name.toLowerCase().includes("education"))
-    return "fa-graduation-cap";
-  if (
-    program.program_name.toLowerCase().includes("medical") ||
-    program.program_name.toLowerCase().includes("health")
-  )
-    return "fa-medkit";
-  if (program.program_name.toLowerCase().includes("orphan")) return "fa-child";
-  if (program.program_name.toLowerCase().includes("zakat"))
-    return "fa-star-and-crescent";
-  return "fa-hands-helping"; // Default icon
-};
 ---
 
 <section class="py-16 bg-white max-w-7xl mx-auto">
@@ -82,7 +62,7 @@ const getCategoryIcon = (program: Program): string => {
     <!-- Section Header with underline decoration -->
     <div class="text-center mb-12 relative">
       <div class="inline-block">
-        <h2 class="text-4xl font-bold text-hotpink mb-3">{title}</h2>
+        <h2 class="text-4xl font-bold text-teal mb-3">{title}</h2>
         <div class="h-1 w-24 bg-teal rounded-full mx-auto"></div>
       </div>
       {
@@ -95,20 +75,11 @@ const getCategoryIcon = (program: Program): string => {
     <!-- Programs Grid with hover effects -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {
-        displayPrograms.slice(0, 6).map((program, index) => {
-          // Alternate colors for visual interest
-          const buttonColor =
-            index % 3 === 0
-              ? "hotpink"
-              : index % 3 === 1
-                ? "teal"
-                : "customblue";
-          const categoryIcon = getCategoryIcon(program);
-
+        displayPrograms.slice(0, 6).map((program) => {
           return (
             <div class="group relative overflow-hidden rounded-xl bg-white border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
               {/* Decorative accent line at top */}
-              <div class={`h-1 w-full bg-${buttonColor}`} />
+              <div class="h-1 w-full bg-teal" />
 
               {/* Program Image with overlay */}
               <div class="relative h-64 overflow-hidden">
@@ -124,28 +95,17 @@ const getCategoryIcon = (program: Program): string => {
                 {/* Country Badge */}
                 <div class="absolute bottom-4 left-4">
                   <div class="flex items-center bg-white py-1.5 px-4 rounded-full shadow-md">
-                    <i class="fas fa-globe-asia text-customblue mr-2" />
+                    <i class="fas fa-globe-asia text-teal mr-2" />
                     <span class="font-medium text-customgray">
                       {program.country_name || "Pakistan"}
                     </span>
-                  </div>
-                </div>
-
-                {/* Category icon */}
-                <div class="absolute top-4 right-4">
-                  <div
-                    class={`flex items-center justify-center w-10 h-10 rounded-full bg-${buttonColor} text-white shadow-md`}
-                  >
-                    <i class={`fas ${categoryIcon}`} />
                   </div>
                 </div>
               </div>
 
               {/* Content with improved spacing */}
               <div class="p-6">
-                <h3
-                  class={`text-xl font-bold text-${buttonColor} mb-3 line-clamp-2 h-14`}
-                >
+                <h3 class="text-xl font-bold text-teal mb-3 line-clamp-2 h-14">
                   {program.program_name}
                 </h3>
 
@@ -159,7 +119,7 @@ const getCategoryIcon = (program: Program): string => {
                   {/* Progress indicator - for visual interest */}
                   <div class="w-20 h-1.5 bg-gray-200 rounded-full overflow-hidden">
                     <div
-                      class={`h-full bg-${buttonColor}`}
+                      class="h-full bg-teal"
                       style={`width: ${Math.floor(Math.random() * 100)}%`}
                     />
                   </div>
@@ -168,7 +128,7 @@ const getCategoryIcon = (program: Program): string => {
                 <div class="flex justify-between gap-3">
                   <a
                     href={program.donation_url}
-                    class={`group flex-1 inline-flex items-center justify-center bg-${buttonColor} hover:bg-opacity-90 text-white font-medium py-2.5 px-4 rounded-full transition duration-300 shadow-sm hover:shadow`}
+                    class="group flex-1 inline-flex items-center justify-center bg-teal hover:bg-opacity-90 text-white font-medium py-2.5 px-4 rounded-full transition duration-300 shadow-sm hover:shadow"
                   >
                     <i class="fas fa-heart mr-2" />
                     <span>Donate Now</span>
@@ -186,7 +146,6 @@ const getCategoryIcon = (program: Program): string => {
         })
       }
     </div>
-
   </div>
 </section>
 

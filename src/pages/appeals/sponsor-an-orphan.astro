@@ -5,12 +5,9 @@ import DonationCard from "../../components/DonationCard.astro";
 import FAQItem from "../../components/SingleFaq.astro";
 import { SEO } from "astro-seo";
 const pageImage = "/assets/images/logo.png";
-const title =
-  "Donate Cooked Meals with My Sadaqah Online - Feed the Needy Today";
-const description =
-  "Your Sadaqah provides warm meals to the hungry. Support the poor, sick, and elderly with ready food. Quick, secure giving with 100% donation policy.";
-const keywords =
-  "Cooked Food, Cooked Food Donation, Cooked Meal, Feed the Hungry, Hot Meal Donation";
+const title = "Sponsor an Orphan with My Sadaqah Online | Help Those In Need";
+const description = "Sponsor an orphan with My Sadaqah Online and provide essential care, education, and support. Your kindness makes a lasting impact on a child's life and future.";
+const keywords = "Sponsor an Orphan";
 ---
 
 <SEO
@@ -53,8 +50,8 @@ const keywords =
 />
 <Layout title={title} description={description} pageImage={pageImage}>
   <AppealsBanner
-    title="Cooked Food"
-    description="A Small Gift. A Warm Meal. A Big Impact"
+    title="Sponsor an Orphan"
+    description="Sponsor an Orphan. Change a Life. Earn Endless Rewards."
     image="/assets/images/home.jpg"
   />
 
@@ -64,43 +61,47 @@ const keywords =
     <div class="container mx-auto px-4 relative z-10">
       <!-- Two-column layout -->
       <div class="flex flex-col lg:flex-row gap-8 items-center">
-        <!-- Left column: Image -->
+        <!-- Left column: Content -->
         <div class="lg:w-3/5">
           <div
             class="inline-block px-3 py-1 bg-hotpink/10 text-hotpink/90 rounded-full text-xs font-medium mb-4 shadow-sm"
           >
-            How Your Donation Feeds the Hungry
+            Orphan Sponsorship
           </div>
 
           <h2
             class="text-2xl md:text-3xl font-semibold mb-6 text-customgray relative"
           >
-            The Significance & Impact
+            Give a Child the Care They Deserve
             <span class="block w-12 h-0.5 bg-teal mt-3"></span>
           </h2>
 
           <!-- Paragraphs without bullet points -->
           <div class="prose prose-lg text-customgray/80 max-w-none space-y-4">
             <p>
-              We work with trusted teams on the ground to prepare and distribute
-              cooked meals in areas affected by poverty, conflict, and disaster.
-              Many families lack even basic cooking facilities—your support
-              fills this critical gap.
+              Every child deserves a safe place to grow, learn, and thrive. With your help, we can give orphans around the world the opportunity to experience the love and support they deserve. Your monthly sponsorship provides an orphan with food, shelter, healthcare, and an education empowering them to build a brighter future.
             </p>
 
             <p>
-              Our platform allows you to choose a cause and donate easily. From
-              one-time meals to daily meal drives, your generosity ensures that
-              someone eats today. You'll receive updates, so you can see the
-              difference your Sadaqah makes. It's more than food—it's a chance
-              at survival, delivered with dignity.
+              Around the world, millions of children are left without parents due to conflict, poverty, and natural disasters. These children are vulnerable and in need of your help. Sponsoring an orphan ensures that they receive essential care, protection, and a chance for a better future.
+            </p>
+
+            <p>
+              By sponsoring an orphan, you're not only providing material needs, but also offering a chance for them to grow up surrounded by love and compassion.
             </p>
           </div>
 
-          <!-- Subtle separator -->
-          <div
-            class="w-full h-px bg-gradient-to-r from-transparent via-customgray/20 to-transparent my-6"
-          >
+          <!-- Hadith callout -->
+          <div class="relative pl-6 border-l-2 border-gray-300 my-6">
+            <i
+              class="fas fa-quote-left text-customblue absolute -left-3 bg-white text-xl"
+            ></i>
+            <p class="italic text-customgray mb-2">
+              "The one who cares for an orphan... will be with me in Paradise like this..."
+            </p>
+            <p class="text-sm font-semibold text-customgray">
+              - Bukhari
+            </p>
           </div>
 
           <!-- Simple stat cards -->
@@ -109,10 +110,10 @@ const keywords =
               class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3"
             >
               <div class="text-hotpink">
-                <i class="fas fa-globe text-lg"></i>
+                <i class="fas fa-hand-holding-heart text-lg"></i>
               </div>
               <div>
-                <div class="font-medium">Global Reach</div>
+                <div class="font-medium">Monthly Support</div>
               </div>
             </div>
 
@@ -120,10 +121,10 @@ const keywords =
               class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3"
             >
               <div class="text-teal">
-                <i class="fas fa-truck text-lg"></i>
+                <i class="fas fa-child text-lg"></i>
               </div>
               <div>
-                <div class="font-medium">Quick Distribution</div>
+                <div class="font-medium">Lifelong Impact</div>
               </div>
             </div>
 
@@ -131,7 +132,7 @@ const keywords =
               class="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm border border-customgray/10 flex items-center gap-3"
             >
               <div class="text-customblue">
-                <i class="fas fa-chart-line text-lg"></i>
+                <i class="fas fa-envelope-open-text text-lg"></i>
               </div>
               <div>
                 <div class="font-medium">Regular Updates</div>
@@ -140,7 +141,7 @@ const keywords =
           </div>
         </div>
 
-        <!-- Right column: Content -->
+        <!-- Right column: Image -->
         <div class="lg:w-2/5">
           <div class="relative">
             <!-- Main image with styling -->
@@ -149,15 +150,26 @@ const keywords =
             >
               <img
                 src="/assets/images/home.jpg"
-                alt="Food distribution"
-                class="w-full h-auto object-cover"
+                alt="Child receiving support"
+                class="w-full h-full object-cover"
               />
+            </div>
+
+            <!-- Decorative element -->
+            <div
+              class="absolute -bottom-3 -right-3 w-24 h-24 bg-hotpink/10 rounded-tl-2xl"
+            >
+            </div>
+            <div
+              class="absolute -top-3 -left-3 w-24 h-24 bg-teal/10 rounded-br-2xl"
+            >
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
   <section class="relative py-16 bg-white max-w-7xl mx-auto">
     <div class="container mx-auto px-4">
       <!-- Section Header -->
@@ -165,28 +177,20 @@ const keywords =
         <div
           class="inline-block px-4 py-1 bg-teal/10 text-teal rounded-full text-sm font-medium mb-3"
         >
-          <i class="fas fa-info-circle mr-2"></i>Every Plate Makes a Difference
+          <i class="fas fa-info-circle mr-2"></i>Every Child Deserves Care
         </div>
-        <h2 class="text-3xl font-bold mb-4">Your Impact</h2>
+        <h2 class="text-3xl font-bold mb-4">Why Sponsor an Orphan?</h2>
         <div class="w-20 h-1 bg-hotpink mx-auto"></div>
       </div>
 
       <!-- Content Paragraphs -->
       <div class="max-w-7xl mx-auto">
         <p class="text-lg mb-6 text-customgray leading-relaxed">
-          A warm, ready-to-eat meal can do more than satisfy hunger—it can
-          restore health, comfort, and dignity. Many people around the world,
-          including the sick, elderly, and struggling families, go without a
-          proper meal each day. Through your Sadaqah, My Sadaqah Online delivers
-          freshly cooked food to those who need it most.
+          Orphaned children face life without support, security, or guidance. Through My Sadaqah Online, your sponsorship provides them with the essentials they need food, education, healthcare, and hope for a brighter future.
         </p>
 
         <p class="text-lg mb-8 text-customgray leading-relaxed">
-          Each donation directly supports meal preparation and distribution in
-          crisis-affected communities. Your support brings relief to people who
-          are unable to cook or afford food. Give your Sadaqah today and help
-          ensure someone doesn't go to bed hungry. One meal can make a real
-          difference.
+          Your regular donation ensures these vulnerable children grow up safe, supported, and with dignity. You're not just changing a life you're shaping a future.
         </p>
 
         <!-- Key Points -->
@@ -196,22 +200,22 @@ const keywords =
           >
             <div class="flex items-center gap-3 mb-3">
               <div class="bg-customblue/10 p-3 rounded-full text-customblue">
-                <i class="fas fa-fire"></i>
+                <i class="fas fa-heart-broken"></i>
               </div>
-              <h3 class="font-bold text-xl">Why Cooked Food Matters</h3>
+              <h3 class="font-bold text-xl">Why Orphan Sponsorship Matters</h3>
             </div>
             <ul class="space-y-2 text-customgray">
               <li class="flex items-start gap-2">
                 <i class="fas fa-circle text-xs mt-1.5 text-hotpink"></i>
-                <span>Millions lack cooking facilities due to crisis</span>
+                <span>Millions of children live without parents or stable care</span>
               </li>
               <li class="flex items-start gap-2">
                 <i class="fas fa-circle text-xs mt-1.5 text-hotpink"></i>
-                <span>Ready meals offer immediate comfort and strength</span>
+                <span>Sponsorship provides daily meals, school, and medical aid</span>
               </li>
               <li class="flex items-start gap-2">
                 <i class="fas fa-circle text-xs mt-1.5 text-hotpink"></i>
-                <span>Food brings hope, energy, and human dignity</span>
+                <span>A supported child has a better chance at a strong, healthy future</span>
               </li>
             </ul>
           </div>
@@ -219,22 +223,22 @@ const keywords =
           <div class="bg-teal/5 p-6 rounded-xl border-l-4 border-teal">
             <div class="flex items-center gap-3 mb-3">
               <div class="bg-teal/10 p-3 rounded-full text-teal">
-                <i class="fas fa-heart"></i>
+                <i class="fas fa-hand-holding-heart"></i>
               </div>
               <h3 class="font-bold text-xl">How Your Sadaqah Helps</h3>
             </div>
             <ul class="space-y-2 text-customgray">
               <li class="flex items-start gap-2">
                 <i class="fas fa-circle text-xs mt-1.5 text-hotpink"></i>
-                <span>Hot meals delivered to the hungry daily</span>
+                <span>Covers education, nutrition, clothing, and healthcare</span>
               </li>
               <li class="flex items-start gap-2">
                 <i class="fas fa-circle text-xs mt-1.5 text-hotpink"></i>
-                <span>Supports the poor, sick, elderly, and displaced</span>
+                <span>Supports emotional well-being and social development</span>
               </li>
               <li class="flex items-start gap-2">
                 <i class="fas fa-circle text-xs mt-1.5 text-hotpink"></i>
-                <span>Reaches high-need areas through trusted partners</span>
+                <span>Helps orphans thrive in trusted homes or care programs</span>
               </li>
             </ul>
           </div>
@@ -249,15 +253,15 @@ const keywords =
             <ul class="space-y-2 text-customgray">
               <li class="flex items-start gap-2">
                 <i class="fas fa-circle text-xs mt-1.5 text-customblue"></i>
-                <span>Easy and secure online giving platform</span>
+                <span>Simple and secure monthly giving</span>
               </li>
               <li class="flex items-start gap-2">
                 <i class="fas fa-circle text-xs mt-1.5 text-customblue"></i>
-                <span>100% donation policy for maximum impact</span>
+                <span>100% donation policy your full gift goes to the child</span>
               </li>
               <li class="flex items-start gap-2">
                 <i class="fas fa-circle text-xs mt-1.5 text-customblue"></i>
-                <span>Clear updates so you see the difference you make</span>
+                <span>Regular updates so you see the difference you're making</span>
               </li>
             </ul>
           </div>
@@ -266,7 +270,7 @@ const keywords =
     </div>
   </section>
 
-  <!-- Video Section -->
+  <!-- Sponsorship Options Section -->
   <section
     class="py-16 bg-gradient-to-b from-teal/5 to-white relative overflow-hidden"
   >
@@ -275,48 +279,116 @@ const keywords =
         <span
           class="inline-block px-4 py-1 bg-teal/10 text-teal rounded-full text-sm font-medium mb-3"
         >
-          <i class="fas fa-video mr-2"></i>See The Impact
+          <i class="fas fa-heart mr-2"></i>Ways to Help
         </span>
         <h2 class="text-3xl md:text-4xl font-bold text-customgray">
-          Witness Your <span class="text-teal">Cooked Food in Action</span>
+          Sponsorship <span class="text-teal">Options</span>
         </h2>
         <div class="h-1 w-24 bg-hotpink mx-auto mt-4"></div>
       </div>
 
       <div class="max-w-7xl mx-auto">
-        <div class="relative rounded-2xl overflow-hidden shadow-xl bg-black">
-          <!-- Video thumbnail with play overlay (for better page load performance) -->
-          <div
-            class="relative aspect-auto h-96 group cursor-pointer video-container"
-          >
-            <!-- Replace with your actual YouTube embed, this is a placeholder structure -->
-            <iframe
-              class="w-full h-full rounded-xl"
-              src="https://www.youtube.com/embed/VIDEO_ID_HERE?rel=0"
-              title="Cooked Food 2024 Impact"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            >
-            </iframe>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Option 1 -->
+          <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <div class="h-40 overflow-hidden relative">
+              <img
+                src="/assets/images/home.jpg"
+                alt="Monthly Sponsorship"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+            </div>
+            <div class="p-6 relative">
+              <div class="absolute top-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              <div class="flex items-center gap-3 mb-4">
+                <div class="bg-teal/10 p-3 rounded-full text-teal">
+                  <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3 class="font-bold text-xl">Monthly Sponsorship</h3>
+              </div>
+              <p class="text-customgray/80 mb-6">
+                Provide consistent support with a monthly donation that ensures ongoing care for an orphaned child.
+              </p>
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-customgray/70">Starting at</span>
+                <span class="text-2xl font-bold text-teal">$45/month</span>
+              </div>
+              <button class="bg-teal text-white px-6 py-3 rounded-full w-full hover:bg-opacity-90 transition-all duration-300 flex items-center justify-center">
+                <span>Sponsor Monthly</span>
+                <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
           </div>
-        </div>
 
-        <div
-          class="mt-8 bg-white p-6 rounded-xl shadow-md border-l-4 border-teal"
-        >
-          <h3 class="font-bold text-xl text-customgray mb-3">
-            Last Year's Cooked Food Distribution
-          </h3>
-          <p class="text-customgray/80">
-            Watch how your generosity brought nourishment to thousands of
-            families in need. For many, this was their only proper meal of the
-            day.
-          </p>
+          <!-- Option 2 -->
+          <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <div class="h-40 overflow-hidden relative">
+              <img
+                src="/assets/images/home.jpg"
+                alt="Annual Sponsorship"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+            </div>
+            <div class="p-6 relative">
+              <div class="absolute top-0 left-0 w-full h-1 bg-hotpink transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              <div class="flex items-center gap-3 mb-4">
+                <div class="bg-hotpink/10 p-3 rounded-full text-hotpink">
+                  <i class="fas fa-gift"></i>
+                </div>
+                <h3 class="font-bold text-xl">Annual Sponsorship</h3>
+              </div>
+              <p class="text-customgray/80 mb-6">
+                Make a one-time annual payment that ensures a full year of support for an orphaned child.
+              </p>
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-customgray/70">One-time payment</span>
+                <span class="text-2xl font-bold text-hotpink">$540/year</span>
+              </div>
+              <button class="bg-hotpink text-white px-6 py-3 rounded-full w-full hover:bg-opacity-90 transition-all duration-300 flex items-center justify-center">
+                <span>Sponsor Annually</span>
+                <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Option 3 -->
+          <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <div class="h-40 overflow-hidden relative">
+              <img
+                src="/assets/images/home.jpg"
+                alt="Educational Support"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+            </div>
+            <div class="p-6 relative">
+              <div class="absolute top-0 left-0 w-full h-1 bg-customblue transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              <div class="flex items-center gap-3 mb-4">
+                <div class="bg-customblue/10 p-3 rounded-full text-customblue">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="font-bold text-xl">Educational Support</h3>
+              </div>
+              <p class="text-customgray/80 mb-6">
+                Provide specific educational support including school fees, books, supplies and uniforms.
+              </p>
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-customgray/70">Starting at</span>
+                <span class="text-2xl font-bold text-customblue">$30/month</span>
+              </div>
+              <button class="bg-customblue text-white px-6 py-3 rounded-full w-full hover:bg-opacity-90 transition-all duration-300 flex items-center justify-center">
+                <span>Support Education</span>
+                <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
 
   <!-- FAQ Section -->
   <section class="py-16 bg-white relative overflow-hidden">
@@ -325,28 +397,28 @@ const keywords =
         <span
           class="inline-block px-4 py-1 bg-hotpink/10 text-hotpink rounded-full text-sm font-medium mb-3"
         >
-          <i class="fas fa-question-circle mr-2"></i>About Donations
+          <i class="fas fa-question-circle mr-2"></i>Common Questions
         </span>
         <h2 class="text-3xl md:text-4xl font-bold text-customgray">
-          Donation <span class="text-hotpink">FAQs</span>
+          Orphan Sponsorship <span class="text-hotpink">FAQs</span>
         </h2>
         <div class="h-1 w-24 bg-hotpink mx-auto mt-4"></div>
       </div>
 
       <div class="max-w-3xl mx-auto">
         <FAQItem
-          question="What is Cooked Food Sadaqah?"
-          answer="Cooked Food Sadaqah is a charitable act where your donation provides freshly prepared meals to those in need, ensuring they receive nourishment and dignity."
+          question="How is my sponsorship money used?"
+          answer="Your donation covers essential needs including nutritious food, clean water, healthcare, education, clothing, and emotional support for the orphaned child. We provide comprehensive care to ensure their physical, mental, and social development."
         />
 
         <FAQItem
-          question="Who benefits from Cooked Food Sadaqah?"
-          answer="Your donations benefit the poor, sick, elderly, and displaced individuals who lack access to proper meals or cooking facilities."
+          question="Can I communicate with the child I sponsor?"
+          answer="Yes, you will receive regular updates and photos of your sponsored child, including their progress in school and overall wellbeing. For privacy and security reasons, direct contact is limited, but we facilitate appropriate communication through our program staff."
         />
 
         <FAQItem
-          question="How are the meals distributed?"
-          answer="Meals are prepared and distributed through trusted local partners in high-need areas, ensuring they reach the most vulnerable communities efficiently."
+          question="What happens when my sponsored child grows up?"
+          answer="We support children until they reach adulthood (18 years) or become self-sufficient. Our goal is to equip them with education and skills to lead independent, productive lives. You'll be notified when your sponsored child completes the program, and you can choose to sponsor another child if you wish."
         />
       </div>
     </div>
@@ -396,5 +468,5 @@ const keywords =
         }
       }
     </style>
-  </section></Layout
->
+  </section>
+</Layout>

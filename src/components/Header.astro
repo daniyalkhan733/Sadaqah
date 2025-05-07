@@ -1,23 +1,24 @@
 <header
-  class="bg-white shadow-lg sticky top-0 z-50 transition-all duration-300 text-customgray"
+  class="mx-4 my-4 md:mx-6 md:my-6 bg-white rounded-xl shadow-xl fixed top-0 left-0 right-0 z-50 transition-all duration-300 text-customgray overflow-visible"
 >
   <!-- Top section with logo and main buttons -->
-  <div class="container mx-auto px-4">
+  <div class="container mx-auto px-4 bg-white/95 md:rounded-t-xl rounded-xl">
     <div class="flex justify-between items-center py-4">
       <div class="flex items-center">
-        <a href="/">
+        <a href="/" class="hover:scale-105 transition-transform duration-300">
           <img
             src="/assets/images/logo.png"
             alt="Sadaqah Online Logo"
-            class="h-12 hover:opacity-80 transition-opacity duration-300"
-          /></a
-        >
+            class="h-12 hover:opacity-90 transition-opacity duration-300"
+          />
+        </a>
       </div>
 
       <!-- Mobile menu button -->
       <button
         id="mobile-menu-button"
-        class="md:hidden flex items-center focus:outline-none"
+        class="md:hidden flex items-center focus:outline-none bg-gray-100 hover:bg-gray-200 p-2 rounded-lg transition-colors duration-300"
+        aria-label="Toggle menu"
       >
         <svg
           class="w-6 h-6"
@@ -37,16 +38,19 @@
       <!-- Desktop action buttons -->
       <div class="hidden md:flex space-x-4 items-center">
         <button
-          class="bg-hotpink hover:bg-opacity-90 text-white px-5 py-2 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 font-medium flex items-center gap-2"
+          class="bg-hotpink hover:bg-opacity-90 text-white px-5 py-2 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-hotpink/30 hover:shadow-lg font-medium flex items-center gap-2 group"
         >
-          <i class="fas fa-heart"></i>
-          Donate Now
+          <i class="fas fa-heart group-hover:animate-ping absolute"></i>
+          <i class="fas fa-heart relative"></i>
+          <span>Donate Now</span>
         </button>
         <button
-          class="bg-teal hover:bg-opacity-90 text-white px-5 py-2 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 font-medium flex items-center gap-2"
+          class="bg-teal hover:bg-opacity-90 text-white px-5 py-2 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-teal/30 hover:shadow-lg font-medium flex items-center gap-2 group"
         >
-          <i class="fas fa-user"></i>
-          Sign In
+          <i
+            class="fas fa-user group-hover:rotate-12 transition-transform duration-300"
+          ></i>
+          <span>Sign In</span>
         </button>
       </div>
     </div>
@@ -54,189 +58,173 @@
 
   <!-- Desktop Navigation -->
   <nav
-    class="bg-white border-t border-customgray border-opacity-30 relative md:block hidden"
+    class="bg-white/95 backdrop-blur-md border-t border-customgray/10 relative md:block hidden rounded-b-xl mx-auto"
   >
     <div class="container mx-auto px-4">
       <ul id="nav-menu" class="flex flex-row space-x-2 text-sm">
         <li class="group relative">
           <a
             href="/"
-            class="block p-4 hover:text-teal transition-colors duration-300 font-medium"
+            class="block p-4 hover:text-teal transition-colors duration-300 font-medium group-hover:scale-105 transition-transform"
           >
             Home
             <span
-              class="absolute bottom-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+              class="absolute bottom-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-t-md"
             ></span>
           </a>
         </li>
         <li class="group relative">
           <a
             href="/about-us"
-            class="block p-4 hover:text-teal transition-colors duration-300 font-medium"
+            class="block p-4 hover:text-teal transition-colors duration-300 font-medium group-hover:scale-105 transition-transform"
           >
             About Us
             <span
-              class="absolute bottom-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+              class="absolute bottom-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-t-md"
             ></span>
           </a>
         </li>
         <li class="group relative">
           <a
             href="/appeals/qurbani"
-            class="block p-4 hover:text-hotpink transition-colors duration-300 font-medium text-hotpink"
+            class="block p-4 hover:text-hotpink transition-colors duration-300 font-medium text-hotpink group-hover:scale-105 transition-transform"
           >
             Qurbani 2025
             <span
-              class="absolute bottom-0 left-0 w-full h-1 bg-hotpink transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+              class="absolute bottom-0 left-0 w-full h-1 bg-hotpink transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-t-md"
             ></span>
           </a>
         </li>
-        <li class="group relative" id="desktop-appeals-dropdown">
+        <li
+          class="group relative dropdown-container"
+          id="desktop-appeals-dropdown"
+        >
           <a
             href="#"
-            class="block p-4 hover:text-teal transition-colors duration-300 font-medium"
+            class="block p-4 hover:text-teal transition-colors duration-300 font-medium group-hover:scale-105 transition-transform flex items-center gap-1"
           >
             Appeals
+            <i
+              class="fas fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"
+            ></i>
             <span
-              class="absolute bottom-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+              class="absolute bottom-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-t-md"
             ></span>
           </a>
           <div
-            class="absolute left-0 mt-1 w-48 bg-white shadow-xl rounded-lg overflow-hidden transform scale-0 group-hover:scale-100 origin-top-left transition-transform duration-200 z-50"
+            class="dropdown-menu absolute left-0 mt-1 w-56 bg-white rounded-lg overflow-hidden transform-gpu opacity-0 invisible group-hover:opacity-100 group-hover:visible origin-top-left transition-all duration-200 shadow-xl border border-gray-100"
+            style="z-index: 1000;"
           >
             <a
               href="/appeals/sadaqah"
-              class="block px-4 py-2 hover:bg-teal text-sm flex items-center gap-2 hover:text-white"
+              class="block px-4 py-3 hover:bg-teal text-sm flex items-center gap-2 hover:text-white transition-colors duration-300"
             >
               Pay Sadaqah Online
             </a>
             <a
               href="/appeals/water"
-              class="block px-4 py-2 hover:bg-teal text-sm flex items-center gap-2 hover:text-white"
+              class="block px-4 py-3 hover:bg-teal text-sm flex items-center gap-2 hover:text-white transition-colors duration-300"
             >
               Water Pump
             </a>
             <a
               href="/appeals/cooked-food"
-              class="block px-4 py-2 hover:bg-teal text-sm flex items-center gap-2 hover:text-white"
+              class="block px-4 py-3 hover:bg-teal text-sm flex items-center gap-2 hover:text-white transition-colors duration-300"
             >
               Cooked Food
             </a>
             <a
-            href="/appeals/build-a-masjid"
-            class="block px-4 py-2 hover:bg-teal text-sm flex items-center gap-2 hover:text-white"
-          >
-Build A Masjid          </a>
-          <a
-          href="/appeals/sponsor-an-orphan"
-          class="block px-4 py-2 hover:bg-teal text-sm flex items-center gap-2 hover:text-white"
-        >
-Sponsor An Orphan        </a>
+              href="/appeals/build-a-masjid"
+              class="block px-4 py-3 hover:bg-teal text-sm flex items-center gap-2 hover:text-white transition-colors duration-300"
+            >
+              Build A Masjid
+            </a>
+            <a
+              href="/appeals/sponsor-an-orphan"
+              class="block px-4 py-3 hover:bg-teal text-sm flex items-center gap-2 hover:text-white transition-colors duration-300"
+            >
+              Sponsor An Orphan
+            </a>
           </div>
         </li>
         <li class="group relative">
           <a
             href="/blogs"
-            class="block p-4 hover:text-teal transition-colors duration-300 font-medium"
+            class="block p-4 hover:text-teal transition-colors duration-300 font-medium group-hover:scale-105 transition-transform"
           >
             Blogs
             <span
-              class="absolute bottom-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+              class="absolute bottom-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-t-md"
             ></span>
           </a>
         </li>
         <li class="group relative">
           <a
             href="/contact"
-            class="block p-4 hover:text-teal transition-colors duration-300 font-medium"
+            class="block p-4 hover:text-teal transition-colors duration-300 font-medium group-hover:scale-105 transition-transform"
           >
             Contact Us
             <span
-              class="absolute bottom-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+              class="absolute bottom-0 left-0 w-full h-1 bg-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-t-md"
             ></span>
           </a>
         </li>
       </ul>
 
-      <!-- Search bar -->
+      <!-- Call Us button -->
       <div
         class="absolute right-4 top-1/2 transform -translate-y-1/2 hidden md:block"
       >
-      <a href="tel:+441632960961">
-        <button
-          class="bg-customblue hover:bg-opacity-90 text-white px-5 py-2 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 font-medium flex items-center gap-2"
-        
-        >
-          <i class="fas fa-phone"></i>
-          Call Us
-        </button></a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Action buttons section -->
-  <div
-    class="bg-white py-3 border-t border-customgray border-opacity-20 relative overflow-x-auto"
-  >
-    <div class="container mx-auto px-4 max-w-2xl">
-      <div class="flex gap-3 justify-center">
-        <!-- <buttonf
-          class="bg-hotpink hover:bg-opacity-90 text-white text-sm px-4 py-2 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
-        >
-          <i class="fas fa-calculator"></i>
-          Zakat Calculator
-        </button> -->
-        <button
-          class="bg-teal hover:bg-opacity-90 text-white text-sm px-4 py-2 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 flex items-center gap-2 md:block hidden"
-        >
-          <i class="fas fa-hand-holding-heart"></i>
-          Donate
-        </button>
-        <a href="/appeals/qurbani">
+        <a href="tel:+441632960961" class="group">
           <button
-            class="bg-customblue hover:bg-opacity-90 text-white text-sm px-4 py-2 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+            class="bg-customblue hover:bg-opacity-90 text-white px-5 py-2 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-customblue/30 hover:shadow-lg font-medium flex items-center gap-2"
           >
-            <i class="fa-solid fa-headset"></i>
-            Qurbani 2025
+            <i
+              class="fas fa-phone group-hover:rotate-12 transition-transform duration-300"
+            ></i>
+            <span>Call Us</span>
           </button>
         </a>
       </div>
     </div>
-  </div>
+  </nav>
 
   <!-- Mobile menu (hidden by default) -->
   <div
     id="mobile-menu"
-    class="md:hidden hidden bg-white border-t border-customgray border-opacity-20 shadow-inner"
+    class="md:hidden hidden bg-white/95 backdrop-blur-md border-t border-customgray/10 shadow-inner rounded-b-xl"
   >
     <nav class="px-4 py-2">
-      <ul class="space-y-2">
-        <li>
+      <ul class="space-y-1">
+        <li class="hover:bg-gray-50 rounded-lg transition-colors duration-300">
           <a
             href="/"
-            class="block p-2 hover:text-teal transition-colors duration-300 font-medium"
+            class="block p-3 hover:text-teal transition-colors duration-300 font-medium"
           >
-            Home
+             Home
           </a>
         </li>
-        <li>
+        <li class="hover:bg-gray-50 rounded-lg transition-colors duration-300">
           <a
             href="/about-us"
-            class="block p-2 hover:text-teal transition-colors duration-300 font-medium"
+            class="block p-3 hover:text-teal transition-colors duration-300 font-medium"
           >
             About Us
           </a>
         </li>
-        <li>
+        <li class="hover:bg-gray-50 rounded-lg transition-colors duration-300">
           <a
             href="/appeals/qurbani"
-            class="block p-2 hover:text-hotpink transition-colors duration-300 font-medium text-hotpink"
+            class="block p-3 hover:text-hotpink transition-colors duration-300 font-medium text-hotpink"
           >
             Qurbani 2025
           </a>
         </li>
-        <li class="relative" id="mobile-appeals-dropdown">
-          <div class="flex justify-between items-center p-2">
+        <li
+          class="relative hover:bg-gray-50 rounded-lg transition-colors duration-300"
+          id="mobile-appeals-dropdown"
+        >
+          <div class="flex justify-between items-center p-3">
             <a
               href="#"
               class="hover:text-teal transition-colors duration-300 font-medium"
@@ -245,95 +233,144 @@ Sponsor An Orphan        </a>
             </a>
             <button
               id="mobile-appeals-toggle"
-              class="text-customgray focus:outline-none"
+              class="text-customgray focus:outline-none bg-gray-100 hover:bg-gray-200 p-2 rounded-full transition-colors duration-300"
             >
-              <i class="fas fa-chevron-down"></i>
+              <i class="fas fa-chevron-down transition-transform duration-300"
+              ></i>
             </button>
           </div>
           <div
             id="mobile-appeals-content"
-            class="hidden pl-4 py-2 space-y-2 border-l-2 border-teal ml-2 mt-1"
+            class="hidden pl-2 py-2 space-y-2  mt-1"
           >
             <a
               href="/appeals/sadaqah"
-              class="block px-4 py-2 hover:text-white text-sm flex items-center gap-2"
+              class="block px-4 py-2 text-sm flex items-center gap-2 transition-colors duration-300 rounded-lg border-l-2 border-teal relative overflow-hidden text-customgray hover:text-white hover:bg-gradient-to-r from-teal to-transparent"
             >
               Pay Sadaqah Online
             </a>
             <a
               href="/appeals/water"
-              class="block px-4 py-2 hover:text-white text-sm flex items-center gap-2"
+              class="block px-4 py-2 text-sm flex items-center gap-2 transition-colors duration-300 rounded-lg border-l-2 border-teal relative overflow-hidden text-customgray hover:text-white hover:bg-gradient-to-r from-teal via-[#bbedea] to-transparent"
             >
-              Water Pump
+           Water Pump
             </a>
             <a
               href="/appeals/cooked-food"
-              class="block px-4 py-2 hover:text-white text-sm flex items-center gap-2"
+              class="block px-4 py-2 text-sm flex items-center gap-2 transition-colors duration-300 rounded-lg border-l-2 border-teal relative overflow-hidden text-customgray hover:text-white hover:bg-gradient-to-r from-teal via-[#bbedea] to-transparent"
             >
-              Cooked Food
+            Cooked Food
             </a>
             <a
-            href="/appeals/build-a-masjid"
-            class="block px-4 py-2 hover:text-white text-sm flex items-center gap-2"
-          >
-Build A Masjid          </a>
-          <a
-            href="/appeals/sponsor-an-orphan"
-            class="block px-4 py-2 hover:text-white text-sm flex items-center gap-2"
-          >
-Sponsor An Orphan          </a>
+              href="/appeals/build-a-masjid"
+              class="block px-4 py-2 text-sm flex items-center gap-2 transition-colors duration-300 rounded-lg border-l-2 border-teal relative overflow-hidden text-customgray hover:text-white hover:bg-gradient-to-r from-teal via-[#bbedea] to-transparent"
+            >
+             Build A Masjid
+            </a>
+            <a
+              href="/appeals/sponsor-an-orphan"
+              class="block px-4 py-2 text-sm flex items-center gap-2 transition-colors duration-300 rounded-lg border-l-2 border-teal relative overflow-hidden text-customgray hover:text-white hover:bg-gradient-to-r from-teal  to-transparent"
+            >
+              Sponsor An Orphan
+             
+            </a>
           </div>
         </li>
-        <li>
+        <li class="hover:bg-gray-50 rounded-lg transition-colors duration-300">
           <a
             href="/blogs"
-            class="block p-2 hover:text-teal transition-colors duration-300 font-medium"
+            class="block p-3 hover:text-teal transition-colors duration-300 font-medium"
           >
-            Blogs
+         Blogs
           </a>
         </li>
-        <li>
+        <li class="hover:bg-gray-50 rounded-lg transition-colors duration-300">
           <a
             href="/contact"
-            class="block p-2 hover:text-teal transition-colors duration-300 font-medium"
+            class="block p-3 hover:text-teal transition-colors duration-300 font-medium"
           >
-            Contact Us
+    Contact Us
           </a>
         </li>
       </ul>
     </nav>
-    <div
-      class="px-4 py-3 border-t border-customgray border-opacity-20 grid grid-cols-1 gap-2"
-    >
+    <div class="px-4 py-3 border-t border-customgray/10 grid grid-cols-2 gap-3">
       <button
-        class="bg-hotpink text-white px-3 py-2 rounded-lg text-sm flex items-center justify-center gap-1"
+        class="bg-hotpink hover:bg-opacity-90 text-white px-3 py-3 rounded-lg text-sm flex items-center justify-center gap-2 hover:shadow-hotpink/30 hover:shadow-lg transition-all duration-300"
       >
         <i class="fas fa-heart"></i>
         Donate Now
       </button>
       <button
-        class="bg-teal text-white px-3 py-2 rounded-lg text-sm flex items-center justify-center gap-1"
+        class="bg-teal hover:bg-opacity-90 text-white px-3 py-3 rounded-lg text-sm flex items-center justify-center gap-2 hover:shadow-teal/30 hover:shadow-lg transition-all duration-300"
       >
         <i class="fas fa-user"></i>
         Sign In
       </button>
+      <a href="tel:+441632960961" class="col-span-2">
+        <button
+          class="bg-customblue hover:bg-opacity-90 text-white px-3 py-3 rounded-lg text-sm flex items-center justify-center gap-2 w-full hover:shadow-customblue/30 hover:shadow-lg transition-all duration-300"
+        >
+          <i class="fas fa-phone "></i>
+          Call Us
+        </button>
+      </a>
     </div>
   </div>
 </header>
 
+<!-- Spacer to compensate for the fixed header -->
+<div id="header-spacer" class="w-full"></div>
+
 <script is:inline>
   document.addEventListener("DOMContentLoaded", function () {
-    // Mobile menu toggle
+    // Calculate and set the header spacer height
+    const header = document.querySelector("header");
+    const headerSpacer = document.getElementById("header-spacer");
+
+    function updateHeaderSpacerHeight() {
+      if (header && headerSpacer) {
+        const headerHeight = header.offsetHeight;
+        headerSpacer.style.height = "0"; // Add a little extra space
+      }
+    }
+
+    // Initial calculation
+    updateHeaderSpacerHeight();
+
+    // Update on window resize
+    window.addEventListener("resize", updateHeaderSpacerHeight);
+
+    // Mobile menu toggle with animation
     const mobileMenuButton = document.getElementById("mobile-menu-button");
     const mobileMenu = document.getElementById("mobile-menu");
 
     if (mobileMenuButton && mobileMenu) {
       mobileMenuButton.addEventListener("click", function () {
-        mobileMenu.classList.toggle("hidden");
+        // Toggle the hidden class with animation
+        if (mobileMenu.classList.contains("hidden")) {
+          mobileMenu.classList.remove("hidden");
+          // Use setTimeout to apply transition after the display is set
+          setTimeout(() => {
+            mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
+            mobileMenu.style.opacity = "1";
+            // Update header spacer after opening menu
+            updateHeaderSpacerHeight();
+          }, 10);
+        } else {
+          mobileMenu.style.maxHeight = "0";
+          mobileMenu.style.opacity = "0";
+          // Wait for transition to finish before hiding
+          setTimeout(() => {
+            mobileMenu.classList.add("hidden");
+            // Update header spacer after closing menu
+            updateHeaderSpacerHeight();
+          }, 300);
+        }
       });
     }
 
-    // Mobile Appeals dropdown toggle
+    // Mobile Appeals dropdown toggle with animation
     const mobileAppealsToggle = document.getElementById(
       "mobile-appeals-toggle"
     );
@@ -343,47 +380,85 @@ Sponsor An Orphan          </a>
 
     if (mobileAppealsToggle && mobileAppealsContent) {
       mobileAppealsToggle.addEventListener("click", function () {
-        mobileAppealsContent.classList.toggle("hidden");
-
-        // Change the chevron icon direction
+        // Toggle with animation
         const icon = mobileAppealsToggle.querySelector("i");
-        if (icon) {
-          if (mobileAppealsContent.classList.contains("hidden")) {
-            icon.classList.remove("fa-chevron-up");
-            icon.classList.add("fa-chevron-down");
-          } else {
-            icon.classList.remove("fa-chevron-down");
-            icon.classList.add("fa-chevron-up");
+
+        if (mobileAppealsContent.classList.contains("hidden")) {
+          mobileAppealsContent.classList.remove("hidden");
+          mobileAppealsContent.style.maxHeight = "0";
+          mobileAppealsContent.style.opacity = "0";
+
+          // Use setTimeout to apply transition after the display is set
+          setTimeout(() => {
+            mobileAppealsContent.style.maxHeight =
+              mobileAppealsContent.scrollHeight + "px";
+            mobileAppealsContent.style.opacity = "1";
+
+            // Rotate icon
+            if (icon) {
+              icon.style.transform = "rotate(180deg)";
+            }
+
+            // Update header spacer height
+            updateHeaderSpacerHeight();
+          }, 10);
+        } else {
+          mobileAppealsContent.style.maxHeight = "0";
+          mobileAppealsContent.style.opacity = "0";
+
+          // Rotate icon back
+          if (icon) {
+            icon.style.transform = "rotate(0)";
           }
+
+          // Wait for transition to finish before hiding
+          setTimeout(() => {
+            mobileAppealsContent.classList.add("hidden");
+            // Update header spacer height
+            updateHeaderSpacerHeight();
+          }, 300);
         }
       });
     }
 
-    // Sticky header effect on scroll
-    const header = document.querySelector("header");
+    // Enhanced sticky header effect on scroll with smooth floating animation
     let lastScrollTop = 0;
+    let ticking = false;
 
     window.addEventListener("scroll", function () {
-      const scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
+      if (!ticking) {
+        window.requestAnimationFrame(function () {
+          const scrollTop =
+            window.pageYOffset || document.documentElement.scrollTop;
 
-      if (scrollTop > 100) {
-        header.classList.add("py-2");
-        header.classList.add("shadow-xl");
-      } else {
-        header.classList.remove("py-2");
-        header.classList.remove("shadow-xl");
+          // Add shadow and reduce padding on scroll
+          if (scrollTop > 20) {
+            header.classList.add("shadow-2xl");
+            header.classList.add("bg-white/98");
+            header.classList.remove("my-4", "md:my-6");
+            header.classList.add("my-2", "md:my-3");
+          } else {
+            header.classList.remove("shadow-2xl");
+            header.classList.remove("bg-white/98");
+            header.classList.remove("my-2", "md:my-3");
+            header.classList.add("my-4", "md:my-6");
+          }
+
+          // Hide on scroll down, show on scroll up
+          if (scrollTop > lastScrollTop && scrollTop > 200) {
+            // Scrolling down - hide with animation
+            header.style.transform = "translateY(-120%)";
+          } else {
+            // Scrolling up - show with animation
+            header.style.transform = "translateY(0)";
+          }
+
+          lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+          ticking = false;
+        });
+
+        ticking = true;
       }
-
-      if (scrollTop > lastScrollTop && scrollTop > 200) {
-        // Scrolling down
-        header.style.transform = "translateY(-100%)";
-      } else {
-        // Scrolling up
-        header.style.transform = "translateY(0)";
-      }
-
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     });
 
     // Close mobile dropdown when clicking outside
@@ -397,6 +472,9 @@ Sponsor An Orphan          </a>
       const mobileAppealsContent = document.getElementById(
         "mobile-appeals-content"
       );
+      const icon = mobileAppealsToggle
+        ? mobileAppealsToggle.querySelector("i")
+        : null;
 
       // If the click is outside the dropdown and the dropdown is open
       if (
@@ -405,15 +483,100 @@ Sponsor An Orphan          </a>
         mobileAppealsContent &&
         !mobileAppealsContent.classList.contains("hidden")
       ) {
-        mobileAppealsContent.classList.add("hidden");
+        // Close with animation
+        mobileAppealsContent.style.maxHeight = "0";
+        mobileAppealsContent.style.opacity = "0";
 
-        // Reset the chevron icon
-        const icon = mobileAppealsToggle.querySelector("i");
+        // Rotate icon back
         if (icon) {
-          icon.classList.remove("fa-chevron-up");
-          icon.classList.add("fa-chevron-down");
+          icon.style.transform = "rotate(0)";
         }
+
+        // Wait for transition to finish before hiding
+        setTimeout(() => {
+          mobileAppealsContent.classList.add("hidden");
+          updateHeaderSpacerHeight();
+        }, 300);
       }
+    });
+
+    // Add smooth hover transition to dropdown menu items
+    const dropdownItems = document.querySelectorAll(
+      "#desktop-appeals-dropdown .dropdown-menu a"
+    );
+    dropdownItems.forEach((item, index) => {
+      item.style.transitionDelay = index * 0.05 + "s";
     });
   });
 </script>
+
+<style>
+  /* Smooth transitions for mobile menu */
+  #mobile-menu {
+    transition:
+      max-height 0.3s ease,
+      opacity 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  #mobile-appeals-content {
+    transition:
+      max-height 0.3s ease,
+      opacity 0.3s ease;
+    overflow: hidden;
+  }
+
+  /* Smooth rotation for chevron icon */
+  #mobile-appeals-toggle i {
+    transition: transform 0.3s ease;
+  }
+
+  /* Smooth transitions for header */
+  header {
+    transition:
+      transform 0.3s ease,
+      padding 0.3s ease,
+      margin 0.3s ease,
+      box-shadow 0.3s ease,
+      background-color 0.3s ease;
+  }
+
+  /* Add subtle animation to the donate button heart */
+  @keyframes ping {
+    75%,
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+
+  .animate-ping {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  /* Desktop dropdown menu styles */
+  .dropdown-container {
+    perspective: 1000px;
+  }
+
+  .dropdown-menu {
+    transform-origin: top center;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease,
+      transform 0.3s ease;
+    transform: translateY(10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .dropdown-container:hover .dropdown-menu {
+    transform: translateY(0);
+  }
+
+  /* Ensure dropdown is visible */
+  .dropdown-menu {
+    z-index: 1000 !important;
+    display: block !important;
+  }
+</style>

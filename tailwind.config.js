@@ -6,9 +6,9 @@ export default {
 
     extend: {
       colors: {
-        'hotpink': '#EE0C6E',
-        'teal': '#01A6A0',
-        'customblue': '#0E173B',
+        'hotpink': '#D51051',
+        'teal': '#37145A',
+        'customblue': '#FEC80A',
         'customgray': '#5B5A59',
       },
       // Enhance scrolling experience with better animation defaults

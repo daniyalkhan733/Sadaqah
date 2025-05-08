@@ -73,25 +73,25 @@ const displayPrograms = filteredPrograms.slice(0, maxDisplay);
     </div>
 
     <!-- Programs Grid with hover effects -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
       {
         displayPrograms.slice(0, 6).map((program) => {
           return (
-            <div class="group relative overflow-hidden rounded-xl bg-white border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+            <div class="flex-shrink-0 w-full md:w-64 group relative overflow-hidden rounded-xl bg-white border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
               {/* Decorative accent line at top */}
               <div class="h-1 w-full bg-teal" />
-
+              
               {/* Program Image with overlay */}
               <div class="relative h-64 overflow-hidden">
                 <img
-                  src={program.image || "/api/placeholder/600/400"}
+                  src={program.image || "/assets/images/logo.png"}
                   alt={program.program_name}
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-
+                
                 {/* Gradient overlay */}
                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60" />
-
+                
                 {/* Country Badge */}
                 <div class="absolute bottom-4 left-4">
                   <div class="flex items-center bg-white py-1.5 px-4 rounded-full shadow-md">
@@ -102,42 +102,28 @@ const displayPrograms = filteredPrograms.slice(0, maxDisplay);
                   </div>
                 </div>
               </div>
-
+              
               {/* Content with improved spacing */}
               <div class="p-6">
-                <h3 class="text-xl font-bold text-teal mb-3 line-clamp-2 h-14">
+                <h3 class="text-xl font-bold text-teal line-clamp-2 mb-4">
                   {program.program_name}
                 </h3>
-
+                
                 <div class="flex items-center justify-between mb-6">
                   <span class="text-2xl font-bold text-customgray">
                     {program.program_rate
                       ? `${pound}${program.program_rate}`
                       : "Any amount"}
                   </span>
-
-                  {/* Progress indicator - for visual interest */}
-                  <div class="w-20 h-1.5 bg-gray-200 rounded-full overflow-hidden">
-                    <div
-                      class="h-full bg-teal"
-                      style={`width: ${Math.floor(Math.random() * 100)}%`}
-                    />
-                  </div>
                 </div>
-
+                
                 <div class="flex justify-between gap-3">
                   <a
                     href={program.donation_url}
-                    class="group flex-1 inline-flex items-center justify-center bg-teal hover:bg-opacity-90 text-white font-medium py-2.5 px-4 rounded-full transition duration-300 shadow-sm hover:shadow"
+                    class="group flex-1 inline-flex items-center justify-center bg-teal hover:bg-opacity-90 text-white font-medium py-2.5 px-4 rounded-xl transition duration-300 shadow-sm hover:shadow"
                   >
                     <i class="fas fa-heart mr-2" />
                     <span>Donate Now</span>
-                  </a>
-                  <a
-                    href={`/details/${program.program_id}`}
-                    class="group flex-grow-0 inline-flex items-center justify-center border border-customgray/30 hover:border-customgray/50 text-customgray font-medium py-2.5 w-12 rounded-full transition duration-300"
-                  >
-                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300" />
                   </a>
                 </div>
               </div>

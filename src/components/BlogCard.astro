@@ -19,7 +19,7 @@ const { title, excerpt, date, image, category } = Astro.props;
   <div class="p-6">
     <div class="text-sm text-[#5B5A59] mb-2">{date}</div>
     <h3
-      class="text-xl font-bold text-[#0E173B] mb-2 hover:text-[#EE0C6E] transition-colors duration-300"
+      class="text-xl font-bold text-[#0E173B] mb-2 hover:text-hotpink transition-colors duration-300"
     >
       <a href={`/blogs/${title.toLowerCase().replace(/\s+/g, "-")}`}>
         {title}
@@ -29,7 +29,7 @@ const { title, excerpt, date, image, category } = Astro.props;
 
     <a
       href={`/blogs/${title.toLowerCase().replace(/\s+/g, "-")}`}
-      class="inline-flex items-center text-[#EE0C6E] hover:text-[#d00a62] font-medium transition-colors duration-300"
+      class="inline-flex items-center text-hotpink hover:text-[#d00a62] font-medium transition-colors duration-300"
     >
       Read Blog
       <svg

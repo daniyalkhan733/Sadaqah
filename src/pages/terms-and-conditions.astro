@@ -1,0 +1,258 @@
+---
+import MainLayout from "../layout/Layout.astro";
+import Banner from "../components/Banner.astro";
+const { frontmatter } = Astro.props;
+---
+
+<MainLayout>
+<section class="relative w-full overflow-hidden bg-teal">
+  
+
+  <!-- Content Container -->
+  <div
+    class="relative z-10 container mx-auto px-4 md:py-20 flex flex-col items-center justify-center text-center mt-20"
+  >
+    <!-- Breadcrumbs -->
+
+    <!-- Main Content -->
+    <div class="w-full max-w-3xl mx-auto  ">
+      <!-- Tag Animation -->
+      <div
+        class="my-6 inline-block"
+      >
+        <span
+          class="bg-hotpink text-white text-xs md:text-sm font-semibold px-4 py-1.5 rounded-full"
+        >
+          Home / Terms & Conditions
+        </span>
+      </div>
+
+      <!-- Title with Animation -->
+      <h1
+        class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 transition-all duration-700 ease-in-out transform translate-y-0 opacity-100 text-shadow-lg"
+      >
+        <span class="inline-block hoverable-text">Terms & Conditions</span>
+        <!-- <span class="inline-block hoverable-text text-hotpink">Us</span> -->
+      </h1>
+
+    </div>
+  </div>
+</section>
+  <!-- Blog content -->
+ <main class="container mx-auto px-4 py-8 max-w-4xl">
+    <!-- Page header -->
+    <div class="mb-8">
+      <div class="flex flex-wrap items-center text-gray-500 my-6 gap-4">
+        <div class="flex items-center">
+          <i class="far fa-file-alt mr-2 text-teal"></i>
+          <span>Legal Document</span>
+        </div>
+        <div class="flex items-center">
+          <i class="far fa-calendar-alt mr-2 text-teal"></i>
+          <span>Last Updated: May 9, 2025</span>
+        </div>
+      </div>
+      <h1 class="text-4xl font-bold text-gray-800 mb-4">Terms and Conditions</h1>
+      <p class="text-gray-700 leading-relaxed">
+        These Terms and Conditions govern your use of the My Sadaqah Online website and services. Please read these Terms carefully before using our platform.
+      </p>
+    </div>
+
+    <article class="prose prose-lg max-w-none">
+      <!-- Introduction -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Introduction</h2>
+        <p class="text-gray-700 leading-relaxed">
+          Welcome to My Sadaqah Online. These Terms and Conditions ("Terms") govern your use of the My Sadaqah Online website located at mysadaqahonline.com ("Site") and all related services. The Site is operated by My Sadaqah Online ("we", "us", or "our"), a registered charity in Canada.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          By accessing or using our Site, you agree to be bound by these Terms. If you disagree with any part of the Terms, then you may not access the Site or use our services.
+        </p>
+      </section>
+        <section class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Definitions</h2>
+        <p class="text-gray-700 leading-relaxed">
+          For the purposes of these Terms and Conditions:
+        </p>
+        <ul class="list-disc pl-6 text-gray-700 leading-relaxed">
+          <li><strong>"Donation"</strong> refers to any financial contribution made through our Site for charitable purposes.</li>
+          <li><strong>"User," "You," and "Your"</strong> refer to the individual accessing or using the Site.</li>
+          <li><strong>"Services"</strong> refers to all services provided by My Sadaqah Online through the Site, including but not limited to donation processing, information provision, and facilitation of charitable activities.</li>
+          <li><strong>"Content"</strong> includes text, images, audio, video, or any other material that is posted, uploaded, linked to, or otherwise made available on our Site.</li>
+        </ul>
+      </section>
+    
+      <!-- Use of Our Services -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Use of Our Services</h2>
+        <p class="text-gray-700 leading-relaxed">
+          Our Services are intended solely for users who are at least 18 years of age and are legally capable of entering into binding contracts. By using our Services, you represent and warrant that you meet these requirements.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          You agree to use our Site and Services only for lawful purposes and in accordance with these Terms. Specifically, you agree not to:
+        </p>
+        <ul class="list-disc pl-6 text-gray-700 leading-relaxed">
+          <li>Use the Site in any way that violates any applicable federal, provincial, local, or international law or regulation.</li>
+          <li>Use the Site to impersonate or attempt to impersonate My Sadaqah Online, our employees, another user, or any other person or entity.</li>
+          <li>Engage in any conduct that restricts or inhibits anyone's use or enjoyment of the Site.</li>
+          <li>Attempt to gain unauthorized access to, interfere with, damage, or disrupt any parts of the Site.</li>
+          <li>Use the Site to transmit any material that is harmful, threatening, abusive, harassing, defamatory, or otherwise objectionable.</li>
+          <li>Use the Site for any commercial solicitation purposes without our prior written consent.</li>
+        </ul>
+      </section>
+    
+      <!-- Donations and Financial Transactions -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Donations and Financial Transactions</h2>
+        <p class="text-gray-700 leading-relaxed">
+          My Sadaqah Online operates as a registered Canadian charity that collects and distributes donations in accordance with Islamic principles, including Zakat, Sadaqah, and Qurbani. By making a donation through our Site, you agree to the following:
+        </p>
+        <ul class="list-disc pl-6 text-gray-700 leading-relaxed">
+          <li><strong>Authorization:</strong> You authorize us to process your donation using the payment method you provide.</li>
+          <li><strong>Accuracy:</strong> You represent and warrant that all payment and billing information you provide is accurate, complete, and current.</li>
+          <li><strong>Irrevocability:</strong> All donations made through our platform are generally irrevocable once processed, except as required by applicable law.</li>
+          <li><strong>Tax Receipts:</strong> For eligible donations, we will issue tax receipts in accordance with Canadian tax laws.</li>
+          <li><strong>Administration Fee:</strong> A small portion of each donation (typically 10-15%) may be allocated to cover our administrative and operational costs, ensuring the sustainability of our charitable work. This is clearly indicated during the donation process.</li>
+          <li><strong>Distribution:</strong> We will use our best efforts to distribute your donation as specified, but reserve the right to redirect funds if the designated program is overfunded or to address more urgent needs.</li>
+        </ul>
+        <p class="text-gray-700 leading-relaxed">
+          We use industry-standard security measures to protect your financial information. However, no method of transmission over the Internet is 100% secure. Therefore, while we strive to protect your personal information, we cannot guarantee its absolute security.
+        </p>
+      </section>
+    
+      <!-- Qurbani Services -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Qurbani Services</h2>
+        <p class="text-gray-700 leading-relaxed">
+          For Qurbani (animal sacrifice) services, the following additional terms apply:
+        </p>
+        <ul class="list-disc pl-6 text-gray-700 leading-relaxed">
+          <li><strong>Delegation:</strong> By using our Qurbani service, you delegate to us the responsibility of performing the Qurbani on your behalf in accordance with Islamic guidelines.</li>
+          <li><strong>Timing:</strong> We will make every effort to perform the Qurbani during the specified days of Eid ul-Adha. However, due to logistical challenges in some regions, the Qurbani may be performed within an extended period as permitted by Islamic scholars.</li>
+          <li><strong>Animal Welfare:</strong> We are committed to ensuring that all animals are treated humanely and that the sacrifice is carried out in accordance with Islamic principles.</li>
+          <li><strong>Distribution:</strong> The meat from your Qurbani will be distributed to eligible beneficiaries in your selected region. If for any reason we cannot perform the Qurbani in your chosen location, we will notify you and either offer an alternative location or refund your donation.</li>
+        </ul>
+      </section>
+    
+      <!-- Intellectual Property -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Intellectual Property</h2>
+        <p class="text-gray-700 leading-relaxed">
+          The Site and its original content, features, and functionality are owned by My Sadaqah Online and are protected by international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          You may not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of the material on our Site, except as follows:
+        </p>
+        <ul class="list-disc pl-6 text-gray-700 leading-relaxed">
+          <li>Your computer may temporarily store copies of such materials in RAM incidental to your accessing and viewing those materials.</li>
+          <li>You may store files that are automatically cached by your Web browser for display enhancement purposes.</li>
+          <li>You may print or download one copy of a reasonable number of pages of the Site for your own personal, non-commercial use and not for further reproduction, publication, or distribution.</li>
+          <li>If we provide social media features with certain content, you may take such actions as are enabled by such features.</li>
+        </ul>
+      </section>
+    
+      <!-- Disclaimer of Warranties -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Disclaimer of Warranties</h2>
+        <p class="text-gray-700 leading-relaxed">
+          Our Site and Services are provided on an "AS IS" and "AS AVAILABLE" basis, without any warranties of any kind, either express or implied. We disclaim all warranties, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          We do not warrant that our Site will be uninterrupted or error-free, that defects will be corrected, or that the Site or server that makes it available are free of viruses or other harmful components.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          The foregoing does not affect any warranties which cannot be excluded or limited under applicable law.
+        </p>
+      </section>
+    
+      <!-- Limitation of Liability -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Limitation of Liability</h2>
+        <p class="text-gray-700 leading-relaxed">
+          To the fullest extent permitted by law, My Sadaqah Online, its officers, directors, employees, and agents shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to, loss of profits, data, use, goodwill, or other intangible losses, resulting from:
+        </p>
+        <ul class="list-disc pl-6 text-gray-700 leading-relaxed">
+          <li>Your access to or use of or inability to access or use the Site or Services;</li>
+          <li>Any conduct or content of any third party on the Site;</li>
+          <li>Any content obtained from the Site; and</li>
+          <li>Unauthorized access, use, or alteration of your transmissions or content.</li>
+        </ul>
+        <p class="text-gray-700 leading-relaxed">
+          In no event shall our total liability to you for all claims exceed the amount you have donated through our platform in the 12 months preceding the event giving rise to the liability.
+        </p>
+      </section>
+    
+      <!-- Indemnification -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Indemnification</h2>
+        <p class="text-gray-700 leading-relaxed">
+          You agree to defend, indemnify, and hold harmless My Sadaqah Online, its officers, directors, employees, and agents from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your violation of these Terms or your use of the Site.
+        </p>
+      </section>
+    
+      <!-- Governing Law -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Governing Law</h2>
+        <p class="text-gray-700 leading-relaxed">
+          These Terms shall be governed by and construed in accordance with the laws of the Province of Ontario and the federal laws of Canada applicable therein, without regard to its conflict of law principles.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          Any legal suit, action, or proceeding arising out of, or related to, these Terms or the Site shall be instituted exclusively in the courts of the Province of Ontario, although we retain the right to bring any suit, action, or proceeding against you for breach of these Terms in your country of residence or any other relevant jurisdiction.
+        </p>
+      </section>
+    
+      <!-- Dispute Resolution -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Dispute Resolution</h2>
+        <p class="text-gray-700 leading-relaxed">
+          In the event of any dispute or claim arising out of or relating to these Terms or your use of our Site or Services, the parties shall first attempt to resolve such dispute through informal negotiation. If the dispute cannot be resolved through negotiation, either party may initiate legal proceedings in accordance with the Governing Law section.
+        </p>
+      </section>
+    
+      <!-- Changes to Terms -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Changes to Terms</h2>
+        <p class="text-gray-700 leading-relaxed">
+          We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          By continuing to access or use our Site after any revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you are no longer authorized to use the Site.
+        </p>
+      </section>
+    
+      <!-- Severability -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Severability</h2>
+        <p class="text-gray-700 leading-relaxed">
+          If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. An invalid or unenforceable provision will be deemed superseded by a valid, enforceable provision that most closely matches the intent of the original provision.
+        </p>
+      </section>
+    
+      <!-- Entire Agreement -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Entire Agreement</h2>
+        <p class="text-gray-700 leading-relaxed">
+          These Terms constitute the entire agreement between you and My Sadaqah Online regarding our Site and Services and supersede all prior and contemporaneous agreements, proposals, or representations, written or oral, concerning its subject matter.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          A printed version of these Terms and of any notice given in electronic form shall be admissible in judicial or administrative proceedings based upon or relating to these Terms to the same extent and subject to the same conditions as other business documents and records originally generated and maintained in printed form.
+        </p>
+      </section>
+    
+      <!-- Contact Us -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Contact Us</h2>
+        <p class="text-gray-700 leading-relaxed">
+          If you have any questions about these Terms and Conditions, please contact us:
+        </p>
+        <div class="bg-teal-50 p-6 rounded-lg mt-4">
+          <ul class="text-gray-700 leading-relaxed">
+            <li><strong>By email:</strong> legal@mysadaqahonline.com</li>
+            <li><strong>By phone:</strong> +1 (XXX) XXX-XXXX</li>
+            <li><strong>By mail:</strong> My Sadaqah Online, XXX Street Name, City, Province, Postal Code, Canada</li>
+          </ul>
+        </div>
+      </section>
+    </article>
+  </main>
+</MainLayout>

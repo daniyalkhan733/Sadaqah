@@ -66,7 +66,7 @@ const keywords = "charity, donations, sadaqah, zakat, online giving, humanitaria
         <h2 class="text-3xl md:text-4xl font-bold text-[#0E173B] mb-3">
           Get in Touch
         </h2>
-        <div class="w-16 h-1 bg-[#EE0C6E] mx-auto mb-6"></div>
+        <div class="w-16 h-1 bg-hotpink mx-auto mb-6"></div>
         <p class="text-[#5B5A59] max-w-xl mx-auto text-lg">
           We'd love to hear from you! Send us a message and we'll get back to
           you as soon as possible.
@@ -80,7 +80,7 @@ const keywords = "charity, donations, sadaqah, zakat, online giving, humanitaria
         >
           <h3 class="text-2xl font-bold text-[#0E173B] mb-6 flex items-center">
             <span
-              class="w-8 h-8 rounded-full bg-[#EE0C6E] flex items-center justify-center text-white mr-3"
+              class="w-8 h-8 rounded-full bg-hotpink flex items-center justify-center text-white mr-3"
             >
               <i class="fa-solid fa-message text-sm"></i>
             </span>
@@ -134,7 +134,7 @@ const keywords = "charity, donations, sadaqah, zakat, online giving, humanitaria
             </div>
             <button
               type="submit"
-              class="bg-[#EE0C6E] hover:bg-[#EE0C6E]/90 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
+              class="bg-hotpink hover:bg-hotpink/90 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
             >
               Send Message
             </button>
@@ -198,19 +198,19 @@ const keywords = "charity, donations, sadaqah, zakat, online giving, humanitaria
             <div class="flex space-x-4">
               <a
                 href="https://www.facebook.com/mysadaqahonline/"
-                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-black hover:bg-[#EE0C6E] transition-all duration-300 ease-in-out transform hover:-translate-y-1"
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-black hover:bg-hotpink transition-all duration-300 ease-in-out transform hover:-translate-y-1"
               >
                 <i class="fa-brands fa-facebook-f text-lg"></i>
               </a>
               <a
                 href="https://www.instagram.com/mysadaqahonline/"
-                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-black hover:bg-[#EE0C6E] transition-all duration-300 ease-in-out transform hover:-translate-y-1"
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-black hover:bg-hotpink transition-all duration-300 ease-in-out transform hover:-translate-y-1"
               >
                 <i class="fa-brands fa-instagram text-lg"></i>
               </a>
               <a
                 href="https://x.com/mysadaqahonline"
-                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-black hover:bg-[#EE0C6E] transition-all duration-300 ease-in-out transform hover:-translate-y-1"
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-black hover:bg-hotpink transition-all duration-300 ease-in-out transform hover:-translate-y-1"
               >
                 <i class="fa-brands fa-x-twitter text-lg"></i>
               </a>
@@ -344,8 +344,8 @@ const keywords = "charity, donations, sadaqah, zakat, online giving, humanitaria
             setTimeout(() => {
               submitButton.innerHTML =
                 '<i class="fa-solid fa-check mr-2"></i> Message Sent!';
-              submitButton.classList.remove("bg-[#EE0C6E]");
-              submitButton.classList.remove("hover:bg-[#EE0C6E]/90");
+              submitButton.classList.remove("bg-hotpink");
+              submitButton.classList.remove("hover:bg-hotpink/90");
               submitButton.classList.add("bg-[#01A6A0]");
 
               // Reset form
@@ -353,8 +353,8 @@ const keywords = "charity, donations, sadaqah, zakat, online giving, humanitaria
                 form.reset();
                 submitButton.innerHTML = "Send Message";
                 submitButton.classList.remove("bg-[#01A6A0]");
-                submitButton.classList.add("bg-[#EE0C6E]");
-                submitButton.classList.add("hover:bg-[#EE0C6E]/90");
+                submitButton.classList.add("bg-hotpink");
+                submitButton.classList.add("hover:bg-hotpink/90");
                 submitButton.disabled = false;
               }, 2000);
             }, 1500);

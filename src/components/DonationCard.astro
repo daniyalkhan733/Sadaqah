@@ -1,5 +1,4 @@
 ---
-// BurgundyDonationAppeals.astro
 import { fetchPrograms } from "./api";
 
 // Interface for Program type matching the provided structure
@@ -22,77 +21,49 @@ type Program = {
   programId: number;
 };
 
-// Props definition
 interface Props {
   programId?: number[];
-  programname?: string;
   title?: string;
-  subtitle?: string;
-  maxDisplay?: number;
 }
 
-// Default props
-const {
-  programId = [],
-  programname = "Donation",
-  title = "Sadaqah Donation Appeals",
-  subtitle = "",
-  maxDisplay = 12,
-} = Astro.props;
+const { programId = [], title = "Sadaqah Donation Appeals" } = Astro.props;
 
-// Currency symbol
 const pound = "£";
 
-// Fetch program data
 const data = await fetchPrograms();
 const programs: Program[] = data;
 
-// Filter programs based on programId (if provided)
 const filteredPrograms =
   programId.length === 0
     ? programs
     : programs.filter((program) => programId.includes(program.program_id));
-
-// Take only the first set of programs for display
-const displayPrograms = filteredPrograms.slice(0, maxDisplay);
 ---
 
 <section class="py-16 bg-white max-w-7xl mx-auto">
   <div class="container mx-auto px-4">
-    <!-- Section Header with underline decoration -->
     <div class="text-center mb-12 relative">
       <div class="inline-block">
         <h1 class="text-4xl font-bold text-teal mb-3">{title}</h1>
         <div class="h-1 w-24 bg-teal rounded-full mx-auto"></div>
       </div>
-      {
-        subtitle && (
-          <p class="text-customgray max-w-2xl mx-auto mt-4">{subtitle}</p>
-        )
-      }
     </div>
 
-    <!-- Programs Grid with hover effects -->
     <div class="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
       {
-        displayPrograms.slice(0, 6).map((program) => {
+        filteredPrograms.slice(0, 7).map((program) => {
           return (
             <div class="flex-shrink-0 w-full md:w-64 group relative overflow-hidden rounded-xl bg-white border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-              {/* Decorative accent line at top */}
               <div class="h-1 w-full bg-teal" />
-              
-              {/* Program Image with overlay */}
+
               <div class="relative h-64 overflow-hidden">
                 <img
                   src={program.image || "/assets/images/logo.png"}
                   alt={program.program_name}
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                
-                {/* Gradient overlay */}
+
                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60" />
-                
-                {/* Country Badge */}
+
                 <div class="absolute bottom-4 left-4">
                   <div class="flex items-center bg-white py-1.5 px-4 rounded-full shadow-md">
                     <i class="fas fa-globe-asia text-teal mr-2" />
@@ -102,13 +73,12 @@ const displayPrograms = filteredPrograms.slice(0, maxDisplay);
                   </div>
                 </div>
               </div>
-              
-              {/* Content with improved spacing */}
+
               <div class="p-6">
                 <h3 class="text-xl font-bold text-teal line-clamp-2 mb-4">
                   {program.program_name}
                 </h3>
-                
+
                 <div class="flex items-center justify-between mb-6">
                   <span class="text-2xl font-bold text-customgray">
                     {program.program_rate
@@ -116,7 +86,7 @@ const displayPrograms = filteredPrograms.slice(0, maxDisplay);
                       : "Any amount"}
                   </span>
                 </div>
-                
+
                 <div class="flex justify-between gap-3">
                   <a
                     href={program.donation_url}
@@ -136,12 +106,10 @@ const displayPrograms = filteredPrograms.slice(0, maxDisplay);
 </section>
 
 <style>
-  /* Card hover animation */
   .group:hover .group-hover\:scale-110 {
     transform: scale(1.1);
   }
 
-  /* Line clamp for consistent card heights */
   .line-clamp-2 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -149,7 +117,6 @@ const displayPrograms = filteredPrograms.slice(0, maxDisplay);
     overflow: hidden;
   }
 
-  /* Ensure consistent title heights */
   .h-14 {
     height: 3.5rem;
   }

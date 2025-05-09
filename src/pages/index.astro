@@ -60,7 +60,7 @@ const keywords =
   </section>
   <DonationCard programId={[]} />
   <section
-    class="py-16 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden min-h-screen flex items-center"
+    class="md:py-16 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden min-h-screen flex items-center"
   >
     <div class="container mx-auto px-4 relative z-10">
       <div class="flex flex-col md:flex-row gap-8 lg:gap-12 items-center">
@@ -76,8 +76,8 @@ const keywords =
           </h2>
           <p class="text-lg mb-6 text-customgray leading-relaxed">
             At My Sadaqah Online, every donation you make has a real and lasting
-            impact. Your Sadaqah reaches those who need it most quickly, safely, and
-            effectively.
+            impact. Your Sadaqah reaches those who need it most quickly, safely,
+            and effectively.
           </p>
 
           <div
@@ -91,7 +91,8 @@ const keywords =
               <div>
                 <div class="font-bold text-xl">Trust & Transparency</div>
                 <div class="text-sm text-customgray/80">
-                  We're committed to transparency, accountability, and impact in everything we do
+                  We're committed to transparency, accountability, and impact in
+                  everything we do
                 </div>
               </div>
             </div>
@@ -102,7 +103,8 @@ const keywords =
               <div>
                 <div class="font-bold text-xl">One-time or Monthly</div>
                 <div class="text-sm text-customgray/80">
-                  Whether it's a one-time donation or monthly support, you can give with confidence
+                  Whether it's a one-time donation or monthly support, you can
+                  give with confidence
                 </div>
               </div>
             </div>
@@ -113,22 +115,20 @@ const keywords =
               class="fas fa-quote-left text-customblue absolute -left-3 bg-gray-50 text-xl"
             ></i>
             <p class="italic text-customgray mb-2">
-              "The believer's shade on the Day of Resurrection will be his charity."
+              "The believer's shade on the Day of Resurrection will be his
+              charity."
             </p>
-            <p class="text-sm font-semibold text-customgray">
-              - Hadith
-            </p>
+            <p class="text-sm font-semibold text-customgray">- Hadith</p>
           </div>
 
           <div class="mt-6 flex flex-wrap gap-4">
             <a
-            href="/appeals/sadaqah"
+              href="/appeals/sadaqah"
               class="bg-hotpink hover:bg-opacity-90 text-white px-6 py-3 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2 font-medium cursor-pointer"
             >
               <i class="fas fa-hand-holding-heart"></i>
               Donate Sadaqah Now
             </a>
-            
           </div>
         </div>
 
@@ -179,64 +179,13 @@ const keywords =
     </div>
   </section>
 
-  <style>
-    /* Custom animations */
-    .animate-fade-in-left {
-      animation: fadeInLeft 1s ease-out forwards;
-    }
-
-    .animate-fade-in-right {
-      animation: fadeInRight 1s ease-out forwards;
-    }
-
-    @keyframes fadeInLeft {
-      from {
-        opacity: 0;
-        transform: translateX(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    @keyframes fadeInRight {
-      from {
-        opacity: 0;
-        transform: translateX(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    /* Subtle scale hover effect */
-    .hover\:scale-102:hover {
-      transform: scale(1.02);
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .min-h-screen {
-        min-height: auto;
-      }
-
-      .container {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-      }
-
-      .absolute {
-        display: none;
-      }
-    }
-  </style>
   <!-- Enhanced Quote section -->
   <section class="bg-[#37145A] relative py-16 text-white overflow-hidden">
     <!-- Background pattern overlay -->
     <div class="absolute inset-0 opacity-10">
-      <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"
+      <div
+        class="absolute inset-0"
+        style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"
       >
       </div>
     </div>
@@ -246,9 +195,7 @@ const keywords =
         <div class="md:w-2/3">
           <div class="flex items-center gap-2 mb-6">
             <div class="w-12 h-1 bg-green-400"></div>
-            <h3 class="text-xl font-medium">
-              Sadaqah Jariyah:
-            </h3>
+            <h3 class="text-xl font-medium">Sadaqah Jariyah:</h3>
           </div>
 
           <div class="relative">
@@ -262,8 +209,8 @@ const keywords =
             <blockquote
               class="text-2xl md:text-3xl italic mb-6 leading-relaxed relative z-10 pl-6 border-l-4 border-green-400"
             >
-              "Give towards projects like water wells and orphan care that continue
-              to benefit others for years to come."
+              "Give towards projects like water wells and orphan care that
+              continue to benefit others for years to come."
             </blockquote>
 
             <div class="flex items-center gap-4">
@@ -274,15 +221,15 @@ const keywords =
 
           <div class="mt-8">
             <a href="/appeals/sadaqah">
-            <button
-              class="group hover:bg-white border-2  text-white hover:text-green-800 px-6 py-3 rounded-lg transition-all duration-300 font-medium flex items-center gap-2 cursor-pointer bg-[#D51051]"
-            >
-              Donate Sadaqah
-              <i
-                class="fas fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"
-              ></i>
-            </button>
-          </a>
+              <button
+                class="group hover:bg-white border-2 text-white hover:text-green-800 px-6 py-3 rounded-lg transition-all duration-300 font-medium flex items-center gap-2 cursor-pointer bg-[#D51051]"
+              >
+                Donate Sadaqah
+                <i
+                  class="fas fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+              </button>
+            </a>
           </div>
         </div>
 
@@ -304,9 +251,7 @@ const keywords =
   </section>
 
   <!-- Sadaqah services section -->
-  <section
-    class="sadaqah-section py-16 relative overflow-hidden"
-  >
+  <section class="sadaqah-section py-16 relative overflow-hidden">
     <div class="container mx-auto px-4 relative z-10">
       <div class="text-center mb-12">
         <span
@@ -353,18 +298,19 @@ const keywords =
             </div>
 
             <p class="text-customgray/80 mb-6">
-              Understand the value of giving Sadaqah, how it benefits those in need,
-              and how it brings blessings to your life.
+              Understand the value of giving Sadaqah, how it benefits those in
+              need, and how it brings blessings to your life.
             </p>
             <a href="/appeals/sadaqah">
-            <button
-              class="bg-hotpink text-white px-6 py-3 rounded-full w-full hover:bg-opacity-90 transition-all duration-300 flex items-center justify-center group-hover:shadow-md"
+              <button
+                class="bg-hotpink text-white px-6 py-3 rounded-full w-full hover:bg-opacity-90 transition-all duration-300 flex items-center justify-center group-hover:shadow-md"
+              >
+                <span>Donate</span>
+                <i
+                  class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"
+                ></i>
+              </button></a
             >
-              <span>Donate</span>
-              <i
-                class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"
-              ></i>
-            </button></a>
           </div>
         </div>
 
@@ -396,14 +342,12 @@ const keywords =
               >
                 <i class="fas fa-tint"></i>
               </div>
-              <h3 class="font-bold text-xl text-customgray">
-                Water Appeal
-              </h3>
+              <h3 class="font-bold text-xl text-customgray">Water Appeal</h3>
             </div>
 
             <p class="text-customgray/80 mb-6">
-              Help us provide clean, safe water to communities in need. Your Sadaqah
-              can fund life-saving water projects.
+              Help us provide clean, safe water to communities in need. Your
+              Sadaqah can fund life-saving water projects.
             </p>
             <button
               class="bg-teal text-white px-6 py-3 rounded-full w-full hover:bg-opacity-90 transition-all duration-300 flex items-center justify-center group-hover:shadow-md"
@@ -444,12 +388,14 @@ const keywords =
               >
                 <i class="fas fa-child"></i>
               </div>
-              <h3 class="font-bold text-xl text-customgray">Sponsor an Orphan</h3>
+              <h3 class="font-bold text-xl text-customgray">
+                Sponsor an Orphan
+              </h3>
             </div>
 
             <p class="text-customgray/80 mb-6">
-              Change a child's life. Your monthly support gives them food, education,
-              and hope for a brighter future.
+              Change a child's life. Your monthly support gives them food,
+              education, and hope for a brighter future.
             </p>
             <button
               class="bg-customblue text-white px-6 py-3 rounded-full w-full hover:bg-opacity-90 transition-all duration-300 flex items-center justify-center group-hover:shadow-md"
@@ -522,7 +468,9 @@ const keywords =
             </div>
             <div>
               <span class="text-customblue font-bold text-2xl">4.2M+</span>
-              <span class="text-customblue text-sm font-medium ml-1">lives touched</span>
+              <span class="text-customblue text-sm font-medium ml-1"
+                >lives touched</span
+              >
             </div>
           </div>
           <h3 class="font-bold text-lg mb-2 text-customgray">
@@ -539,7 +487,7 @@ const keywords =
 
   <!-- Qurbani 2025 section -->
   <section
-    class="qurbani-section py-16 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden"
+    class="qurbani-section md:py-16 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden"
   >
     <div class="container mx-auto px-4 relative z-10">
       <div class="flex flex-col md:flex-row gap-8 lg:gap-12 items-center">
@@ -564,13 +512,12 @@ const keywords =
 
           <div class="mt-6 flex flex-wrap gap-4">
             <a
-            href="/appeals/qurbani"
+              href="/appeals/qurbani"
               class="bg-hotpink hover:bg-opacity-90 text-white px-6 py-3 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2 font-medium cursor-pointer"
             >
               <i class="fas fa-hand-holding-heart"></i>
               Give Qurbani Now
             </a>
-           
           </div>
         </div>
 
@@ -588,43 +535,12 @@ const keywords =
     </div>
   </section>
 
-<style>
-  /* Animations and transitions */
-  @keyframes gentle-float {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-  
-  .hover\:shadow-md:hover {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .md\:flex-row {
-      flex-direction: column;
-    }
-    
-    .md\:w-2\/3, .md\:w-1\/3 {
-      width: 100%;
-    }
-    
-    .container {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-  }
-</style>
   <section id="featured" class="pb-16 md:pb-24 bg-white">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl md:text-4xl font-bold mb-2 text-[#0E173B]">
         Featured Articles
       </h2>
-      <div class="w-20 h-1 bg-[#EE0C6E] mb-10"></div>
+      <div class="w-20 h-1 bg-hotpink mb-10"></div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <BlogCard
@@ -652,7 +568,7 @@ const keywords =
       <div class="text-center mt-12">
         <a
           href="/blogs"
-          class="inline-flex items-center gap-2 text-[#EE0C6E] hover:text-[#d00a62] font-medium text-lg transition-all duration-300"
+          class="inline-flex items-center gap-2 text-hotpink hover:text-[#d00a62] font-medium text-lg transition-all duration-300"
         >
           View all articles
           <svg
@@ -678,6 +594,89 @@ const keywords =
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
-  </style>
+    /* Animations and transitions */
+    @keyframes gentle-float {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
 
+    .hover\:shadow-md:hover {
+      box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .md\:flex-row {
+        flex-direction: column;
+      }
+
+      .md\:w-2\/3,
+      .md\:w-1\/3 {
+        width: 100%;
+      }
+
+      .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+    /* Custom animations */
+    .animate-fade-in-left {
+      animation: fadeInLeft 1s ease-out forwards;
+    }
+
+    .animate-fade-in-right {
+      animation: fadeInRight 1s ease-out forwards;
+    }
+
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Subtle scale hover effect */
+    .hover\:scale-102:hover {
+      transform: scale(1.02);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .min-h-screen {
+        min-height: auto;
+      }
+
+      .container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      .absolute {
+        display: none;
+      }
+    }
+  </style>
 </Layout>

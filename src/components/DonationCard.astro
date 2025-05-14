@@ -37,6 +37,7 @@ const filteredPrograms =
   programId.length === 0
     ? programs
     : programs.filter((program) => programId.includes(program.program_id));
+
 ---
 
 <section class="py-16 bg-white max-w-7xl mx-auto">
@@ -57,7 +58,7 @@ const filteredPrograms =
 
               <div class="relative h-64 overflow-hidden">
                 <img
-                  src={program.image || "/assets/images/logo.png"}
+                  src={`https://my-sadaqah-online-website-icharms.tscube.co.in/${program.image}` || "/assets/images/logo.png"}
                   alt={program.program_name}
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
